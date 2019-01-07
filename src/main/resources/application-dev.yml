@@ -1,0 +1,31 @@
+spring:
+  # mysql 连接池
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+    druid:
+      #url: jdbc:mysql://localhost:3306/ssm_weibo?useUnicode=true&characterEncoding=UTF-8
+      url: jdbc:mysql://localhost:3306/order_system?useUnicode=true&characterEncoding=UTF-8
+      username: root
+      password: 1741074535zwk
+      initial-size: 10
+      min-idle: 10
+      max-wait: 60000
+      max-active: 100
+
+  # 视图解析器
+  mvc:
+    view:
+      prefix: /WEB-INF/
+      suffix: .jsp
+
+
+#log4j日志
+logging:
+  file: log.log
+  path: logs/
+  level.com.zwk.weibo: debug
+
+
+
+
