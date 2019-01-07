@@ -1,0 +1,3 @@
+本项目只是一个单纯的微信小程序订餐系统的后台管理系统（小程序端会后续上传），
+基于springboot + mybatis-plus + springmvc（jsp） 创建
+其中swagger用于测试接口 ，地址http://localhost:8080/Weibo/swagger-ui.html
