@@ -1219,3 +1219,244 @@
 2019-01-07 10:12:02,069 [DEBUG] [http-nio-8080-exec-18] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] ==>  Preparing: SELECT * FROM ORDER_DETAIL WHERE order_id=? 
 2019-01-07 10:12:02,070 [DEBUG] [http-nio-8080-exec-18] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] ==> Parameters: 29(Long)
 2019-01-07 10:12:02,070 [DEBUG] [http-nio-8080-exec-18] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] <==      Total: 3
+2019-01-07 10:18:48,372 [DEBUG] [http-nio-8080-exec-22] com.zwk.weibo.dao.FoodDao.getFoodList [BaseJdbcLogger.java : 159] ==>  Preparing: SELECT * FROM FOOD F LEFT JOIN STORE S ON F.STORE_ID=S.STORE_ID WHERE 1=1 
+2019-01-07 10:18:48,372 [DEBUG] [http-nio-8080-exec-21] com.zwk.weibo.dao.GenreDao.getGenreList [BaseJdbcLogger.java : 159] ==>  Preparing: SELECT * FROM GENRE WHERE 1=1 
+2019-01-07 10:18:48,373 [DEBUG] [http-nio-8080-exec-22] com.zwk.weibo.dao.FoodDao.getFoodList [BaseJdbcLogger.java : 159] ==> Parameters: 
+2019-01-07 10:18:48,373 [DEBUG] [http-nio-8080-exec-21] com.zwk.weibo.dao.GenreDao.getGenreList [BaseJdbcLogger.java : 159] ==> Parameters: 
+2019-01-07 10:18:48,374 [DEBUG] [http-nio-8080-exec-21] com.zwk.weibo.dao.GenreDao.getGenreList [BaseJdbcLogger.java : 159] <==      Total: 6
+2019-01-07 10:18:48,374 [DEBUG] [http-nio-8080-exec-22] com.zwk.weibo.dao.FoodDao.getFoodList [BaseJdbcLogger.java : 159] <==      Total: 7
+2019-01-07 10:18:51,870 [DEBUG] [http-nio-8080-exec-23] com.zwk.weibo.dao.OrderDao.orderLists [BaseJdbcLogger.java : 159] ==>  Preparing: SELECT * FROM ORDERINFO WHERE USER_ID=? 
+2019-01-07 10:18:51,871 [DEBUG] [http-nio-8080-exec-23] com.zwk.weibo.dao.OrderDao.orderLists [BaseJdbcLogger.java : 159] ==> Parameters: 1(String)
+2019-01-07 10:18:51,872 [DEBUG] [http-nio-8080-exec-23] com.zwk.weibo.dao.OrderDao.orderLists [BaseJdbcLogger.java : 159] <==      Total: 7
+2019-01-07 10:18:51,873 [DEBUG] [http-nio-8080-exec-23] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] ==>  Preparing: SELECT * FROM ORDER_DETAIL WHERE order_id=? 
+2019-01-07 10:18:51,874 [DEBUG] [http-nio-8080-exec-23] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] ==> Parameters: 23(Long)
+2019-01-07 10:18:51,875 [DEBUG] [http-nio-8080-exec-23] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] <==      Total: 2
+2019-01-07 10:18:51,876 [DEBUG] [http-nio-8080-exec-23] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] ==>  Preparing: SELECT * FROM ORDER_DETAIL WHERE order_id=? 
+2019-01-07 10:18:51,876 [DEBUG] [http-nio-8080-exec-23] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] ==> Parameters: 24(Long)
+2019-01-07 10:18:51,877 [DEBUG] [http-nio-8080-exec-23] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] <==      Total: 2
+2019-01-07 10:18:51,878 [DEBUG] [http-nio-8080-exec-23] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] ==>  Preparing: SELECT * FROM ORDER_DETAIL WHERE order_id=? 
+2019-01-07 10:18:51,878 [DEBUG] [http-nio-8080-exec-23] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] ==> Parameters: 25(Long)
+2019-01-07 10:18:51,879 [DEBUG] [http-nio-8080-exec-23] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] <==      Total: 2
+2019-01-07 10:18:51,880 [DEBUG] [http-nio-8080-exec-23] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] ==>  Preparing: SELECT * FROM ORDER_DETAIL WHERE order_id=? 
+2019-01-07 10:18:51,880 [DEBUG] [http-nio-8080-exec-23] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] ==> Parameters: 26(Long)
+2019-01-07 10:18:51,882 [DEBUG] [http-nio-8080-exec-23] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] <==      Total: 2
+2019-01-07 10:18:51,882 [DEBUG] [http-nio-8080-exec-23] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] ==>  Preparing: SELECT * FROM ORDER_DETAIL WHERE order_id=? 
+2019-01-07 10:18:51,883 [DEBUG] [http-nio-8080-exec-23] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] ==> Parameters: 27(Long)
+2019-01-07 10:18:51,884 [DEBUG] [http-nio-8080-exec-23] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] <==      Total: 2
+2019-01-07 10:18:51,885 [DEBUG] [http-nio-8080-exec-23] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] ==>  Preparing: SELECT * FROM ORDER_DETAIL WHERE order_id=? 
+2019-01-07 10:18:51,885 [DEBUG] [http-nio-8080-exec-23] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] ==> Parameters: 28(Long)
+2019-01-07 10:18:51,887 [DEBUG] [http-nio-8080-exec-23] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] <==      Total: 3
+2019-01-07 10:18:51,887 [DEBUG] [http-nio-8080-exec-23] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] ==>  Preparing: SELECT * FROM ORDER_DETAIL WHERE order_id=? 
+2019-01-07 10:18:51,888 [DEBUG] [http-nio-8080-exec-23] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] ==> Parameters: 29(Long)
+2019-01-07 10:18:51,889 [DEBUG] [http-nio-8080-exec-23] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] <==      Total: 3
+2019-01-07 10:21:48,400 [DEBUG] [http-nio-8080-exec-27] com.zwk.weibo.dao.FoodDao.getFoodList [BaseJdbcLogger.java : 159] ==>  Preparing: SELECT * FROM FOOD F LEFT JOIN STORE S ON F.STORE_ID=S.STORE_ID WHERE 1=1 
+2019-01-07 10:21:48,400 [DEBUG] [http-nio-8080-exec-26] com.zwk.weibo.dao.GenreDao.getGenreList [BaseJdbcLogger.java : 159] ==>  Preparing: SELECT * FROM GENRE WHERE 1=1 
+2019-01-07 10:21:48,402 [DEBUG] [http-nio-8080-exec-26] com.zwk.weibo.dao.GenreDao.getGenreList [BaseJdbcLogger.java : 159] ==> Parameters: 
+2019-01-07 10:21:48,402 [DEBUG] [http-nio-8080-exec-27] com.zwk.weibo.dao.FoodDao.getFoodList [BaseJdbcLogger.java : 159] ==> Parameters: 
+2019-01-07 10:21:48,405 [DEBUG] [http-nio-8080-exec-26] com.zwk.weibo.dao.GenreDao.getGenreList [BaseJdbcLogger.java : 159] <==      Total: 6
+2019-01-07 10:21:48,407 [DEBUG] [http-nio-8080-exec-27] com.zwk.weibo.dao.FoodDao.getFoodList [BaseJdbcLogger.java : 159] <==      Total: 7
+2019-01-07 10:21:51,827 [DEBUG] [http-nio-8080-exec-28] com.zwk.weibo.dao.ReceiveAddressDao.getAddressList [BaseJdbcLogger.java : 159] ==>  Preparing: SELECT * FROM RECEIVE_ADDRESS WHERE USER_ID=? 
+2019-01-07 10:21:51,829 [DEBUG] [http-nio-8080-exec-28] com.zwk.weibo.dao.ReceiveAddressDao.getAddressList [BaseJdbcLogger.java : 159] ==> Parameters: 1(Long)
+2019-01-07 10:21:51,840 [DEBUG] [http-nio-8080-exec-28] com.zwk.weibo.dao.ReceiveAddressDao.getAddressList [BaseJdbcLogger.java : 159] <==      Total: 2
+2019-01-07 10:21:53,488 [DEBUG] [http-nio-8080-exec-29] com.zwk.weibo.dao.OrderDao.getMaxId [BaseJdbcLogger.java : 159] ==>  Preparing: SELECT MAX(ORDER_ID)+1 FROM ORDERINFO WHERE 1=1 
+2019-01-07 10:21:53,489 [DEBUG] [http-nio-8080-exec-29] com.zwk.weibo.dao.OrderDao.getMaxId [BaseJdbcLogger.java : 159] ==> Parameters: 
+2019-01-07 10:21:53,490 [DEBUG] [http-nio-8080-exec-29] com.zwk.weibo.dao.OrderDao.getMaxId [BaseJdbcLogger.java : 159] <==      Total: 1
+2019-01-07 10:21:53,491 [DEBUG] [http-nio-8080-exec-29] com.zwk.weibo.dao.OrderDao.insert [BaseJdbcLogger.java : 159] ==>  Preparing: INSERT INTO orderinfo ( order_id, order_number, user_id, total_price, `status`, store_id, address_id, covers_number ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ? ) 
+2019-01-07 10:21:53,492 [DEBUG] [http-nio-8080-exec-29] com.zwk.weibo.dao.OrderDao.insert [BaseJdbcLogger.java : 159] ==> Parameters: 30(Long), 2019010721530002(Long), 1(Long), 537.5(Float), 1101(String), 1(Long), 1(Long), 1(Long)
+2019-01-07 10:21:53,498 [DEBUG] [http-nio-8080-exec-29] com.zwk.weibo.dao.OrderDao.insert [BaseJdbcLogger.java : 159] <==    Updates: 1
+2019-01-07 10:21:53,499 [DEBUG] [http-nio-8080-exec-29] com.zwk.weibo.dao.OrderDetailDao.getMaxId [BaseJdbcLogger.java : 159] ==>  Preparing: SELECT MAX(ORDER_DETAIL_ID)+1 FROM ORDER_DETAIL WHERE 1=1 
+2019-01-07 10:21:53,499 [DEBUG] [http-nio-8080-exec-29] com.zwk.weibo.dao.OrderDetailDao.getMaxId [BaseJdbcLogger.java : 159] ==> Parameters: 
+2019-01-07 10:21:53,500 [DEBUG] [http-nio-8080-exec-29] com.zwk.weibo.dao.OrderDetailDao.getMaxId [BaseJdbcLogger.java : 159] <==      Total: 1
+2019-01-07 10:21:53,502 [DEBUG] [http-nio-8080-exec-29] com.zwk.weibo.dao.OrderDetailDao.insert [BaseJdbcLogger.java : 159] ==>  Preparing: INSERT INTO order_detail ( order_detail_id, food_id, food_name, price, food_num, food_price, food_pic, order_id ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ? ) 
+2019-01-07 10:21:53,502 [DEBUG] [http-nio-8080-exec-29] com.zwk.weibo.dao.OrderDetailDao.insert [BaseJdbcLogger.java : 159] ==> Parameters: 58(Long), 3(Long), 酸辣土豆丝(String), 0.0(Float), 8(Long), 12.9(Float), photao.jpg(String), 30(Long)
+2019-01-07 10:21:53,505 [DEBUG] [http-nio-8080-exec-29] com.zwk.weibo.dao.OrderDetailDao.insert [BaseJdbcLogger.java : 159] <==    Updates: 1
+2019-01-07 10:21:53,506 [DEBUG] [http-nio-8080-exec-29] com.zwk.weibo.dao.OrderDetailDao.getMaxId [BaseJdbcLogger.java : 159] ==>  Preparing: SELECT MAX(ORDER_DETAIL_ID)+1 FROM ORDER_DETAIL WHERE 1=1 
+2019-01-07 10:21:53,506 [DEBUG] [http-nio-8080-exec-29] com.zwk.weibo.dao.OrderDetailDao.getMaxId [BaseJdbcLogger.java : 159] ==> Parameters: 
+2019-01-07 10:21:53,507 [DEBUG] [http-nio-8080-exec-29] com.zwk.weibo.dao.OrderDetailDao.getMaxId [BaseJdbcLogger.java : 159] <==      Total: 1
+2019-01-07 10:21:53,508 [DEBUG] [http-nio-8080-exec-29] com.zwk.weibo.dao.OrderDetailDao.insert [BaseJdbcLogger.java : 159] ==>  Preparing: INSERT INTO order_detail ( order_detail_id, food_id, food_name, price, food_num, food_price, food_pic, order_id ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ? ) 
+2019-01-07 10:21:53,508 [DEBUG] [http-nio-8080-exec-29] com.zwk.weibo.dao.OrderDetailDao.insert [BaseJdbcLogger.java : 159] ==> Parameters: 59(Long), 4(Long), 小米粥(String), 0.0(Float), 5(Long), 6.9(Float), xiaomi.jpg(String), 30(Long)
+2019-01-07 10:21:53,511 [DEBUG] [http-nio-8080-exec-29] com.zwk.weibo.dao.OrderDetailDao.insert [BaseJdbcLogger.java : 159] <==    Updates: 1
+2019-01-07 10:21:53,512 [DEBUG] [http-nio-8080-exec-29] com.zwk.weibo.dao.OrderDetailDao.getMaxId [BaseJdbcLogger.java : 159] ==>  Preparing: SELECT MAX(ORDER_DETAIL_ID)+1 FROM ORDER_DETAIL WHERE 1=1 
+2019-01-07 10:21:53,512 [DEBUG] [http-nio-8080-exec-29] com.zwk.weibo.dao.OrderDetailDao.getMaxId [BaseJdbcLogger.java : 159] ==> Parameters: 
+2019-01-07 10:21:53,513 [DEBUG] [http-nio-8080-exec-29] com.zwk.weibo.dao.OrderDetailDao.getMaxId [BaseJdbcLogger.java : 159] <==      Total: 1
+2019-01-07 10:21:53,516 [DEBUG] [http-nio-8080-exec-29] com.zwk.weibo.dao.OrderDetailDao.insert [BaseJdbcLogger.java : 159] ==>  Preparing: INSERT INTO order_detail ( order_detail_id, food_id, food_name, price, food_num, food_price, food_pic, order_id ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ? ) 
+2019-01-07 10:21:53,516 [DEBUG] [http-nio-8080-exec-29] com.zwk.weibo.dao.OrderDetailDao.insert [BaseJdbcLogger.java : 159] ==> Parameters: 60(Long), 5(Long), 烤兄弟(String), 0.0(Float), 2(Long), 199.9(Float), 912333d7ab45473e8c05d694d6a4c10b.jpg(String), 30(Long)
+2019-01-07 10:21:53,519 [DEBUG] [http-nio-8080-exec-29] com.zwk.weibo.dao.OrderDetailDao.insert [BaseJdbcLogger.java : 159] <==    Updates: 1
+2019-01-07 10:23:18,121 [DEBUG] [http-nio-8080-exec-3] com.zwk.weibo.dao.FoodDao.getFoodList [BaseJdbcLogger.java : 159] ==>  Preparing: SELECT * FROM FOOD F LEFT JOIN STORE S ON F.STORE_ID=S.STORE_ID WHERE 1=1 
+2019-01-07 10:23:18,121 [DEBUG] [http-nio-8080-exec-2] com.zwk.weibo.dao.GenreDao.getGenreList [BaseJdbcLogger.java : 159] ==>  Preparing: SELECT * FROM GENRE WHERE 1=1 
+2019-01-07 10:23:18,122 [DEBUG] [http-nio-8080-exec-3] com.zwk.weibo.dao.FoodDao.getFoodList [BaseJdbcLogger.java : 159] ==> Parameters: 
+2019-01-07 10:23:18,122 [DEBUG] [http-nio-8080-exec-2] com.zwk.weibo.dao.GenreDao.getGenreList [BaseJdbcLogger.java : 159] ==> Parameters: 
+2019-01-07 10:23:18,126 [DEBUG] [http-nio-8080-exec-2] com.zwk.weibo.dao.GenreDao.getGenreList [BaseJdbcLogger.java : 159] <==      Total: 6
+2019-01-07 10:23:18,128 [DEBUG] [http-nio-8080-exec-3] com.zwk.weibo.dao.FoodDao.getFoodList [BaseJdbcLogger.java : 159] <==      Total: 7
+2019-01-07 10:23:24,387 [DEBUG] [http-nio-8080-exec-4] com.zwk.weibo.dao.OrderDao.orderLists [BaseJdbcLogger.java : 159] ==>  Preparing: SELECT * FROM ORDERINFO WHERE USER_ID=? 
+2019-01-07 10:23:24,387 [DEBUG] [http-nio-8080-exec-4] com.zwk.weibo.dao.OrderDao.orderLists [BaseJdbcLogger.java : 159] ==> Parameters: 1(String)
+2019-01-07 10:23:24,390 [DEBUG] [http-nio-8080-exec-4] com.zwk.weibo.dao.OrderDao.orderLists [BaseJdbcLogger.java : 159] <==      Total: 8
+2019-01-07 10:23:24,391 [DEBUG] [http-nio-8080-exec-4] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] ==>  Preparing: SELECT * FROM ORDER_DETAIL WHERE order_id=? 
+2019-01-07 10:23:24,392 [DEBUG] [http-nio-8080-exec-4] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] ==> Parameters: 23(Long)
+2019-01-07 10:23:24,393 [DEBUG] [http-nio-8080-exec-4] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] <==      Total: 2
+2019-01-07 10:23:24,394 [DEBUG] [http-nio-8080-exec-4] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] ==>  Preparing: SELECT * FROM ORDER_DETAIL WHERE order_id=? 
+2019-01-07 10:23:24,394 [DEBUG] [http-nio-8080-exec-4] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] ==> Parameters: 24(Long)
+2019-01-07 10:23:24,395 [DEBUG] [http-nio-8080-exec-4] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] <==      Total: 2
+2019-01-07 10:23:24,396 [DEBUG] [http-nio-8080-exec-4] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] ==>  Preparing: SELECT * FROM ORDER_DETAIL WHERE order_id=? 
+2019-01-07 10:23:24,397 [DEBUG] [http-nio-8080-exec-4] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] ==> Parameters: 25(Long)
+2019-01-07 10:23:24,398 [DEBUG] [http-nio-8080-exec-4] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] <==      Total: 2
+2019-01-07 10:23:24,399 [DEBUG] [http-nio-8080-exec-4] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] ==>  Preparing: SELECT * FROM ORDER_DETAIL WHERE order_id=? 
+2019-01-07 10:23:24,400 [DEBUG] [http-nio-8080-exec-4] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] ==> Parameters: 26(Long)
+2019-01-07 10:23:24,401 [DEBUG] [http-nio-8080-exec-4] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] <==      Total: 2
+2019-01-07 10:23:24,402 [DEBUG] [http-nio-8080-exec-4] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] ==>  Preparing: SELECT * FROM ORDER_DETAIL WHERE order_id=? 
+2019-01-07 10:23:24,403 [DEBUG] [http-nio-8080-exec-4] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] ==> Parameters: 27(Long)
+2019-01-07 10:23:24,404 [DEBUG] [http-nio-8080-exec-4] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] <==      Total: 2
+2019-01-07 10:23:24,405 [DEBUG] [http-nio-8080-exec-4] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] ==>  Preparing: SELECT * FROM ORDER_DETAIL WHERE order_id=? 
+2019-01-07 10:23:24,406 [DEBUG] [http-nio-8080-exec-4] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] ==> Parameters: 28(Long)
+2019-01-07 10:23:24,407 [DEBUG] [http-nio-8080-exec-4] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] <==      Total: 3
+2019-01-07 10:23:24,408 [DEBUG] [http-nio-8080-exec-4] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] ==>  Preparing: SELECT * FROM ORDER_DETAIL WHERE order_id=? 
+2019-01-07 10:23:24,409 [DEBUG] [http-nio-8080-exec-4] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] ==> Parameters: 29(Long)
+2019-01-07 10:23:24,410 [DEBUG] [http-nio-8080-exec-4] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] <==      Total: 3
+2019-01-07 10:23:24,411 [DEBUG] [http-nio-8080-exec-4] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] ==>  Preparing: SELECT * FROM ORDER_DETAIL WHERE order_id=? 
+2019-01-07 10:23:24,414 [DEBUG] [http-nio-8080-exec-4] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] ==> Parameters: 30(Long)
+2019-01-07 10:23:24,415 [DEBUG] [http-nio-8080-exec-4] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] <==      Total: 3
+2019-01-07 10:23:27,385 [WARN] [http-nio-8080-exec-5] o.s.w.s.m.m.annotation.ExceptionHandlerExceptionResolver [AbstractHandlerExceptionResolver.java : 194] Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; nested exception is java.lang.NumberFormatException: For input string: "undefined"]
+2019-01-07 10:23:27,521 [DEBUG] [http-nio-8080-exec-6] com.zwk.weibo.dao.OrderDao.getOrderStatus [BaseJdbcLogger.java : 159] ==>  Preparing: SELECT STATUS FROM ORDERINFO WHERE ORDER_NUMBER=? 
+2019-01-07 10:23:27,523 [DEBUG] [http-nio-8080-exec-6] com.zwk.weibo.dao.OrderDao.getOrderStatus [BaseJdbcLogger.java : 159] ==> Parameters: null
+2019-01-07 10:23:27,526 [DEBUG] [http-nio-8080-exec-6] com.zwk.weibo.dao.OrderDao.getOrderStatus [BaseJdbcLogger.java : 159] <==      Total: 0
+2019-01-07 10:23:42,377 [DEBUG] [http-nio-8080-exec-7] com.zwk.weibo.dao.OrderDao.orderLists [BaseJdbcLogger.java : 159] ==>  Preparing: SELECT * FROM ORDERINFO WHERE USER_ID=? 
+2019-01-07 10:23:42,378 [DEBUG] [http-nio-8080-exec-7] com.zwk.weibo.dao.OrderDao.orderLists [BaseJdbcLogger.java : 159] ==> Parameters: 1(String)
+2019-01-07 10:23:42,379 [DEBUG] [http-nio-8080-exec-7] com.zwk.weibo.dao.OrderDao.orderLists [BaseJdbcLogger.java : 159] <==      Total: 8
+2019-01-07 10:23:42,379 [DEBUG] [http-nio-8080-exec-7] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] ==>  Preparing: SELECT * FROM ORDER_DETAIL WHERE order_id=? 
+2019-01-07 10:23:42,380 [DEBUG] [http-nio-8080-exec-7] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] ==> Parameters: 23(Long)
+2019-01-07 10:23:42,381 [DEBUG] [http-nio-8080-exec-7] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] <==      Total: 2
+2019-01-07 10:23:42,382 [DEBUG] [http-nio-8080-exec-7] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] ==>  Preparing: SELECT * FROM ORDER_DETAIL WHERE order_id=? 
+2019-01-07 10:23:42,382 [DEBUG] [http-nio-8080-exec-7] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] ==> Parameters: 24(Long)
+2019-01-07 10:23:42,383 [DEBUG] [http-nio-8080-exec-7] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] <==      Total: 2
+2019-01-07 10:23:42,384 [DEBUG] [http-nio-8080-exec-7] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] ==>  Preparing: SELECT * FROM ORDER_DETAIL WHERE order_id=? 
+2019-01-07 10:23:42,384 [DEBUG] [http-nio-8080-exec-7] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] ==> Parameters: 25(Long)
+2019-01-07 10:23:42,385 [DEBUG] [http-nio-8080-exec-7] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] <==      Total: 2
+2019-01-07 10:23:42,385 [DEBUG] [http-nio-8080-exec-7] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] ==>  Preparing: SELECT * FROM ORDER_DETAIL WHERE order_id=? 
+2019-01-07 10:23:42,386 [DEBUG] [http-nio-8080-exec-7] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] ==> Parameters: 26(Long)
+2019-01-07 10:23:42,386 [DEBUG] [http-nio-8080-exec-7] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] <==      Total: 2
+2019-01-07 10:23:42,387 [DEBUG] [http-nio-8080-exec-7] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] ==>  Preparing: SELECT * FROM ORDER_DETAIL WHERE order_id=? 
+2019-01-07 10:23:42,387 [DEBUG] [http-nio-8080-exec-7] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] ==> Parameters: 27(Long)
+2019-01-07 10:23:42,388 [DEBUG] [http-nio-8080-exec-7] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] <==      Total: 2
+2019-01-07 10:23:42,389 [DEBUG] [http-nio-8080-exec-7] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] ==>  Preparing: SELECT * FROM ORDER_DETAIL WHERE order_id=? 
+2019-01-07 10:23:42,391 [DEBUG] [http-nio-8080-exec-7] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] ==> Parameters: 28(Long)
+2019-01-07 10:23:42,392 [DEBUG] [http-nio-8080-exec-7] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] <==      Total: 3
+2019-01-07 10:23:42,393 [DEBUG] [http-nio-8080-exec-7] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] ==>  Preparing: SELECT * FROM ORDER_DETAIL WHERE order_id=? 
+2019-01-07 10:23:42,393 [DEBUG] [http-nio-8080-exec-7] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] ==> Parameters: 29(Long)
+2019-01-07 10:23:42,394 [DEBUG] [http-nio-8080-exec-7] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] <==      Total: 3
+2019-01-07 10:23:42,395 [DEBUG] [http-nio-8080-exec-7] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] ==>  Preparing: SELECT * FROM ORDER_DETAIL WHERE order_id=? 
+2019-01-07 10:23:42,395 [DEBUG] [http-nio-8080-exec-7] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] ==> Parameters: 30(Long)
+2019-01-07 10:23:42,396 [DEBUG] [http-nio-8080-exec-7] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] <==      Total: 3
+2019-01-07 10:25:36,975 [DEBUG] [http-nio-8080-exec-9] com.zwk.weibo.dao.GenreDao.getGenreList [BaseJdbcLogger.java : 159] ==>  Preparing: SELECT * FROM GENRE WHERE 1=1 
+2019-01-07 10:25:36,977 [DEBUG] [http-nio-8080-exec-9] com.zwk.weibo.dao.GenreDao.getGenreList [BaseJdbcLogger.java : 159] ==> Parameters: 
+2019-01-07 10:25:36,980 [DEBUG] [http-nio-8080-exec-11] com.zwk.weibo.dao.FoodDao.getFoodList [BaseJdbcLogger.java : 159] ==>  Preparing: SELECT * FROM FOOD F LEFT JOIN STORE S ON F.STORE_ID=S.STORE_ID WHERE 1=1 
+2019-01-07 10:25:36,980 [DEBUG] [http-nio-8080-exec-9] com.zwk.weibo.dao.GenreDao.getGenreList [BaseJdbcLogger.java : 159] <==      Total: 6
+2019-01-07 10:25:36,981 [DEBUG] [http-nio-8080-exec-11] com.zwk.weibo.dao.FoodDao.getFoodList [BaseJdbcLogger.java : 159] ==> Parameters: 
+2019-01-07 10:25:36,984 [DEBUG] [http-nio-8080-exec-11] com.zwk.weibo.dao.FoodDao.getFoodList [BaseJdbcLogger.java : 159] <==      Total: 7
+2019-01-07 10:25:40,380 [DEBUG] [http-nio-8080-exec-12] com.zwk.weibo.dao.OrderDao.orderLists [BaseJdbcLogger.java : 159] ==>  Preparing: SELECT * FROM ORDERINFO WHERE USER_ID=? 
+2019-01-07 10:25:40,381 [DEBUG] [http-nio-8080-exec-12] com.zwk.weibo.dao.OrderDao.orderLists [BaseJdbcLogger.java : 159] ==> Parameters: 1(String)
+2019-01-07 10:25:40,382 [DEBUG] [http-nio-8080-exec-12] com.zwk.weibo.dao.OrderDao.orderLists [BaseJdbcLogger.java : 159] <==      Total: 8
+2019-01-07 10:25:40,383 [DEBUG] [http-nio-8080-exec-12] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] ==>  Preparing: SELECT * FROM ORDER_DETAIL WHERE order_id=? 
+2019-01-07 10:25:40,384 [DEBUG] [http-nio-8080-exec-12] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] ==> Parameters: 23(Long)
+2019-01-07 10:25:40,386 [DEBUG] [http-nio-8080-exec-12] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] <==      Total: 2
+2019-01-07 10:25:40,387 [DEBUG] [http-nio-8080-exec-12] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] ==>  Preparing: SELECT * FROM ORDER_DETAIL WHERE order_id=? 
+2019-01-07 10:25:40,388 [DEBUG] [http-nio-8080-exec-12] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] ==> Parameters: 24(Long)
+2019-01-07 10:25:40,389 [DEBUG] [http-nio-8080-exec-12] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] <==      Total: 2
+2019-01-07 10:25:40,390 [DEBUG] [http-nio-8080-exec-12] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] ==>  Preparing: SELECT * FROM ORDER_DETAIL WHERE order_id=? 
+2019-01-07 10:25:40,391 [DEBUG] [http-nio-8080-exec-12] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] ==> Parameters: 25(Long)
+2019-01-07 10:25:40,393 [DEBUG] [http-nio-8080-exec-12] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] <==      Total: 2
+2019-01-07 10:25:40,394 [DEBUG] [http-nio-8080-exec-12] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] ==>  Preparing: SELECT * FROM ORDER_DETAIL WHERE order_id=? 
+2019-01-07 10:25:40,394 [DEBUG] [http-nio-8080-exec-12] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] ==> Parameters: 26(Long)
+2019-01-07 10:25:40,395 [DEBUG] [http-nio-8080-exec-12] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] <==      Total: 2
+2019-01-07 10:25:40,396 [DEBUG] [http-nio-8080-exec-12] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] ==>  Preparing: SELECT * FROM ORDER_DETAIL WHERE order_id=? 
+2019-01-07 10:25:40,397 [DEBUG] [http-nio-8080-exec-12] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] ==> Parameters: 27(Long)
+2019-01-07 10:25:40,398 [DEBUG] [http-nio-8080-exec-12] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] <==      Total: 2
+2019-01-07 10:25:40,399 [DEBUG] [http-nio-8080-exec-12] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] ==>  Preparing: SELECT * FROM ORDER_DETAIL WHERE order_id=? 
+2019-01-07 10:25:40,399 [DEBUG] [http-nio-8080-exec-12] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] ==> Parameters: 28(Long)
+2019-01-07 10:25:40,400 [DEBUG] [http-nio-8080-exec-12] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] <==      Total: 3
+2019-01-07 10:25:40,402 [DEBUG] [http-nio-8080-exec-12] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] ==>  Preparing: SELECT * FROM ORDER_DETAIL WHERE order_id=? 
+2019-01-07 10:25:40,403 [DEBUG] [http-nio-8080-exec-12] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] ==> Parameters: 29(Long)
+2019-01-07 10:25:40,404 [DEBUG] [http-nio-8080-exec-12] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] <==      Total: 3
+2019-01-07 10:25:40,405 [DEBUG] [http-nio-8080-exec-12] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] ==>  Preparing: SELECT * FROM ORDER_DETAIL WHERE order_id=? 
+2019-01-07 10:25:40,406 [DEBUG] [http-nio-8080-exec-12] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] ==> Parameters: 30(Long)
+2019-01-07 10:25:40,407 [DEBUG] [http-nio-8080-exec-12] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] <==      Total: 3
+2019-01-07 10:25:46,317 [DEBUG] [http-nio-8080-exec-13] com.zwk.weibo.dao.OrderDao.orderLists [BaseJdbcLogger.java : 159] ==>  Preparing: SELECT * FROM ORDERINFO WHERE USER_ID=? 
+2019-01-07 10:25:46,317 [DEBUG] [http-nio-8080-exec-13] com.zwk.weibo.dao.OrderDao.orderLists [BaseJdbcLogger.java : 159] ==> Parameters: 1(String)
+2019-01-07 10:25:46,319 [DEBUG] [http-nio-8080-exec-13] com.zwk.weibo.dao.OrderDao.orderLists [BaseJdbcLogger.java : 159] <==      Total: 8
+2019-01-07 10:25:46,320 [DEBUG] [http-nio-8080-exec-13] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] ==>  Preparing: SELECT * FROM ORDER_DETAIL WHERE order_id=? 
+2019-01-07 10:25:46,320 [DEBUG] [http-nio-8080-exec-13] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] ==> Parameters: 23(Long)
+2019-01-07 10:25:46,321 [DEBUG] [http-nio-8080-exec-13] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] <==      Total: 2
+2019-01-07 10:25:46,322 [DEBUG] [http-nio-8080-exec-13] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] ==>  Preparing: SELECT * FROM ORDER_DETAIL WHERE order_id=? 
+2019-01-07 10:25:46,323 [DEBUG] [http-nio-8080-exec-13] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] ==> Parameters: 24(Long)
+2019-01-07 10:25:46,324 [DEBUG] [http-nio-8080-exec-13] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] <==      Total: 2
+2019-01-07 10:25:46,325 [DEBUG] [http-nio-8080-exec-13] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] ==>  Preparing: SELECT * FROM ORDER_DETAIL WHERE order_id=? 
+2019-01-07 10:25:46,326 [DEBUG] [http-nio-8080-exec-13] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] ==> Parameters: 25(Long)
+2019-01-07 10:25:46,328 [DEBUG] [http-nio-8080-exec-13] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] <==      Total: 2
+2019-01-07 10:25:46,329 [DEBUG] [http-nio-8080-exec-13] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] ==>  Preparing: SELECT * FROM ORDER_DETAIL WHERE order_id=? 
+2019-01-07 10:25:46,330 [DEBUG] [http-nio-8080-exec-13] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] ==> Parameters: 26(Long)
+2019-01-07 10:25:46,333 [DEBUG] [http-nio-8080-exec-13] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] <==      Total: 2
+2019-01-07 10:25:46,334 [DEBUG] [http-nio-8080-exec-13] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] ==>  Preparing: SELECT * FROM ORDER_DETAIL WHERE order_id=? 
+2019-01-07 10:25:46,334 [DEBUG] [http-nio-8080-exec-13] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] ==> Parameters: 27(Long)
+2019-01-07 10:25:46,336 [DEBUG] [http-nio-8080-exec-13] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] <==      Total: 2
+2019-01-07 10:25:46,336 [DEBUG] [http-nio-8080-exec-13] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] ==>  Preparing: SELECT * FROM ORDER_DETAIL WHERE order_id=? 
+2019-01-07 10:25:46,337 [DEBUG] [http-nio-8080-exec-13] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] ==> Parameters: 28(Long)
+2019-01-07 10:25:46,339 [DEBUG] [http-nio-8080-exec-13] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] <==      Total: 3
+2019-01-07 10:25:46,340 [DEBUG] [http-nio-8080-exec-13] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] ==>  Preparing: SELECT * FROM ORDER_DETAIL WHERE order_id=? 
+2019-01-07 10:25:46,340 [DEBUG] [http-nio-8080-exec-13] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] ==> Parameters: 29(Long)
+2019-01-07 10:25:46,342 [DEBUG] [http-nio-8080-exec-13] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] <==      Total: 3
+2019-01-07 10:25:46,343 [DEBUG] [http-nio-8080-exec-13] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] ==>  Preparing: SELECT * FROM ORDER_DETAIL WHERE order_id=? 
+2019-01-07 10:25:46,343 [DEBUG] [http-nio-8080-exec-13] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] ==> Parameters: 30(Long)
+2019-01-07 10:25:46,344 [DEBUG] [http-nio-8080-exec-13] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] <==      Total: 3
+2019-01-07 10:25:56,691 [DEBUG] [http-nio-8080-exec-14] com.zwk.weibo.dao.OrderDao.orderLists [BaseJdbcLogger.java : 159] ==>  Preparing: SELECT * FROM ORDERINFO WHERE USER_ID=? 
+2019-01-07 10:25:56,692 [DEBUG] [http-nio-8080-exec-14] com.zwk.weibo.dao.OrderDao.orderLists [BaseJdbcLogger.java : 159] ==> Parameters: 1(String)
+2019-01-07 10:25:56,693 [DEBUG] [http-nio-8080-exec-14] com.zwk.weibo.dao.OrderDao.orderLists [BaseJdbcLogger.java : 159] <==      Total: 8
+2019-01-07 10:25:56,694 [DEBUG] [http-nio-8080-exec-14] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] ==>  Preparing: SELECT * FROM ORDER_DETAIL WHERE order_id=? 
+2019-01-07 10:25:56,694 [DEBUG] [http-nio-8080-exec-14] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] ==> Parameters: 23(Long)
+2019-01-07 10:25:56,695 [DEBUG] [http-nio-8080-exec-14] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] <==      Total: 2
+2019-01-07 10:25:56,695 [DEBUG] [http-nio-8080-exec-14] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] ==>  Preparing: SELECT * FROM ORDER_DETAIL WHERE order_id=? 
+2019-01-07 10:25:56,696 [DEBUG] [http-nio-8080-exec-14] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] ==> Parameters: 24(Long)
+2019-01-07 10:25:56,697 [DEBUG] [http-nio-8080-exec-14] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] <==      Total: 2
+2019-01-07 10:25:56,697 [DEBUG] [http-nio-8080-exec-14] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] ==>  Preparing: SELECT * FROM ORDER_DETAIL WHERE order_id=? 
+2019-01-07 10:25:56,698 [DEBUG] [http-nio-8080-exec-14] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] ==> Parameters: 25(Long)
+2019-01-07 10:25:56,698 [DEBUG] [http-nio-8080-exec-14] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] <==      Total: 2
+2019-01-07 10:25:56,699 [DEBUG] [http-nio-8080-exec-14] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] ==>  Preparing: SELECT * FROM ORDER_DETAIL WHERE order_id=? 
+2019-01-07 10:25:56,699 [DEBUG] [http-nio-8080-exec-14] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] ==> Parameters: 26(Long)
+2019-01-07 10:25:56,700 [DEBUG] [http-nio-8080-exec-14] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] <==      Total: 2
+2019-01-07 10:25:56,700 [DEBUG] [http-nio-8080-exec-14] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] ==>  Preparing: SELECT * FROM ORDER_DETAIL WHERE order_id=? 
+2019-01-07 10:25:56,701 [DEBUG] [http-nio-8080-exec-14] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] ==> Parameters: 27(Long)
+2019-01-07 10:25:56,701 [DEBUG] [http-nio-8080-exec-14] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] <==      Total: 2
+2019-01-07 10:25:56,702 [DEBUG] [http-nio-8080-exec-14] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] ==>  Preparing: SELECT * FROM ORDER_DETAIL WHERE order_id=? 
+2019-01-07 10:25:56,702 [DEBUG] [http-nio-8080-exec-14] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] ==> Parameters: 28(Long)
+2019-01-07 10:25:56,703 [DEBUG] [http-nio-8080-exec-14] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] <==      Total: 3
+2019-01-07 10:25:56,705 [DEBUG] [http-nio-8080-exec-14] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] ==>  Preparing: SELECT * FROM ORDER_DETAIL WHERE order_id=? 
+2019-01-07 10:25:56,705 [DEBUG] [http-nio-8080-exec-14] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] ==> Parameters: 29(Long)
+2019-01-07 10:25:56,707 [DEBUG] [http-nio-8080-exec-14] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] <==      Total: 3
+2019-01-07 10:25:56,707 [DEBUG] [http-nio-8080-exec-14] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] ==>  Preparing: SELECT * FROM ORDER_DETAIL WHERE order_id=? 
+2019-01-07 10:25:56,708 [DEBUG] [http-nio-8080-exec-14] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] ==> Parameters: 30(Long)
+2019-01-07 10:25:56,709 [DEBUG] [http-nio-8080-exec-14] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] <==      Total: 3
+2019-01-07 10:26:02,598 [DEBUG] [http-nio-8080-exec-15] com.zwk.weibo.dao.OrderDao.orderLists [BaseJdbcLogger.java : 159] ==>  Preparing: SELECT * FROM ORDERINFO WHERE USER_ID=? 
+2019-01-07 10:26:02,599 [DEBUG] [http-nio-8080-exec-15] com.zwk.weibo.dao.OrderDao.orderLists [BaseJdbcLogger.java : 159] ==> Parameters: 1(String)
+2019-01-07 10:26:02,601 [DEBUG] [http-nio-8080-exec-15] com.zwk.weibo.dao.OrderDao.orderLists [BaseJdbcLogger.java : 159] <==      Total: 8
+2019-01-07 10:26:02,601 [DEBUG] [http-nio-8080-exec-15] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] ==>  Preparing: SELECT * FROM ORDER_DETAIL WHERE order_id=? 
+2019-01-07 10:26:02,602 [DEBUG] [http-nio-8080-exec-15] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] ==> Parameters: 23(Long)
+2019-01-07 10:26:02,603 [DEBUG] [http-nio-8080-exec-15] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] <==      Total: 2
+2019-01-07 10:26:02,604 [DEBUG] [http-nio-8080-exec-15] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] ==>  Preparing: SELECT * FROM ORDER_DETAIL WHERE order_id=? 
+2019-01-07 10:26:02,605 [DEBUG] [http-nio-8080-exec-15] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] ==> Parameters: 24(Long)
+2019-01-07 10:26:02,606 [DEBUG] [http-nio-8080-exec-15] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] <==      Total: 2
+2019-01-07 10:26:02,607 [DEBUG] [http-nio-8080-exec-15] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] ==>  Preparing: SELECT * FROM ORDER_DETAIL WHERE order_id=? 
+2019-01-07 10:26:02,608 [DEBUG] [http-nio-8080-exec-15] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] ==> Parameters: 25(Long)
+2019-01-07 10:26:02,624 [DEBUG] [http-nio-8080-exec-15] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] <==      Total: 2
+2019-01-07 10:26:02,625 [DEBUG] [http-nio-8080-exec-15] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] ==>  Preparing: SELECT * FROM ORDER_DETAIL WHERE order_id=? 
+2019-01-07 10:26:02,626 [DEBUG] [http-nio-8080-exec-15] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] ==> Parameters: 26(Long)
+2019-01-07 10:26:02,628 [DEBUG] [http-nio-8080-exec-15] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] <==      Total: 2
+2019-01-07 10:26:02,629 [DEBUG] [http-nio-8080-exec-15] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] ==>  Preparing: SELECT * FROM ORDER_DETAIL WHERE order_id=? 
+2019-01-07 10:26:02,629 [DEBUG] [http-nio-8080-exec-15] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] ==> Parameters: 27(Long)
+2019-01-07 10:26:02,631 [DEBUG] [http-nio-8080-exec-15] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] <==      Total: 2
+2019-01-07 10:26:02,632 [DEBUG] [http-nio-8080-exec-15] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] ==>  Preparing: SELECT * FROM ORDER_DETAIL WHERE order_id=? 
+2019-01-07 10:26:02,632 [DEBUG] [http-nio-8080-exec-15] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] ==> Parameters: 28(Long)
+2019-01-07 10:26:02,634 [DEBUG] [http-nio-8080-exec-15] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] <==      Total: 3
+2019-01-07 10:26:02,635 [DEBUG] [http-nio-8080-exec-15] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] ==>  Preparing: SELECT * FROM ORDER_DETAIL WHERE order_id=? 
+2019-01-07 10:26:02,635 [DEBUG] [http-nio-8080-exec-15] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] ==> Parameters: 29(Long)
+2019-01-07 10:26:02,637 [DEBUG] [http-nio-8080-exec-15] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] <==      Total: 3
+2019-01-07 10:26:02,638 [DEBUG] [http-nio-8080-exec-15] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] ==>  Preparing: SELECT * FROM ORDER_DETAIL WHERE order_id=? 
+2019-01-07 10:26:02,638 [DEBUG] [http-nio-8080-exec-15] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] ==> Parameters: 30(Long)
+2019-01-07 10:26:02,640 [DEBUG] [http-nio-8080-exec-15] com.zwk.weibo.dao.OrderDetailDao.orderDetailList [BaseJdbcLogger.java : 159] <==      Total: 3
