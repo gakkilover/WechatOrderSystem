@@ -17,4 +17,8 @@ public interface ReceiveAddressService extends IService<ReceiveAddressEntity> {
     List<ReceiveAddressEntity> getAddressList(Long userId);
 
     void insertAddress(ReceiveAddressEntity address);
+
+    String updateAddress(String type,ReceiveAddressEntity address);
+
+    String defaultAddress(Long addressId, Long userId);
 }

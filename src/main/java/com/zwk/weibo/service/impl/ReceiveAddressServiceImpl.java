@@ -1,6 +1,7 @@
 package com.zwk.weibo.service.impl;
 
 import com.baomidou.mybatisplus.service.impl.ServiceImpl;
+import com.zwk.weibo.constant.Final;
 import com.zwk.weibo.dao.ReceiveAddressDao;
 import com.zwk.weibo.entity.MyCollectEntity;
 import com.zwk.weibo.entity.ReceiveAddressEntity;
@@ -31,7 +32,36 @@ public class ReceiveAddressServiceImpl extends ServiceImpl<ReceiveAddressDao,Rec
 
     @Override
     public void insertAddress(ReceiveAddressEntity address) {
-        address.setAddressId(receiveAddressDao.getMaxId());
-        receiveAddressDao.insert(address);
+        if(address.getAddressId()!=null){
+            address.setDefaultAddress("0");
+        }else {
+            address.setAddressId(receiveAddressDao.getMaxId());
+            address.setDefaultAddress("1");
+        }
+        this.insertOrUpdate(address);
+    }
+
+    @Override
+    public String updateAddress(String type, ReceiveAddressEntity address) {
+        if(type!=null&&type.equals("-1")){
+
+        }
+        return null;
+    }
+
+    @Override
+    public String defaultAddress(Long addressId, Long userId) {
+        List<ReceiveAddressEntity> addressList=receiveAddressDao.getAddressList(userId);
+        for (ReceiveAddressEntity address:addressList) {
+            if(addressId!=null&&addressId.equals(address.getAddressId())){
+                address.setDefaultAddress("0");
+            }else{
+                address.setDefaultAddress("1");
+            }
+        }
+        if(this.updateBatchById(addressList)){
+            return Final.SUCCESS;
+        }
+        return Final.FAILURE;
     }
 }

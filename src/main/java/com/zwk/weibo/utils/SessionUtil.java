@@ -4,6 +4,7 @@ import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import java.util.Enumeration;
 
 /**
@@ -20,10 +21,11 @@ public class SessionUtil {
     }
 
     //获取session信息
-    public static void getSessionInfo(){
+    public static String getSessionInfo(String msg){
         request=getHttpServletRequest();
+        HttpSession session=request.getSession();
         Enumeration<String> enumLIst=request.getAttributeNames();
-        String nickName=(String)request.getAttribute("nickName");
+        return (String)session.getAttribute(msg);
     }
 
     public static void setSessionAttribute(String key ,String value){

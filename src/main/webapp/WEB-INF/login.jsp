@@ -9,12 +9,15 @@
 <head>
 <title>用户登录</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
 <link rel="stylesheet" href="assets/css/font-awesome.min.css" />
 <link rel="stylesheet" href="assets/css/ace.min.css" />
 <link rel="stylesheet" href="assets/css/ace-rtl.min.css" />
+<link rel="stylesheet" type="text/css" href="css/verify.css">
 </head>
+<script type="text/javascript" src="js/jquery.min.js" ></script>
+<script type="text/javascript" src="js/verify.js" ></script>
 <script>
     function validate_required(field,alerttxt)
     {
@@ -64,26 +67,30 @@
 										<form action="loginValidate" method="post" onsubmit="return check(this)">
 											<fieldset>
 												<label class="block clearfix"> <span
-													class="block input-icon input-icon-right"> <input id="userId"
+													class="block input-icon input-icon-right"> <input id="nickName"
 														name="nickName" type="text" class="form-control"
 														placeholder="请输入账号" /> <i class="icon-user"></i>
 												</span>
 												</label> <label class="block clearfix"> <span
-													class="block input-icon input-icon-right"> <input id="userPw"
+													class="block input-icon input-icon-right"> <input id="password"
 														name="password" type="password" class="form-control"
 														placeholder="请输入密码"/> <i class="icon-lock"></i>
 												</span>
 												</label>
 
-												<div class="clearfix">
-											
 
-													<button type="submit"
-														class="width-35 pull-left btn btn-sm btn-primary">
-														<i class="icon-key"></i> 登录
-													</button>
+											<span>
+												<div id="mpanel2" >
+												</div>
+
+                                            </span>
+
+												<div class="clearfix" >
+
+
+													<button type="button" id="check-btn" class="verify-btn" style="width: 100px;height: 40px">登录</button>
 													<button type="button"
-															class="width-35 pull-right btn btn-sm btn-primary" onclick="register()">
+															class="width-35 pull-right btn btn-sm btn-primary" style="margin-top: 10px;;height: 40px" onclick="register()">
 														<i class="icon-key"></i> 立即注册
 													</button>
 												</div>
@@ -112,5 +119,35 @@
 	function register() {
 		window.location.href="registerPost";
     }
+    function loginValidate() {
+	    var nickName=document.getElementById("nickName").value();
+        var password=document.getElementById("password").value();
+        window.location.href="loginValidate?nickName="+nickName+"&password="+password;
+    }
+    $('#mpanel2').codeVerify({
+        type : 1,
+        width : '150px',
+        height : '33px',
+        fontSize : '25px',
+        codeLength : 6,
+        btnId : 'check-btn',
+        ready : function() {
+        },
+        success : function() {
+            var nickName=document.getElementById("nickName").value;
+            var password=document.getElementById("password").value;
+            <%
+            	String nickName=request.getParameter("nickName");
+            	String password=request.getParameter("password");
+            	request.getSession().setAttribute("nickName",nickName);
+            	request.getSession().setAttribute("password",password);
+            %>
+            window.location.href="loginValidate?nickName="+nickName+"&password="+password;
+        },
+        error : function() {
+            alert('验证码不正确！');
+        }
+    });
+
 </script>
 </html>

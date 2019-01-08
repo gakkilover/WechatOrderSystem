@@ -35,10 +35,12 @@ public final class Final {
      * 成功
      */
     public final static String SUCCESS="SUCCESS";
+
+
     /**
      * 失败
      */
-    public final static String FAILURE="SUCCESS";
+    public final static String FAILURE="FAILED";
 
     /**
      * 订单下单已支付状态

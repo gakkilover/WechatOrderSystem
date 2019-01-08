@@ -27,5 +27,5 @@ public interface FoodService extends IService<FoodEntity> {
 
     List<FoodVO> selectFoodByName(String foodName);
 
-    List<FoodVO> selectFoodByGenre(Long genreId,String genreName);
+    List<FoodVO> selectFoodByGenre(Long genreId,String foodName);
 }

@@ -20,4 +20,5 @@ public interface ReceiveAddressDao extends BaseMapper<ReceiveAddressEntity> {
 
     @Select(" SELECT MAX(ADDRESS_ID)+1 from RECEIVE_ADDRESS  WHERE 1=1 ")
     Long getMaxId();
+
 }

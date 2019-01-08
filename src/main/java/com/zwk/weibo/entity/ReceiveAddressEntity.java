@@ -17,6 +17,15 @@ public class ReceiveAddressEntity {
 	private String street;
 	private String completeAddress;
 	private Long userId;
+	private String defaultAddress;
+
+	public String getDefaultAddress() {
+		return defaultAddress;
+	}
+
+	public void setDefaultAddress(String defaultAddress) {
+		this.defaultAddress = defaultAddress;
+	}
 
 	public Long getAddressId() {
 		return addressId;

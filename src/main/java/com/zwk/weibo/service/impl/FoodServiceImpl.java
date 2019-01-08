@@ -77,14 +77,14 @@ public class FoodServiceImpl extends ServiceImpl<FoodDao,FoodEntity> implements 
     }
 
     @Override
-    public List<FoodVO> selectFoodByGenre(Long genreId, String genreName) {
+    public List<FoodVO> selectFoodByGenre(Long genreId, String foodName) {
         StringBuffer sb=new StringBuffer();
         sb.append(" SELECT * FROM FOOD F LEFT JOIN GENRE g ON F.GENRE_ID=g.GENRE_ID where 1=1 ");
         if(genreId!=null&&!genreId.equals("")){
             sb.append("  and g.GENRE_ID=  "+genreId);
         }
-        if(genreName!=null&&StringUtils.isNotBlank(genreName)){
-            sb.append(" AND G.GENRE_NAME LIKE '%"+genreName+"%'");
+        if(foodName!=null&&StringUtils.isNotBlank(foodName)){
+            sb.append(" AND F.FOOD_NAME LIKE '%"+foodName+"%'");
         }
 
         return foodDao.selectFoodByGenre(sb.toString());

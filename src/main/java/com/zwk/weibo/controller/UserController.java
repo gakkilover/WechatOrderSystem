@@ -12,6 +12,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.SessionAttribute;
+import org.springframework.web.context.request.RequestContextHolder;
+import org.springframework.web.context.request.ServletRequestAttributes;
+
+import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
 /**
@@ -31,13 +36,18 @@ public class UserController {
     @RequestMapping("/userList")
     public String selectAll(Model model){
         List<UserEntity> userList=userService.selectList(null);
-        SessionUtil.getSessionInfo();
+        //SessionUtil.getSessionInfo();
         model.addAttribute("userLists",userList);
         return "view/system/user/user_list";
     }
 
     @RequestMapping("/loginValidate")
-    public String loginValidate(Model model, @Param("nickName")String nickName,@Param("password")String password){
+    public String loginValidate(Model model, @Param("nickName")String nickName, @Param("password")String password){
+//        HttpServletRequest request = ((ServletRequestAttributes)RequestContextHolder.getRequestAttributes()).getRequest();
+//        String nickName=(String)request.getSession().getAttribute("nickName");
+//        String password=(String)request.getSession().getAttribute("password");
+//        String nickName=SessionUtil.getSessionInfo("nickName");
+//        String password=SessionUtil.getSessionInfo("password");
         if(!userService.loginValidate(nickName,password)){
             model.addAttribute("msg","用户名或者密码错误");
             return "login";

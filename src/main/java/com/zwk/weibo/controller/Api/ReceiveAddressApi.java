@@ -1,6 +1,7 @@
 package com.zwk.weibo.controller.Api;
 
 import com.alibaba.fastjson.JSONObject;
+import com.zwk.weibo.constant.Final;
 import com.zwk.weibo.entity.MyCollectEntity;
 import com.zwk.weibo.entity.ReceiveAddressEntity;
 import com.zwk.weibo.service.MyCollectService;
@@ -39,15 +40,19 @@ public class ReceiveAddressApi {
 
     @ApiOperation("新增用户收货地址")
     @PostMapping("/insertAddress")
-    public String insertAddress(@RequestParam("userId") Long userId, @RequestParam("receiver") String receiver, @RequestParam("receiverPhone") String receiverPhone,
-                                @RequestParam("completeAddress") String completeAddress){
+    public String insertAddress(@RequestParam("addressInfo")String addressInfo){
+        JSONObject json=JSONObject.parseObject(addressInfo);
+        ReceiveAddressEntity receiveAddressEntity=JSONObject.toJavaObject(json,ReceiveAddressEntity.class);
 
-        ReceiveAddressEntity receiveAddressEntity=new ReceiveAddressEntity();
-        receiveAddressEntity.setUserId(userId);
-        receiveAddressEntity.setReceiver(receiver);
-        receiveAddressEntity.setCompleteAddress(completeAddress);
-        receiveAddressEntity.setReceiverPhone(receiverPhone);
         receiveAddressService.insertAddress(receiveAddressEntity);
-        return "";
+        return Final.SUCCESS;
+    }
+    @ApiOperation("修改用户默认收货地址")
+    @PostMapping("/defaultAddress")
+    public String defaultAddress(@RequestParam("addressId")Long addressId, @RequestParam("userId")Long userId){
+        if(receiveAddressService.defaultAddress(addressId, userId).equals(Final.SUCCESS)){
+            return Final.SUCCESS;
+        }
+        return Final.EMPTY;
     }
 }

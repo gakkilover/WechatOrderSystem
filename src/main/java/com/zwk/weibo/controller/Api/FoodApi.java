@@ -48,13 +48,16 @@ public class FoodApi {
 
     @ApiOperation("条件查询菜品")
     @PostMapping(value = "/foodListByGenre")
-    public String foodListByGenre(@RequestParam("genreId")Long genreId,@RequestParam("genreName")String genreName){
+    public String foodListByGenre(@RequestParam("genreId")String genreId,@RequestParam("foodName")String foodName){
         List<FoodVO> list=null;
-        if(genreId!=null&&genreId==-1){
+        if(genreId!=null&&genreId.equals("-1")){
             list=foodService.selectAllFood();
-            return JSONObject.toJSONString(list);
-        }else{
-            list=foodService.selectFoodByGenre(genreId,genreName);
+
+        } else if(genreId!=null&&genreId.equals("-2")){
+            list=foodService.selectFoodByGenre(null,foodName);
+
+        }else if(genreId!=null&&!genreId.equals("")){
+            list=foodService.selectFoodByGenre(Long.parseLong(genreId),foodName);
         }
         return JSONObject.toJSONString(list);
     }
