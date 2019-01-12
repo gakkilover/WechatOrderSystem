@@ -24,4 +24,7 @@ public interface GenreDao extends BaseMapper<GenreEntity> {
 
     @Select(" SELECT * FROM GENRE WHERE GENRE_NAME like CONCAT('%',#{genreName},'%') ")
     List<GenreEntity> selectByName(String genreName);
+
+    @Select(" SELECT * FROM GENRE WHERE GENRE_NAME =#{genreName} ")
+    GenreEntity selectOneByName(String genreName);
 }

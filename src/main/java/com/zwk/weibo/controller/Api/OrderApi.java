@@ -31,8 +31,8 @@ public class OrderApi {
 
     @ApiOperation("全部订单")
     @PostMapping("/orderList")
-    public String orderList(@RequestParam("userId")String userId){
-        List<OrderBO> orderList = orderService.selectAllOrders(userId);
+    public String orderList(@RequestParam("userId")String userId, @RequestParam("status")String status){
+        List<OrderBO> orderList = orderService.selectAllOrders(userId, status);
         return JSONObject.toJSONString(orderList);
     }
 
@@ -60,8 +60,8 @@ public class OrderApi {
 
     @ApiOperation("支付完成通知")
     @PostMapping("/confirmOrderPay")
-    public String confirmOrderPay(@RequestParam("orderNumber")Long orderNumber){
-        String msg=orderService.confirmOrderPay(orderNumber);
+    public String confirmOrderPay(@RequestParam("orderNumber")Long orderNumber, @RequestParam("status")String status){
+        String msg=orderService.confirmOrderPay(orderNumber,status);
         return msg;
     }
 

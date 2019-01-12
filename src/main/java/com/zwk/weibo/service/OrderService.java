@@ -25,9 +25,9 @@ public interface OrderService extends IService<OrderInfoEntity> {
 
     String getOrderStatus(Long orderId);
 
-    String confirmOrderPay(Long orderNumber);
+    String confirmOrderPay(Long orderNumber,String status);
 
-    List<OrderBO> selectAllOrders(String userId);
+    List<OrderBO> selectAllOrders(String userId, String status);
 
     String dispatch(Long orderId);
 

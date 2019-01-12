@@ -1,0 +1,214 @@
+<wux-cascader visible="{{visible}}" controlled value="{{ subscribeDate }}" title="请选择送餐时间" options="{{ options2 }}" bind:close="onClose2" bind:change="onChange2" bind:load="onLoadOptions" />
+<wxs src="../../utils/order.wxs" module="filter" />
+<view class="page">
+  <view class="page__bd">
+    <view class="weui-tab">
+       <view class="weui-navbar">
+        <block wx:for="{{tabs}}" wx:key="*this">
+          <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
+            <view class="weui-navbar__title">{{item}}</view>
+          </view>
+        </block>
+        <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
+      </view> 
+      <view class="weui-tab__panel">
+        <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
+          <!--外卖单 -->
+          <form bindsubmit="settlement" class="takeOrder">
+            <view class="address-box">
+              <view class="address-hor" hidden="{{!addressStatus}}" bindtap="selectAddress">
+                <view>
+                  <image class='mypos' src='/images/iconfont-shouhuodizhi.png'></image>
+                </view>
+                <view class="show-address">
+                  <view class="def-address">
+                    <view class="name-tel">收货人：{{addressDef.receiver}}</view>
+                    <view class="name-tel">{{addressDef.receiverPhone}}</view>
+                  </view>
+
+                  <view class="addr-text">收货地址：{{addressDef.province}}{{addressDef.city}}{{addressDef.county}}{{addressDef.completeAddress}}</view>
+                </view>
+                <view>
+                  <image class='mypos' src='/images/arrow-right.png'></image>
+                </view>
+              </view>
+              <navigator bindtap='addAddress' open-type='redirect'>
+                <view class="add-address">
+                  <view class="title" style='text-algin:center'>新增收货地址</view>
+                </view>
+              </navigator>
+            </view>
+            <!--订单详情 -->
+            <block wx:for="{{cartList}}" wx:key="{{item.id}}">
+              <view class="goods" hover-class="weui-cell_active">
+                <!--左侧图片-->
+                <view>
+                  <image src="{{filter.imgPath(item.foodPic)}}" class="good-img" />
+                </view>
+                <!--右侧说明部分-->
+                <view class="good-cont">
+                  <!--文字说明-->
+                  <view class="goods-navigator">
+                    <text>{{item.foodName}}</text>
+                  </view>
+                  <view>
+                    <text style='color: #ec5151;'>X{{item.foodNum}}</text>
+                  </view>
+                </view>
+                <view class="good-price">
+                  <text class="price">￥{{item.foodPrice}}</text>
+                </view>
+              </view>
+            </block>
+            <!--订单详情 -->
+            <view class="food-detail">
+              <text>餐具数量</text>
+              <view>
+                <input type="number" value="{{peopleNum}}" placeholder="方便商家为你准备" placeholder-style="color:#999;font-size:15px;" name="peopleNum" bindinput="getPeopleNum" />
+              </view>
+            </view>
+
+            <view class="food-detail">
+              <text>备注</text>
+              <view>
+                <input type="text" placeholder="口味偏好等要求" placeholder-style="color:#999;font-size:15px;" name="remark" bindinput="getRemark" />
+              </view>
+            </view>
+
+            <view class="food-detail {{idx == detail.length ? 'nobd' :''}} nomt" wx:for="{{orderDetail}}" wx:for-index="idx" wx:key="idx">
+              <text>{{item.title}}</text>
+              <view>
+                <text>￥</text>{{item.price}}
+                <text>×{{item.num}}</text>
+              </view>
+            </view>
+
+            <view class="food-detail">
+              <text>配送费</text>
+              <view>
+                <text>￥</text>{{deliveryPrice}}
+              </view>
+            </view>
+            <view class="food-detail">
+              <text>包装费</text>
+              <view>
+                <text>￥</text>{{bzfee}}
+              </view>
+            </view>
+             <view class="food-detail" style='margin-bottom: 30px;'>
+              <text>配送方式</text>
+              <view>
+                <radio-group name="paymethod" bindchange="radioChange">
+                    <radio value="1" checked="true"/>立即收货
+                    <radio value="0" />预约发货
+                </radio-group>
+              </view>
+            </view>
+
+            <view wx:if='{{showOrHidden}}'> class="food-detail nomt m70">
+              <text>预约时间</text>
+              <view>
+                <text>{{bzfee}}</text>
+              </view>
+            </view>
+           
+            <view class="takeBill">
+              <view class="box-left">
+                已优惠：
+                <text>￥ {{discount}}</text> 合计：
+                <text>￥ {{total-discount+deliveryPrice+bzfee}}</text>
+              </view>
+              <button class="box-right" formType="submit" disabled="{{payDisabled}}"> 微信支付 </button>
+            </view>
+          </form>
+          <!--外卖单结束 -->
+        </view>
+        <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
+          <!--堂食 -->
+          <form bindsubmit="tsSubmit" class="takeOrder">
+            <view class="address-box">
+              <view class="address-hor" hidden="{{!addressStatus}}">
+                <view>
+                  <image class='mypos' src='/images/iconfont-shouhuodizhi.png'></image>
+                </view>
+                <view class="show-address">
+                  <view class="def-address">
+                    <view class="name-tel" style='margin-top:30rpx;'>{{shop.address}}</view>
+                  </view>
+                </view>
+              </view>
+            </view>
+            <!--订单详情 -->
+            <block wx:for="{{cart}}" wx:key="{{item.id}}">
+              <view class="goods" hover-class="weui-cell_active">
+                <!--左侧图片-->
+                <view>
+                  <image src="{{item.img}}" class="good-img" />
+                </view>
+                <!--右侧说明部分-->
+                <view class="good-cont">
+                  <!--文字说明-->
+                  <view class="goods-navigator">
+                    <text>{{item.productname}}</text>
+                  </view>
+                  <view>
+                    <text style='color: #ec5151;'>X{{item.nums}}</text>
+                  </view>
+                </view>
+                <view class="good-price">
+                  <text class="price">￥{{item.productdiscountprice}}</text>
+                </view>
+              </view>
+            </block>
+            <!--订单详情 -->
+            <view class="food-detail">
+              <text>餐具数量</text>
+              <view>
+                <input type="number" value="1" placeholder="方便商家为你准备" placeholder-style="color:#999;font-size:15px;" name="peopleNum" focus="{{peapleNumFocus}}" />
+              </view>
+            </view>
+
+            <view class="food-detail">
+              <text>备注</text>
+              <view>
+                <input type="text" placeholder="口味偏好等要求" placeholder-style="color:#999;font-size:15px;" name="remark" />
+              </view>
+            </view>
+             <view class="desk">
+              <text>桌号（请扫码）</text>
+              <text>{{deskName}}</text>
+              <image bindtap='getDeskCode' class="code" src='/images/pic_code.png'></image>
+            </view>
+
+            <view class="food-detail {{idx == detail.length ? 'nobd' :''}} nomt" wx:for="{{orderDetail}}" wx:for-index="idx" wx:key="idx">
+              <text>{{item.title}}</text>
+              <view>
+                <text>￥</text>{{item.price}}
+                <text>×{{item.num}}</text>
+              </view>
+            </view>
+            <view class="food-detail nomt m70">
+              <text>支付方式</text>
+              <view>
+                <radio-group name="paymethod" bindchange="radioChange">
+                    <radio value="0" checked="true"/>微信支付
+                    <radio value="1" />现金支付
+                </radio-group>
+              </view>
+            </view>
+
+            <view class="takeBill">
+              <view class="box-left">
+                已优惠：
+                <text>￥ {{discount}}</text> 合计：
+                <text>￥ {{total-discount}}</text>
+              </view>
+              <button class="box-right" formType="submit" disabled="{{payDisabled}}"> 提交订单 </button>
+            </view>
+          </form>
+          <!--堂食 -->
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

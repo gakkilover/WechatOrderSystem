@@ -28,7 +28,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     </ul>
 </div>
 
-<form action="<%=basePath %>addGenre?genreName=''&genreDescription=''" class="form-horizontal">
+<form action="<%=basePath %>addGenre" class="form-horizontal">
 
     <h5 class="page-header alert-info" style="padding:10px; margin:0px; margin-bottom:5px;">基本信息</h5>
 	<div class="row">
@@ -36,7 +36,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
             <div class="form-group">
             	<label class="col-sm-3 control-label">种类名称</label>
                 <div class="col-sm-9">
-                	<input type="text" name="genreName" class="form-control input-sm" placeholder="请输入角色名称"/>
+                	<input type="text" id="genreName" name="genreName" class="form-control input-sm" placeholder="请输入角色名称"/>
                 </div>
             </div>
         </div>
@@ -48,7 +48,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         	<div class="form-group">
             	<label class="col-sm-3 control-label">备注</label>
                 <div class="col-sm-9">
-                	<textarea name="genreDescription"  class="form-control"></textarea>
+                	<textarea name="genreDescription"  id="genreDescription" class="form-control"></textarea>
                 </div>
             </div>
         
@@ -65,19 +65,22 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 </form>
 <script>
     function  addGenre() {
-        $.ajax({
-            url: '<%=basePath %>addGenre',
-            type: 'POST',
-            data: JSON.stringify({"genreName":"qwert","genreDescription":"时反而预付款月女"}),
-            dataType: 'json',
-            contentType: "application/json",
-            success: function () {
-
-            },
-            error: function(){
-
-            }
-        });
+        var genreName=document.getElementById("genreName").value;
+        var genreDescription=document.getElementById("genreDescription").value;
+        window.location.href="<%=basePath %>addGenre?genreName="+genreName+"&genreDescription"+genreDescription;
+        alert(${msg});
+    }
+    function checkGenreName() {
+        var genreName=document.getElementById("genreName").value;
+        if(genreName==null||genreName==""){
+            alert("种类名不能为空");
+        }
+    }
+    function checkGenreDes() {
+        var genreDescription=document.getElementById("genreDescription").value;
+        if(genreDescription==null||genreDescription==""||genreDescription==undefined){
+            alert("种类描述不能为空");
+        }
     }
 </script>
 </body>

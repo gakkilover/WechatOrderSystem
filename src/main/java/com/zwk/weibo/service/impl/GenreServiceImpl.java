@@ -27,12 +27,16 @@ public class GenreServiceImpl extends ServiceImpl<GenreDao,GenreEntity> implemen
     }
 
     @Override
-    public boolean insert(GenreEntity genreEntity) {
+    public String insertGenre(GenreEntity genreEntity) {
+        GenreEntity genre=genreDao.selectOneByName(genreEntity.getGenreName());
+        if(genre!=null){
+            return "已存在该种类";
+        }
         genreEntity.setGenreId(genreDao.getMaxId());
         genreEntity.setGenreState(Final.GENRE_ERROE_CODE);
         genreEntity.setStoreId(1L);
         genreDao.insert(genreEntity);
-        return true;
+        return "插入成功";
     }
 
     @Override

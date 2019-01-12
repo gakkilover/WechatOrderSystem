@@ -1,0 +1,117 @@
+<wxs src="../../utils/order.wxs" module="filter" />
+
+<view class="container">
+  <!-- 上部-->
+  <view class='head' style="background-image: url(http://img17.3lian.com/d/file/201701/23/9e845b5fe7c88621b4551733ed180cf2.jpg)">
+    <image class='head-logo' mode='aspectFill' src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1546920387205&di=f53f98d4dc32c68b1b4fdc5ba225810d&imgtype=0&src=http%3A%2F%2Fn.sinaimg.cn%2Fsinacn23%2F469%2Fw639h630%2F20180724%2Ffbc9-hftenhz9406357.jpg'></image>
+    <view class="shop">
+      <text class="title">格蓝迪餐饮有限公司</text>
+      <text class="desc">不知道，不了解，啵啵啵啵啵啵</text>
+    </view>
+  </view>
+  <!--搜索框部分 -->
+  <view class="search">
+    <view class="weui-search-bar__form">
+      <view class="weui-search-bar__box">
+        <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+        <input type="text" class="weui-search-bar__input" placeholder="搜索" value="{{searchInputVal}}" focus="{{searchShowed}}" bindfocus="inputTyping" />
+        <view class="weui-icon-clear" wx:if="{{searchInputVal.length > 0}}" bindtap="clearInput">
+          <icon type="clear" size="14"></icon>
+        </view>
+      </view>
+      <label class="weui-search-bar__label" hidden="{{searchShowed}}" bindtap="showInput">
+        <icon class="weui-icon-search" type="search" size="14"></icon>
+        <view class="weui-search-bar__text">搜索</view>
+      </label>
+    </view>
+    <view class="weui-search-bar__cancel-btn" hidden="{{!searchShowed}}" bindtap="hideInput">取消</view>
+    <image class="searchIcon" src='/images/star.png' bindtap='goCollect'></image>
+    <!-- <image class="searchIcon" src='/images/pin.png' ></image>-->
+    <image class="searchIcon" src='/images/xin.png' bindtap='goEval' style='margin-right:60rpx'></image>
+  </view>
+  <!--搜索结束-->
+  <view class="infor">
+     <wux-notice-bar loop content="{{notice}}" />
+  </view>
+   <!-- 消息隐藏区域 -->
+  <view class="cart {{cartShow?'cart-show':''}}">
+    <view class='cart-item' wx:for="{{cartList}}" wx:key="{{item.id}}">
+      <view class='cart-item-left'>
+        <image src="{{item.image}}"></image>
+      </view>
+      <view class='cart-item-center'>
+        <view>{{item.name}}</view>
+        <view>￥{{item.unitPrice}}</view>
+      </view>
+      <view class='cart-item-right'>{{item.nums}}</view>
+    </view>
+  </view>
+  <view class='main' >
+    <!-- 左侧分类 -->
+    <scroll-view class='main-left' scroll-y="true">
+      <view data-id='-1' class='main-left-item {{currentCateId==-1?"on":""}}' bindtap='onCateChange'>全部菜品</view>
+      <view data-id='{{item.genreId}}' wx:for="{{typeList}}" wx:key="{{item.genreId}}" bindtap='onCateChange' class='main-left-item {{currentCateId==item.genreId?"on":""}}'>
+        {{item.genreName}}</view>
+    </scroll-view>
+    <!-- 右侧内容区域 -->
+    <scroll-view class='main-right' scroll-y="true">
+      <view wx:for="{{dishList}}" wx:key="{{item.id}}" wx:for-index="index" class='main-right-item'>
+        <view class='main-right-item-photo'>
+          <image src="{{filter.imgPath(item.foodPic)}}"></image>
+        </view>
+        <view class='main-right-item-detail'>
+          <view class='name'>
+            <text>{{item.foodName}}</text>
+          </view>
+          <view class='price' style='text-decoration:line-through'>
+            <text>￥{{item.foodPrice}}</text>
+          </view>
+          <view class='price'>
+            <text>￥{{item.foodPrice}}</text>
+            <text style='float:right'>已售{{item.foodSales}}</text>
+          </view>
+        </view>
+        <view class='main-right-item-handle'>
+          <!-- 未选中商品时隐藏减号图标 -->
+          <view bindtap='onReduce' data-id="{{item.foodId}}" data-idx="{{index}}" style="{{!item.foodNum?'visibility:hidden':'visibility:visible'}}">
+            <image src='/images/reduce.png' class='icon'></image>
+          </view>
+          <!-- 未选中商品时隐藏选中数量 -->
+          <view style="{{!item.foodNum?'visibility:hidden':'visibility:visible'}}">
+            <text class='num'>{{item.foodNum}}</text>
+          </view>
+          <view wx:if="{{item.foodNum < 99}}" bindtap='onAdd' data-id="{{item.foodId}}" data-idx="{{index}}">
+            <image src='/images/add.png' class='icon'></image>
+          </view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+  <!-- 购物车列表区域 -->
+  <view class="cart {{cartShow?'cart-show':''}}">
+    <view class='cart-item' wx:for="{{cartList}}" wx:key="{{item.id}}">
+      <view class='cart-item-left'>
+        <image src="{{filter.imgPath(item.foodPic)}}"></image>
+      </view>
+      <view class='cart-item-center'>
+        <view>{{item.foodName}}</view>
+        <view>￥{{item.foodPrice}}</view>
+      </view>
+      <view class='cart-item-right'>{{item.foodNum}}</view>
+    </view>
+  </view>
+
+  <!-- 底部下单区域 -->
+  <view class='footer' catchtap='onCartToggle'>
+    <view class='footer-left'>
+      <view class='tap'>{{count}}</view>
+      <image class='icon' src='/images/cart-off.png'></image>
+    </view>
+    <view class='footer-middle'>
+      <text>￥{{total}}</text>
+    </view>
+    <view class='footer-right' catchtap='addOrder'>
+      下单
+    </view>
+  </view>
+</view>

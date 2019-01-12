@@ -1,0 +1,102 @@
+<wxs module="filter" src="../../../../utils/order.wxs"></wxs>
+<wxs src="../../../../utils/order.wxs" module="filter" />
+
+<view class="page">
+  <view class="page__bd">
+    <view class="weui-tab">
+      <view class="weui-navbar" style='background:#fff'>
+        <block wx:for="{{tabs}}" wx:key="*this">
+          <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
+            <view class="weui-navbar__title">{{item}}</view>
+          </view>
+        </block>
+        <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
+      </view>
+      <view class="weui-tab__panel">
+        <view class="weui-tab__content">
+          <!--隐藏 -->
+          <view class="order-empty" hidden="{{orderList.length>0}}">
+            <image mode='' style='width: 120px;height: 100px;margin-bottom: 20px;  ' src="/images/empty.png" />
+            <view style='width:100%;color:#999;text-align:center;padding-top:50rpx'>暂无相关订单</view>
+          </view>
+          <!--订单信息 -->
+          <scroll-view scroll-y='true' class='container'>
+            <view class='item' wx:for="{{orderList}}" wx:key="{{item.id}}">
+              <view class='item-top'>
+                <view class='left'>{{item.orderNumber}}</view>
+                <view class='right'>{{filter.orderStatus(item.status)}}</view>
+              </view>
+              <view wx:for="{{item.orderDetail}}" wx:for-item="og" wx:key="{{og.id}}" class='item-middle'>
+                <view class='left'>
+                  <image src='{{filter.imgPath(og.foodPic)}}'></image>
+                </view>
+                <view class='center-name'>{{og.foodName}}</view>
+                <view class='center-nums'>{{og.foodNum}}</view>
+                <view class='right'>{{og.foodPrice}}</view>
+              </view>
+              <view class='item-bottom'>共计{{item.orderDetail.length}}件 合计￥{{item.totalPrice}}元
+                <block wx:if="{{item.way!='到店消费'}}">
+                  （其中包装{{item.packfee}}元，配送{{item.exprfee}}元)
+                </block>
+              </view>
+              <view class='item-bottom'>
+                <!--待配送 -->
+                <view class="btn" wx:if="{{item.status==1106||item.status==1100}}">
+                  <wux-button id="{{item.id}}" size="small" block type="balanced" bind:click="refunde">申请退款</wux-button>
+                </view>
+
+                <view class="btn" wx:if="{{item.status==1104}}">
+                  <button id="{{item.id}}" class="weui-btn mini-btn" type="default" size="mini" bindtap='showDelivery'>查看物流</button>
+                  <button id="{{item.id}}" class="weui-btn mini-btn" type="default" size="mini" bindtap='refunde'>退款</button>
+                  <button id="{{item.id}}" class="weui-btn mini-btn" type="default" size="mini" bindtap='deliveryGood' data-orderid='{{item.orderNumber}}'>确认收货</button>
+                </view>
+                <view class="btn" wx:if="{{item.status==1101}}">
+                  <wux-button id="{{item.id}}" size="small" block type="balanced" bind:click="goPay" data-order='{{item.orderNumber}}' data-total='{{item.totalPrice}}'>去付款</wux-button>
+                  <wux-button id="{{item.id}}" size="small" block type="balanced" bind:click="goDelete" style='margin-left:5px'>删除</wux-button>
+                </view>
+                <view class="item-bottom" wx:if="{{item.status==1105}}">
+                  <view class="comment1-description1" style="display:flex;flex-direction:row;justify-content: space-between;">
+                    <radio-group class="radio-group" bindchange="radioChange">
+                      <radio value="1" checked="true " />好评
+                      <radio value="0" />中评
+                      <radio value="-1" />差评
+                    </radio-group>
+                  </view>
+
+                  <wux-cell-group>
+                    <wux-cell title="口味" hover-class="none">
+                      <wux-rater slot="footer" default-value="{{ 5 }}" active-color="#33cd5f" bind:change="changeFlavorColor"/>
+                    </wux-cell>
+                    <wux-cell title="服务" hover-class="none">
+                      <wux-rater slot="footer" default-value="{{ 5 }}" active-color="#33cd5f" bind:change="changeServiceColor"/>
+                    </wux-cell>
+                    <wux-cell title="送货" hover-class="none">
+                      <wux-rater slot="footer" default-value="{{ 5 }}" active-color="#33cd5f" bind:change="changeDeliveryColor"/>
+                    </wux-cell>
+                  </wux-cell-group>
+            
+                  <wux-cell-group>
+                    <wux-cell hover-class="none">
+                      <wux-textarea hasCount rows="3" cursorSpacing="80" placeholder="请输入点评信息" bind:blur="bindInputContent" />
+                    </wux-cell>
+                  </wux-cell-group>
+                  <wux-cell-group wx:if="{{item.status==1105}}">
+                        <wux-button id="{{item.id}}" block type="balanced" bind:click="evaluate">提交</wux-button>
+                  </wux-cell-group>
+                </view>
+              </view>
+            </view>
+            <view class="weui-loadmore" hidden='{{!searchLoading}}'>
+              <view class="weui-loading"></view>
+              <view class="weui-loadmore__tips">正在加载</view>
+            </view>
+            <view class="weui-loadmore weui-loadmore_line" hidden="{{!searchLoadingComplete}}">
+              <view class="weui-loadmore__tips weui-loadmore__tips_in-line">没有更多数据</view>
+            </view>
+          </scroll-view>
+        </view>
+        <!--一个tab结束 -->
+      </view>
+    </view>
+  </view>
+</view>

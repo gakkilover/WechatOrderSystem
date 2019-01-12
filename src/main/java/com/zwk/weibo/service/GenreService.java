@@ -16,7 +16,7 @@ public interface GenreService extends IService<GenreEntity> {
 
     List<GenreEntity> getGenreList();
 
-    boolean insert(GenreEntity genreEntity);
+    String insertGenre(GenreEntity genreEntity);
 
     List<GenreEntity> selectGenreByName(String genreName);
 

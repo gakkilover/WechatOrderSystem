@@ -1,0 +1,85 @@
+<wxs module="filter" src="../../utils/order.wxs"></wxs>
+<wxs src="../../utils/order.wxs" module="filter" />
+<view class="container">
+  <!--搜索框部分 -->
+ <wux-search-bar clear bind:blur="searchFood" bind:change="getInput" bind:cancel="onCancel"/>
+  <!--搜索结束-->
+   <!-- 消息隐藏区域 -->
+  <view class="cart {{cartShow?'cart-show':''}}">
+    <view class='cart-item' wx:for="{{cartList}}" wx:key="{{item.id}}">
+      <view class='cart-item-left'>
+        <image src="{{item.img}}"></image>
+      </view>
+      <view class='cart-item-center'>
+        <view>{{item.foodName}}</view>
+        <view>￥{{item.foodPrice}}</view>
+      </view>
+      <view class='cart-item-right'>{{item.foodNum}}</view>
+    </view>
+  </view>
+  <view class='main' >
+    <view class="weui-tab__content" style='width:100%;height:1280rpx;' hidden="{{ dishList.length !== 0 }}">
+      <wux-prompt visible="{{ dishList.length === 0 }}"title="{{ msg }}" />
+    </view>
+    <!-- 右侧内容区域 -->
+    <scroll-view wx:if="{{dishList.length !== 0}}" class='main-right' scroll-y="true">
+      <view wx:for="{{dishList}}" wx:key="{{item.id}}" class='main-right-item'>
+        <view class='main-right-item-photo'>
+          <image src="{{filter.imgPath(item.foodPic)}}"></image>
+          <!-- <view wx:if="{{item.stock < 1}}" class="sale-out">已售罄</view> -->
+        </view>
+        <view class='main-right-item-detail'>
+          <view class='name'>
+            <text>{{item.foodName}}</text>
+          </view>
+          <view class='price' style='text-decoration:line-through'>
+            <text>￥{{item.foodPrice}}</text>
+          </view>
+          <view class='price'>
+            <text>￥{{item.foodPrice}}</text>
+          </view>
+        </view>
+        <view class='main-right-item-handle'>
+          <!-- 未选中商品时隐藏减号图标 -->
+          <view bindtap='onReduce' data-id="{{item.id}}" data-idx="{{index}}" style="{{!item.foodNum?'visibility:hidden':'visibility:visible'}}">
+            <image src='/images/reduce.png' class='icon'></image>
+          </view>
+          <!-- 未选中商品时隐藏选中数量 -->
+          <view style="{{!item.foodNum?'visibility:hidden':'visibility:visible'}}">
+            <text class='num'>{{item.foodNum}}</text>
+          </view>
+          <view wx:if="{{item.foodNum < 99}}" bindtap='onAdd' data-id="{{item.id}}" data-idx="{{index}}">
+            <image src='/images/add.png' class='icon'></image>
+          </view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+  <!-- 购物车列表区域 -->
+  <view class="cart {{cartShow?'cart-show':''}}">
+    <view class='cart-item' wx:for="{{cartList}}" wx:key="{{item.id}}">
+      <view class='cart-item-left'>
+        <image src="{{filter.imgPath(item.foodPic)}}"></image>
+      </view>
+      <view class='cart-item-center'>
+        <view>{{item.foodName}}</view>
+        <view>￥{{item.foodPrice}}</view>
+      </view>
+      <view class='cart-item-right'>{{item.foodNum}}</view>
+    </view>
+  </view>
+
+  <!-- 底部下单区域 -->
+  <view class='footer' catchtap='onCartToggle'>
+    <view class='footer-left'>
+      <view class='tap'>{{count}}</view>
+      <image class='icon' src='/images/cart-off.png'></image>
+    </view>
+    <view class='footer-middle'>
+      <text>￥{{total}}</text>
+    </view>
+    <view class='footer-right' catchtap='addOrder'>
+      下单
+    </view>
+  </view>
+</view>

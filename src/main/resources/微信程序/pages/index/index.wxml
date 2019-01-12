@@ -1,0 +1,117 @@
+<!--上部 -->
+<view class="container">
+  <!-- 上部-->
+  <view class='head' style="background-image: url({{shop.shopbg}})">
+    <image class='head-logo' mode='aspectFill' src='{{shop.shoplogo}}'></image>
+    <view class="shop">
+      <text class="title">{{shop.shopname}}</text>
+      <text class="desc">{{shop.sdesc}}</text>
+    </view>
+  </view>
+  <!--搜索框部分 -->
+  <view class="search">
+    <view class="weui-search-bar__form">
+      <view class="weui-search-bar__box">
+        <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+        <input type="text" class="weui-search-bar__input" placeholder="搜索" value="{{searchInputVal}}" focus="{{searchShowed}}" bindinput="inputTyping" />
+        <view class="weui-icon-clear" wx:if="{{searchInputVal.length > 0}}" bindtap="clearInput">
+          <icon type="clear" size="14"></icon>
+        </view>
+      </view>
+      <label class="weui-search-bar__label" hidden="{{searchShowed}}" bindtap="showInput">
+        <icon class="weui-icon-search" type="search" size="14"></icon>
+        <view class="weui-search-bar__text">搜索</view>
+      </label>
+    </view>
+    <view class="weui-search-bar__cancel-btn" hidden="{{!searchShowed}}" bindtap="hideInput">取消</view>
+    <image class="searchIcon" src='/images/star.png'></image>
+    <image class="searchIcon" src='/images/pin.png'></image>
+    <image class="searchIcon" src='/images/xin.png' style='margin-right:60rpx'></image>
+  </view>
+  <!--搜索结束-->
+  <view class="infor">
+    <text>{{rule}}</text>
+  </view>
+</view>
+<!-- 点餐 -->
+<view class="book-box">
+
+  <view class="swiper-vertical-tab">
+    <view data-id='0' class='main-left-item {{currentCateId==0?"on":""}}' bindtap='chooseType'>全部菜品</view>
+    <view data-id='{{item.id}}' wx:for="{{cateList}}" wx:key="{{index}}" class="{{currentCateId==item.id? 'on' : ''}}" bindtap="chooseType" data-index="{{index}}">{{item.typename}}</view>
+  </view>
+
+  <scroll-view class="swiper-vertical-box" scroll-y="true" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" enable-back-to-top="true">
+
+    <view class="vertical-list">
+      <view class="type-detail">
+        <view wx:for="{{menuList}}" wx:key="jdx" wx:for-index="jdx">
+          <view class="detail-img">
+            <image src="{{item.img}}"></image>
+            <view wx:if="{{item.stock<1}}" class="sale-out">已售罄</view>
+          </view>
+
+          <view class="book-detail">
+            <text>{{item.productname}}</text>
+            <view>
+              <text class="money">￥{{item.productprice}}{{item.stock}}</text>
+               <view class='main-right-item-handle'>
+          <!-- 未选中商品时隐藏减号图标 -->
+          <view bindtap='onReduce' data-id="{{item.id}}" data-idx="{{index}}" style="{{!item.nums?'visibility:hidden':'visibility:visible'}}">
+            <image src='/images/reduce.png' class='icon'></image>
+          </view>
+          <!-- 未选中商品时隐藏选中数量 -->
+          <view style="{{!item.nums?'visibility:hidden':'visibility:visible'}}">
+            <text class='num'>{{item.nums}}</text>
+          </view>
+          <view bindtap='onAdd' data-id="{{item.id}}" data-idx="{{index}}">
+            <image src='/images/add.png' class='icon'></image>
+          </view>
+        </view>
+            </view>
+          </view>
+
+        </view>
+      </view>
+
+    </view>
+  </scroll-view>
+
+</view>
+
+<!-- 下单 -->
+<view class="Bill-layer" wx:if="{{showCart && sumNum > 0}}" bindtap="hiddenLayer"></view>
+<view class="Bill">
+  <block wx:if="{{showCart && sumNum > 0}}">
+    <view class="clearCart">
+      <button bindtap="clearCart">清空购物车</button>
+    </view>
+
+    <view class="book-result-detail" wx:for="{{list}}" wx:for-index="idx">
+
+      <view wx:for="{{item.goods}}" wx:for-index="jdx" wx:key="jdx" wx:if="{{item.num > 0}}">
+        <text>{{item.title}}</text>
+
+        <view class="operations">
+          <button class="reduce" data-num="{{item.num}}" bindtap="reduceFoodNum" wx:if="{{item.num > 0}}" data-idx="{{idx}}" data-jdx="{{jdx}}" data-price="{{item.price}}" data-title="{{item.title}}"></button>
+
+          <text wx:if="{{item.num > 0}}">{{item.num}}</text>
+          <button class="add" data-num="{{item.num}}" bindtap="addFoodNum" data-idx="{{idx}}" data-jdx="{{jdx}}" data-price="{{item.price}}" data-title="{{item.title}}"></button>
+        </view>
+
+      </view>
+
+    </view>
+  </block>
+
+  <view class="takeBill {{showCart ? '' : 'bdt'}}">
+    <view class="box-left">
+      <view class="tips" bindtap="seeDetailCart">
+        <view>{{sumNum}}</view>
+      </view>
+      <view class="money">￥ {{sumMon}}</view>
+    </view>
+
+    <button class="box-right" disabled="{{submitOrderDisabled}}" bindtap="placeOrder"> 下单 </button>
+  </view>
+</view>

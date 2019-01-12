@@ -21,7 +21,7 @@ import java.util.List;
 @Mapper
 public interface OrderDao extends BaseMapper<OrderInfoEntity> {
 
-    @Select(" SELECT * FROM ORDERINFO O LEFT JOIN  RECEIVE_ADDRESS R ON O.ADDRESS_ID=R.ADDRESS_ID where 1=1 ${sql} ")
+    @Select(" SELECT * FROM ORDERINFO O LEFT JOIN  RECEIVE_ADDRESS R ON O.ADDRESS_ID=R.ADDRESS_ID where 1=1 ${sql} ORDER BY ORDER_ID DESC")
      List<OrderVO> orderList(@Param("sql") String sql);
 
     @Select(" SELECT MAX(ORDER_ID)+1 FROM ORDERINFO  WHERE 1=1 ")
@@ -32,7 +32,9 @@ public interface OrderDao extends BaseMapper<OrderInfoEntity> {
 
     @Select(" SELECT * FROM ORDERINFO WHERE ORDER_NUMBER=#{orderNumber} ")
     OrderInfoEntity getOrderByOrderNumber(Long orderNumber);
-
-    @Select(" SELECT * FROM ORDERINFO WHERE USER_ID=#{userId} ")
-    List<OrderBO> orderLists(String userId);
+//
+    @Select(" SELECT * FROM ORDERINFO WHERE USER_ID=#{userId} AND STATUS LIKE CONCAT('%',#{status},'%')")
+    List<OrderBO> orderLists(@Param("userId") String userId,@Param("status") String status);
+//    @Select(" SELECT * FROM ORDERINFO WHERE USER_ID=#{userId} ")
+//    List<OrderBO> orderLists(String userId);
 }
