@@ -9,14 +9,17 @@ import org.apache.ibatis.annotations.Param;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.SessionAttribute;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import java.util.List;
 
 /**
@@ -25,10 +28,12 @@ import java.util.List;
  * @ Date       ：Created in 2018-12-25 16:19
  * @ Description：
  */
+@RequestMapping(value = "/user")
 @Controller
 public class UserController {
 
     private Logger logger=LoggerFactory.getLogger(UserController.class);
+
 
     @Autowired
     private UserService userService;
@@ -43,11 +48,7 @@ public class UserController {
 
     @RequestMapping("/loginValidate")
     public String loginValidate(Model model, @Param("nickName")String nickName, @Param("password")String password){
-//        HttpServletRequest request = ((ServletRequestAttributes)RequestContextHolder.getRequestAttributes()).getRequest();
-//        String nickName=(String)request.getSession().getAttribute("nickName");
-//        String password=(String)request.getSession().getAttribute("password");
-//        String nickName=SessionUtil.getSessionInfo("nickName");
-//        String password=SessionUtil.getSessionInfo("password");
+
         if(!userService.loginValidate(nickName,password)){
             model.addAttribute("msg","用户名或者密码错误");
             return "login";

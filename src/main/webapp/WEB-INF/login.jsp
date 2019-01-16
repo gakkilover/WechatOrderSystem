@@ -88,7 +88,7 @@
 												<div class="clearfix" >
 
 
-													<button type="button" id="check-btn" class="verify-btn" style="width: 100px;height: 40px">登录</button>
+													<button type="submit" id="check-btn" class="verify-btn" style="width: 100px;height: 40px">登录</button>
 													<button type="button"
 															class="width-35 pull-right btn btn-sm btn-primary" style="margin-top: 10px;;height: 40px" onclick="register()">
 														<i class="icon-key"></i> 立即注册
@@ -134,15 +134,27 @@
         ready : function() {
         },
         success : function() {
-            var nickName=document.getElementById("nickName").value;
-            var password=document.getElementById("password").value;
-            <%
-            	String nickName=request.getParameter("nickName");
-            	String password=request.getParameter("password");
-            	request.getSession().setAttribute("nickName",nickName);
-            	request.getSession().setAttribute("password",password);
-            %>
-            window.location.href="loginValidate?nickName="+nickName+"&password="+password;
+            //this.document.form().submit();
+            var j$ = jQuery.noConflict();//注册jQuery
+            j$.ajax({
+                type:"post",
+                url:"user/loginValidate",
+                data:{
+                    nickName : j$("#nickName").val(),
+                    password : j$("#password").val()
+                },
+            success:function(){
+                 //   alert("suceee!!!");
+                // if(ret == 1) {
+                //     alert("提交审核成功!");
+                //     }else{
+                //     alert(ret);
+                //
+                //     }
+                // window.returnValue=true;
+                // window.close();
+                }
+            });
         },
         error : function() {
             alert('验证码不正确！');

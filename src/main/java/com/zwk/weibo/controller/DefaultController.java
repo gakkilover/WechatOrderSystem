@@ -1,5 +1,6 @@
 package com.zwk.weibo.controller;
 
+import com.zwk.weibo.utils.CacheData;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -13,8 +14,15 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class DefaultController {
 
     @RequestMapping("/bootm")
-
     public String defaultIndex(){
         return "bootm";
     }
+
+    @RequestMapping("/refreshCache")
+    public String refreshCache(){
+        CacheData cacheData=new CacheData();
+        cacheData.refreshCache();
+        return "";
+    }
+
 }

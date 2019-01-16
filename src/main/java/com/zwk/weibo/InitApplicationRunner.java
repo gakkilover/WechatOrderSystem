@@ -1,7 +1,9 @@
 package com.zwk.weibo;
 
+
 import com.zwk.weibo.service.FoodService;
 import com.zwk.weibo.service.UserService;
+import com.zwk.weibo.utils.CacheData;
 import com.zwk.weibo.utils.CacheUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
@@ -24,18 +26,11 @@ public class InitApplicationRunner implements ApplicationRunner {
 
     @Autowired
     private FoodService foodService;
-
     @Override
     public void run(ApplicationArguments args) throws Exception {
-        initCache();
+        CacheData cacheData=new CacheData();
+        cacheData.refreshCache();
     }
 
-    //初始化缓存
-    private void initCache() {
-        List userList=userService.selectAllUser();
-        CacheUtil.set(CacheUtil.Table.USER.getKey(),userList);
 
-        List foodList=foodService.selectAllFood();
-        CacheUtil.set(CacheUtil.Table.FOOD.getKey(),foodList);
-    }
 }
