@@ -28,7 +28,6 @@ import java.util.List;
  * @ Date       ：Created in 2018-12-25 16:19
  * @ Description：
  */
-@RequestMapping(value = "/user")
 @Controller
 public class UserController {
 

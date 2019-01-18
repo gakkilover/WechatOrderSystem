@@ -1,9 +1,12 @@
 package com.zwk.weibo.exception;
 
+import com.alibaba.fastjson.JSONException;
 import com.zwk.weibo.constant.Final;
 import org.springframework.dao.DuplicateKeyException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.*;
+
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 @ControllerAdvice
@@ -64,6 +67,47 @@ public class BaseException {
         return map;
     }
 
+    /**
+     * 文件读取异常
+     * @param ex
+     * @return
+     */
+    @ResponseBody
+    @ExceptionHandler(value = IOException.class)
+    public Map ioExceptionHandler(IOException ex){
+        Map map=new HashMap();
+        map.put("code", Final.IO_ERROE_CODE);
+        map.put("msg", "怎么回事？小老弟，IO异常！");
+        return map;
+    }
+
+    /**
+     * 类型转换
+     * @param ex
+     * @return
+     */
+    @ResponseBody
+    @ExceptionHandler(value = ClassCastException.class)
+    public Map castExceptionHandler(ClassCastException ex){
+        Map map=new HashMap();
+        map.put("code", Final.IO_ERROE_CODE);
+        map.put("msg", "怎么回事？小老弟，IO异常！");
+        return map;
+    }
+
+    /**
+     * JSON类型转换
+     * @param ex
+     * @return
+     */
+    @ResponseBody
+    @ExceptionHandler(value = JSONException.class)
+    public Map castExceptionHandler(JSONException ex){
+        Map map=new HashMap();
+        map.put("code", Final.JSON_ERROE_CODE);
+        map.put("msg", "怎么回事？小老弟，JSON异常！");
+        return map;
+    }
 
 
 }

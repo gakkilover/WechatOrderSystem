@@ -1,6 +1,130 @@
-2019-01-04 15:43:11,980 [INFO] [main] o.s.boot.test.context.SpringBootTestContextBootstrapper [AbstractTestContextBootstrapper.java : 308] Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.zwk.weibo.demo.DemoApplicationTests], using SpringBootContextLoader
-2019-01-04 15:43:12,006 [INFO] [main] o.springframework.test.context.support.AbstractContextLoader [AbstractContextLoader.java : 264] Could not detect default resource locations for test class [com.zwk.weibo.demo.DemoApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
-2019-01-04 15:43:12,008 [INFO] [main] o.s.test.context.support.AnnotationConfigContextLoaderUtils [AnnotationConfigContextLoaderUtils.java : 83] Could not detect default configuration classes for test class [com.zwk.weibo.demo.DemoApplicationTests]: DemoApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2019-01-04 15:43:12,188 [INFO] [main] o.s.boot.test.context.SpringBootTestContextBootstrapper [SpringBootTestContextBootstrapper.java : 247] Found @SpringBootConfiguration com.zwk.weibo.ApiApplication for test class com.zwk.weibo.demo.DemoApplicationTests
-2019-01-04 15:43:12,361 [INFO] [main] o.s.boot.test.context.SpringBootTestContextBootstrapper [AbstractTestContextBootstrapper.java : 248] Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
-2019-01-04 15:43:12,394 [INFO] [main] o.s.boot.test.context.SpringBootTestContextBootstrapper [AbstractTestContextBootstrapper.java : 177] Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@5d0a1059, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@485966cc, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@1de76cc7, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@54bff557, org.springframework.test.context.support.DirtiesContextTestExecutionListener@593aaf41, org.springframework.test.context.transaction.TransactionalTestExecutionListener@5a56cdac, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@7c711375, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@57cf54e1, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@5b03b9fe, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@37d4349f, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@434a63ab, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@6e0f5f7f]
+2019-01-16 15:13:35,251 [ERROR] [restartedMain] org.springframework.boot.SpringApplication [SpringApplication.java : 858] Application run failed
+java.lang.IllegalStateException: Failed to load property source from location 'classpath:/application-dev.yml'
+	at org.springframework.boot.context.config.ConfigFileApplicationListener$Loader.load(ConfigFileApplicationListener.java:554)
+	at org.springframework.boot.context.config.ConfigFileApplicationListener$Loader.loadForFileExtension(ConfigFileApplicationListener.java:488)
+	at org.springframework.boot.context.config.ConfigFileApplicationListener$Loader.load(ConfigFileApplicationListener.java:467)
+	at org.springframework.boot.context.config.ConfigFileApplicationListener$Loader.lambda$null$6(ConfigFileApplicationListener.java:448)
+	at java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.context.config.ConfigFileApplicationListener$Loader.lambda$load$7(ConfigFileApplicationListener.java:447)
+	at java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.context.config.ConfigFileApplicationListener$Loader.load(ConfigFileApplicationListener.java:444)
+	at org.springframework.boot.context.config.ConfigFileApplicationListener$Loader.load(ConfigFileApplicationListener.java:332)
+	at org.springframework.boot.context.config.ConfigFileApplicationListener.addPropertySources(ConfigFileApplicationListener.java:207)
+	at org.springframework.boot.context.config.ConfigFileApplicationListener.postProcessEnvironment(ConfigFileApplicationListener.java:190)
+	at org.springframework.boot.context.config.ConfigFileApplicationListener.onApplicationEnvironmentPreparedEvent(ConfigFileApplicationListener.java:177)
+	at org.springframework.boot.context.config.ConfigFileApplicationListener.onApplicationEvent(ConfigFileApplicationListener.java:163)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:127)
+	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:75)
+	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:54)
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:347)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:306)
+	at com.zwk.weibo.ApiApplication.main(ApiApplication.java:16)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.yaml.snakeyaml.parser.ParserException: while parsing a block mapping
+ in 'reader', line 4, column 3:
+      datasource:
+      ^
+expected <block end>, but found '<block mapping start>'
+ in 'reader', line 34, column 5:
+        application:
+        ^
+
+	at org.yaml.snakeyaml.parser.ParserImpl$ParseBlockMappingKey.produce(ParserImpl.java:572)
+	at org.yaml.snakeyaml.parser.ParserImpl.peekEvent(ParserImpl.java:158)
+	at org.yaml.snakeyaml.parser.ParserImpl.checkEvent(ParserImpl.java:148)
+	at org.yaml.snakeyaml.composer.Composer.composeMappingNode(Composer.java:214)
+	at org.yaml.snakeyaml.composer.Composer.composeNode(Composer.java:144)
+	at org.yaml.snakeyaml.composer.Composer.composeValueNode(Composer.java:236)
+	at org.yaml.snakeyaml.composer.Composer.composeMappingChildren(Composer.java:227)
+	at org.yaml.snakeyaml.composer.Composer.composeMappingNode(Composer.java:215)
+	at org.yaml.snakeyaml.composer.Composer.composeNode(Composer.java:144)
+	at org.yaml.snakeyaml.composer.Composer.getNode(Composer.java:85)
+	at org.yaml.snakeyaml.constructor.BaseConstructor.getData(BaseConstructor.java:123)
+	at org.yaml.snakeyaml.Yaml$1.next(Yaml.java:547)
+	at org.springframework.beans.factory.config.YamlProcessor.process(YamlProcessor.java:161)
+	at org.springframework.beans.factory.config.YamlProcessor.process(YamlProcessor.java:134)
+	at org.springframework.boot.env.OriginTrackedYamlLoader.load(OriginTrackedYamlLoader.java:75)
+	at org.springframework.boot.env.YamlPropertySourceLoader.load(YamlPropertySourceLoader.java:50)
+	at org.springframework.boot.context.config.ConfigFileApplicationListener$Loader.loadDocuments(ConfigFileApplicationListener.java:572)
+	at org.springframework.boot.context.config.ConfigFileApplicationListener$Loader.load(ConfigFileApplicationListener.java:526)
+	... 26 common frames omitted
+2019-01-16 15:14:57,323 [ERROR] [restartedMain] org.springframework.boot.SpringApplication [SpringApplication.java : 858] Application run failed
+java.lang.IllegalStateException: Failed to load property source from location 'classpath:/application-dev.yml'
+	at org.springframework.boot.context.config.ConfigFileApplicationListener$Loader.load(ConfigFileApplicationListener.java:554)
+	at org.springframework.boot.context.config.ConfigFileApplicationListener$Loader.loadForFileExtension(ConfigFileApplicationListener.java:488)
+	at org.springframework.boot.context.config.ConfigFileApplicationListener$Loader.load(ConfigFileApplicationListener.java:467)
+	at org.springframework.boot.context.config.ConfigFileApplicationListener$Loader.lambda$null$6(ConfigFileApplicationListener.java:448)
+	at java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.context.config.ConfigFileApplicationListener$Loader.lambda$load$7(ConfigFileApplicationListener.java:447)
+	at java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.context.config.ConfigFileApplicationListener$Loader.load(ConfigFileApplicationListener.java:444)
+	at org.springframework.boot.context.config.ConfigFileApplicationListener$Loader.load(ConfigFileApplicationListener.java:332)
+	at org.springframework.boot.context.config.ConfigFileApplicationListener.addPropertySources(ConfigFileApplicationListener.java:207)
+	at org.springframework.boot.context.config.ConfigFileApplicationListener.postProcessEnvironment(ConfigFileApplicationListener.java:190)
+	at org.springframework.boot.context.config.ConfigFileApplicationListener.onApplicationEnvironmentPreparedEvent(ConfigFileApplicationListener.java:177)
+	at org.springframework.boot.context.config.ConfigFileApplicationListener.onApplicationEvent(ConfigFileApplicationListener.java:163)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:127)
+	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:75)
+	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:54)
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:347)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:306)
+	at com.zwk.weibo.ApiApplication.main(ApiApplication.java:16)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.yaml.snakeyaml.parser.ParserException: while parsing a block mapping
+ in 'reader', line 4, column 3:
+      datasource:
+      ^
+expected <block end>, but found '<block mapping start>'
+ in 'reader', line 34, column 5:
+        application:
+        ^
+
+	at org.yaml.snakeyaml.parser.ParserImpl$ParseBlockMappingKey.produce(ParserImpl.java:572)
+	at org.yaml.snakeyaml.parser.ParserImpl.peekEvent(ParserImpl.java:158)
+	at org.yaml.snakeyaml.parser.ParserImpl.checkEvent(ParserImpl.java:148)
+	at org.yaml.snakeyaml.composer.Composer.composeMappingNode(Composer.java:214)
+	at org.yaml.snakeyaml.composer.Composer.composeNode(Composer.java:144)
+	at org.yaml.snakeyaml.composer.Composer.composeValueNode(Composer.java:236)
+	at org.yaml.snakeyaml.composer.Composer.composeMappingChildren(Composer.java:227)
+	at org.yaml.snakeyaml.composer.Composer.composeMappingNode(Composer.java:215)
+	at org.yaml.snakeyaml.composer.Composer.composeNode(Composer.java:144)
+	at org.yaml.snakeyaml.composer.Composer.getNode(Composer.java:85)
+	at org.yaml.snakeyaml.constructor.BaseConstructor.getData(BaseConstructor.java:123)
+	at org.yaml.snakeyaml.Yaml$1.next(Yaml.java:547)
+	at org.springframework.beans.factory.config.YamlProcessor.process(YamlProcessor.java:161)
+	at org.springframework.beans.factory.config.YamlProcessor.process(YamlProcessor.java:134)
+	at org.springframework.boot.env.OriginTrackedYamlLoader.load(OriginTrackedYamlLoader.java:75)
+	at org.springframework.boot.env.YamlPropertySourceLoader.load(YamlPropertySourceLoader.java:50)
+	at org.springframework.boot.context.config.ConfigFileApplicationListener$Loader.loadDocuments(ConfigFileApplicationListener.java:572)
+	at org.springframework.boot.context.config.ConfigFileApplicationListener$Loader.load(ConfigFileApplicationListener.java:526)
+	... 26 common frames omitted
+2019-01-16 17:12:04,381 [INFO] [main] o.s.boot.test.context.SpringBootTestContextBootstrapper [AbstractTestContextBootstrapper.java : 308] Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.zwk.weibo.demo.FactTest], using SpringBootContextLoader
+2019-01-16 17:12:04,429 [INFO] [main] o.springframework.test.context.support.AbstractContextLoader [AbstractContextLoader.java : 264] Could not detect default resource locations for test class [com.zwk.weibo.demo.FactTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2019-01-16 17:12:04,995 [INFO] [main] o.s.boot.test.context.SpringBootTestContextBootstrapper [AbstractTestContextBootstrapper.java : 248] Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2019-01-16 17:12:05,037 [INFO] [main] o.s.boot.test.context.SpringBootTestContextBootstrapper [AbstractTestContextBootstrapper.java : 177] Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@587e5365, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@22fcf7ab, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@2de23121, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@63475ace, org.springframework.test.context.support.DirtiesContextTestExecutionListener@4988d8b8, org.springframework.test.context.transaction.TransactionalTestExecutionListener@c0c2f8d, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@305b7c14, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@6913c1fb, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@66d18979, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@bccb269, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@609cd4d8, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@17f7cd29]
+2019-01-16 17:12:21,429 [INFO] [main] o.s.boot.test.context.SpringBootTestContextBootstrapper [AbstractTestContextBootstrapper.java : 308] Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.zwk.weibo.demo.FactTest], using SpringBootContextLoader
+2019-01-16 17:12:21,479 [INFO] [main] o.springframework.test.context.support.AbstractContextLoader [AbstractContextLoader.java : 264] Could not detect default resource locations for test class [com.zwk.weibo.demo.FactTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2019-01-16 17:12:21,992 [INFO] [main] o.s.boot.test.context.SpringBootTestContextBootstrapper [AbstractTestContextBootstrapper.java : 248] Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2019-01-16 17:12:22,040 [INFO] [main] o.s.boot.test.context.SpringBootTestContextBootstrapper [AbstractTestContextBootstrapper.java : 177] Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@65a15628, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@2e6a5539, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@3fc9504b, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@6d025197, org.springframework.test.context.support.DirtiesContextTestExecutionListener@27d4a09, org.springframework.test.context.transaction.TransactionalTestExecutionListener@7e4204e2, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@b7c4869, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@740d2e78, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@1c481ff2, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@72437d8d, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@1b955cac, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@676cf48]
+2019-01-16 17:14:14,544 [INFO] [main] o.s.boot.test.context.SpringBootTestContextBootstrapper [AbstractTestContextBootstrapper.java : 308] Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.zwk.weibo.demo.FactTest], using SpringBootContextLoader
+2019-01-16 17:14:14,558 [INFO] [main] o.springframework.test.context.support.AbstractContextLoader [AbstractContextLoader.java : 264] Could not detect default resource locations for test class [com.zwk.weibo.demo.FactTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2019-01-16 17:14:15,619 [INFO] [main] o.s.boot.test.context.SpringBootTestContextBootstrapper [AbstractTestContextBootstrapper.java : 248] Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2019-01-16 17:14:15,663 [INFO] [main] o.s.boot.test.context.SpringBootTestContextBootstrapper [AbstractTestContextBootstrapper.java : 177] Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@79d8407f, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@5fbe4146, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@1e66f1f5, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@4e50c791, org.springframework.test.context.support.DirtiesContextTestExecutionListener@7530ad9c, org.springframework.test.context.transaction.TransactionalTestExecutionListener@58a9760d, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@71e9ddb4, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@394df057, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@4961f6af, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@5aebe890, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@65d09a04, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@33c911a1]
+2019-01-16 17:17:36,515 [INFO] [main] o.s.boot.test.context.SpringBootTestContextBootstrapper [AbstractTestContextBootstrapper.java : 308] Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.zwk.weibo.demo.FactTest], using SpringBootContextLoader
+2019-01-16 17:17:36,540 [INFO] [main] o.springframework.test.context.support.AbstractContextLoader [AbstractContextLoader.java : 264] Could not detect default resource locations for test class [com.zwk.weibo.demo.FactTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2019-01-16 17:17:37,069 [INFO] [main] o.s.boot.test.context.SpringBootTestContextBootstrapper [AbstractTestContextBootstrapper.java : 248] Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2019-01-16 17:17:37,159 [INFO] [main] o.s.boot.test.context.SpringBootTestContextBootstrapper [AbstractTestContextBootstrapper.java : 177] Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@40db2a24, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@10cf09e8, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@1921ad94, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@ee86bcb, org.springframework.test.context.support.DirtiesContextTestExecutionListener@177bea38, org.springframework.test.context.transaction.TransactionalTestExecutionListener@7f132176, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@6bca7e0d, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@2631f68c, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@6ed3f258, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@8ad6665, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@30af5b6b, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@19835e64]

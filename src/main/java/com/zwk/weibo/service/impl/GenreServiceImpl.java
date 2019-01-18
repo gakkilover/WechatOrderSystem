@@ -5,7 +5,9 @@ import com.zwk.weibo.constant.Final;
 import com.zwk.weibo.dao.GenreDao;
 import com.zwk.weibo.entity.GenreEntity;
 import com.zwk.weibo.service.GenreService;
+import com.zwk.weibo.utils.RedisUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.connection.RedisConnectionFactory;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -18,6 +20,13 @@ import java.util.List;
  */
 @Service("genreService")
 public class GenreServiceImpl extends ServiceImpl<GenreDao,GenreEntity> implements GenreService {
+
+
+    @Autowired
+    private RedisConnectionFactory factory;
+
+    @Autowired
+    private RedisUtils redis;
     @Autowired
     private GenreDao genreDao;
 

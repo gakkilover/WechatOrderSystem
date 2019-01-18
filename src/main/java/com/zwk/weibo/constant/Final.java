@@ -12,9 +12,24 @@ public final class Final {
     public final static Integer EXIST_ERROE_CODE=1001;
 
     /**
-     * 数据库已存在记录
+     * 空指针
      */
     public final static Integer NULL_ERROE_CODE=1002;
+
+    /**
+     * 文件读取异常
+     */
+    public final static String IO_ERROE_CODE="1003";
+
+    /**
+     * 类型转换异常
+     */
+    public final static String CAST_ERROE_CODE="1004";
+
+    /**
+     * JSON异常
+     */
+    public final static String JSON_ERROE_CODE="1005";
 
     /**
      * 类别默认状态
