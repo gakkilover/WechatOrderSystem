@@ -2,6 +2,7 @@ package com.zwk.weibo.config;
 
 import org.quartz.JobExecutionContext;
 import org.quartz.JobExecutionException;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.quartz.QuartzJobBean;
 
 import java.util.Date;
@@ -14,8 +15,12 @@ import java.util.Date;
  */
 public class TestSquartz extends QuartzJobBean {
 
+    @Autowired
+    private MqTestSender sender;
+
     @Override
     protected void executeInternal(JobExecutionContext jobExecutionContext) throws JobExecutionException {
         System.out.println("quartz task "+new Date());
+        sender.send();
     }
 }

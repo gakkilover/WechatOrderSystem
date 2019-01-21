@@ -38,6 +38,14 @@ spring:
           max-idle: 20
           max-wait: -1
 
+  # RabbitMQ 配置
+  rabbitmq:
+    host: 192.168.225.128
+    port: 5672
+    username: zwk
+    password: zwk@123456
+    virtual-host: /
+    publisher-confirms: true
 
   # 视图解析器
   mvc:

@@ -1,5 +1,6 @@
 package com.zwk.weibo.config;
 
+import com.zwk.weibo.utils.CacheData;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
@@ -19,8 +20,10 @@ public class TestScheduler {
      * 秒 分 时 天  月 星期 年
      * 0/10 *  *   *  *   ?
      */
-    @Scheduled(cron="0/10 * * * * ?")
+    @Scheduled(cron="0 */3 * * * ?")
     public void show(){
-        System.out.println("OtherScheduler：" + LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss:SSS")));
+        CacheData cacheData=new CacheData();
+        //每隔三分钟刷新本地缓存
+        cacheData.refreshCache();
     }
 }
