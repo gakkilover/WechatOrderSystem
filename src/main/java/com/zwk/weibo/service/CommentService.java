@@ -10,4 +10,5 @@ import com.zwk.weibo.entity.CommentEntity;
  * @ Description：
  */
 public interface CommentService extends IService<CommentEntity> {
+    void insertComment(CommentEntity entity);
 }

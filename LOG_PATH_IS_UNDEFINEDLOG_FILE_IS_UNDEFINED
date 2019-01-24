@@ -1,130 +1,1003 @@
-2019-01-16 15:13:35,251 [ERROR] [restartedMain] org.springframework.boot.SpringApplication [SpringApplication.java : 858] Application run failed
-java.lang.IllegalStateException: Failed to load property source from location 'classpath:/application-dev.yml'
-	at org.springframework.boot.context.config.ConfigFileApplicationListener$Loader.load(ConfigFileApplicationListener.java:554)
-	at org.springframework.boot.context.config.ConfigFileApplicationListener$Loader.loadForFileExtension(ConfigFileApplicationListener.java:488)
-	at org.springframework.boot.context.config.ConfigFileApplicationListener$Loader.load(ConfigFileApplicationListener.java:467)
-	at org.springframework.boot.context.config.ConfigFileApplicationListener$Loader.lambda$null$6(ConfigFileApplicationListener.java:448)
-	at java.lang.Iterable.forEach(Iterable.java:75)
-	at org.springframework.boot.context.config.ConfigFileApplicationListener$Loader.lambda$load$7(ConfigFileApplicationListener.java:447)
-	at java.lang.Iterable.forEach(Iterable.java:75)
-	at org.springframework.boot.context.config.ConfigFileApplicationListener$Loader.load(ConfigFileApplicationListener.java:444)
-	at org.springframework.boot.context.config.ConfigFileApplicationListener$Loader.load(ConfigFileApplicationListener.java:332)
-	at org.springframework.boot.context.config.ConfigFileApplicationListener.addPropertySources(ConfigFileApplicationListener.java:207)
-	at org.springframework.boot.context.config.ConfigFileApplicationListener.postProcessEnvironment(ConfigFileApplicationListener.java:190)
-	at org.springframework.boot.context.config.ConfigFileApplicationListener.onApplicationEnvironmentPreparedEvent(ConfigFileApplicationListener.java:177)
-	at org.springframework.boot.context.config.ConfigFileApplicationListener.onApplicationEvent(ConfigFileApplicationListener.java:163)
-	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172)
-	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165)
-	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139)
-	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:127)
-	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:75)
-	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:54)
-	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:347)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:306)
-	at com.zwk.weibo.ApiApplication.main(ApiApplication.java:16)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
-Caused by: org.yaml.snakeyaml.parser.ParserException: while parsing a block mapping
- in 'reader', line 4, column 3:
-      datasource:
-      ^
-expected <block end>, but found '<block mapping start>'
- in 'reader', line 34, column 5:
-        application:
-        ^
-
-	at org.yaml.snakeyaml.parser.ParserImpl$ParseBlockMappingKey.produce(ParserImpl.java:572)
-	at org.yaml.snakeyaml.parser.ParserImpl.peekEvent(ParserImpl.java:158)
-	at org.yaml.snakeyaml.parser.ParserImpl.checkEvent(ParserImpl.java:148)
-	at org.yaml.snakeyaml.composer.Composer.composeMappingNode(Composer.java:214)
-	at org.yaml.snakeyaml.composer.Composer.composeNode(Composer.java:144)
-	at org.yaml.snakeyaml.composer.Composer.composeValueNode(Composer.java:236)
-	at org.yaml.snakeyaml.composer.Composer.composeMappingChildren(Composer.java:227)
-	at org.yaml.snakeyaml.composer.Composer.composeMappingNode(Composer.java:215)
-	at org.yaml.snakeyaml.composer.Composer.composeNode(Composer.java:144)
-	at org.yaml.snakeyaml.composer.Composer.getNode(Composer.java:85)
-	at org.yaml.snakeyaml.constructor.BaseConstructor.getData(BaseConstructor.java:123)
-	at org.yaml.snakeyaml.Yaml$1.next(Yaml.java:547)
-	at org.springframework.beans.factory.config.YamlProcessor.process(YamlProcessor.java:161)
-	at org.springframework.beans.factory.config.YamlProcessor.process(YamlProcessor.java:134)
-	at org.springframework.boot.env.OriginTrackedYamlLoader.load(OriginTrackedYamlLoader.java:75)
-	at org.springframework.boot.env.YamlPropertySourceLoader.load(YamlPropertySourceLoader.java:50)
-	at org.springframework.boot.context.config.ConfigFileApplicationListener$Loader.loadDocuments(ConfigFileApplicationListener.java:572)
-	at org.springframework.boot.context.config.ConfigFileApplicationListener$Loader.load(ConfigFileApplicationListener.java:526)
-	... 26 common frames omitted
-2019-01-16 15:14:57,323 [ERROR] [restartedMain] org.springframework.boot.SpringApplication [SpringApplication.java : 858] Application run failed
-java.lang.IllegalStateException: Failed to load property source from location 'classpath:/application-dev.yml'
-	at org.springframework.boot.context.config.ConfigFileApplicationListener$Loader.load(ConfigFileApplicationListener.java:554)
-	at org.springframework.boot.context.config.ConfigFileApplicationListener$Loader.loadForFileExtension(ConfigFileApplicationListener.java:488)
-	at org.springframework.boot.context.config.ConfigFileApplicationListener$Loader.load(ConfigFileApplicationListener.java:467)
-	at org.springframework.boot.context.config.ConfigFileApplicationListener$Loader.lambda$null$6(ConfigFileApplicationListener.java:448)
-	at java.lang.Iterable.forEach(Iterable.java:75)
-	at org.springframework.boot.context.config.ConfigFileApplicationListener$Loader.lambda$load$7(ConfigFileApplicationListener.java:447)
-	at java.lang.Iterable.forEach(Iterable.java:75)
-	at org.springframework.boot.context.config.ConfigFileApplicationListener$Loader.load(ConfigFileApplicationListener.java:444)
-	at org.springframework.boot.context.config.ConfigFileApplicationListener$Loader.load(ConfigFileApplicationListener.java:332)
-	at org.springframework.boot.context.config.ConfigFileApplicationListener.addPropertySources(ConfigFileApplicationListener.java:207)
-	at org.springframework.boot.context.config.ConfigFileApplicationListener.postProcessEnvironment(ConfigFileApplicationListener.java:190)
-	at org.springframework.boot.context.config.ConfigFileApplicationListener.onApplicationEnvironmentPreparedEvent(ConfigFileApplicationListener.java:177)
-	at org.springframework.boot.context.config.ConfigFileApplicationListener.onApplicationEvent(ConfigFileApplicationListener.java:163)
-	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172)
-	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165)
-	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139)
-	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:127)
-	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:75)
-	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:54)
-	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:347)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:306)
-	at com.zwk.weibo.ApiApplication.main(ApiApplication.java:16)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
-Caused by: org.yaml.snakeyaml.parser.ParserException: while parsing a block mapping
- in 'reader', line 4, column 3:
-      datasource:
-      ^
-expected <block end>, but found '<block mapping start>'
- in 'reader', line 34, column 5:
-        application:
-        ^
-
-	at org.yaml.snakeyaml.parser.ParserImpl$ParseBlockMappingKey.produce(ParserImpl.java:572)
-	at org.yaml.snakeyaml.parser.ParserImpl.peekEvent(ParserImpl.java:158)
-	at org.yaml.snakeyaml.parser.ParserImpl.checkEvent(ParserImpl.java:148)
-	at org.yaml.snakeyaml.composer.Composer.composeMappingNode(Composer.java:214)
-	at org.yaml.snakeyaml.composer.Composer.composeNode(Composer.java:144)
-	at org.yaml.snakeyaml.composer.Composer.composeValueNode(Composer.java:236)
-	at org.yaml.snakeyaml.composer.Composer.composeMappingChildren(Composer.java:227)
-	at org.yaml.snakeyaml.composer.Composer.composeMappingNode(Composer.java:215)
-	at org.yaml.snakeyaml.composer.Composer.composeNode(Composer.java:144)
-	at org.yaml.snakeyaml.composer.Composer.getNode(Composer.java:85)
-	at org.yaml.snakeyaml.constructor.BaseConstructor.getData(BaseConstructor.java:123)
-	at org.yaml.snakeyaml.Yaml$1.next(Yaml.java:547)
-	at org.springframework.beans.factory.config.YamlProcessor.process(YamlProcessor.java:161)
-	at org.springframework.beans.factory.config.YamlProcessor.process(YamlProcessor.java:134)
-	at org.springframework.boot.env.OriginTrackedYamlLoader.load(OriginTrackedYamlLoader.java:75)
-	at org.springframework.boot.env.YamlPropertySourceLoader.load(YamlPropertySourceLoader.java:50)
-	at org.springframework.boot.context.config.ConfigFileApplicationListener$Loader.loadDocuments(ConfigFileApplicationListener.java:572)
-	at org.springframework.boot.context.config.ConfigFileApplicationListener$Loader.load(ConfigFileApplicationListener.java:526)
-	... 26 common frames omitted
-2019-01-16 17:12:04,381 [INFO] [main] o.s.boot.test.context.SpringBootTestContextBootstrapper [AbstractTestContextBootstrapper.java : 308] Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.zwk.weibo.demo.FactTest], using SpringBootContextLoader
-2019-01-16 17:12:04,429 [INFO] [main] o.springframework.test.context.support.AbstractContextLoader [AbstractContextLoader.java : 264] Could not detect default resource locations for test class [com.zwk.weibo.demo.FactTest]: no resource found for suffixes {-context.xml, Context.groovy}.
-2019-01-16 17:12:04,995 [INFO] [main] o.s.boot.test.context.SpringBootTestContextBootstrapper [AbstractTestContextBootstrapper.java : 248] Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
-2019-01-16 17:12:05,037 [INFO] [main] o.s.boot.test.context.SpringBootTestContextBootstrapper [AbstractTestContextBootstrapper.java : 177] Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@587e5365, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@22fcf7ab, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@2de23121, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@63475ace, org.springframework.test.context.support.DirtiesContextTestExecutionListener@4988d8b8, org.springframework.test.context.transaction.TransactionalTestExecutionListener@c0c2f8d, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@305b7c14, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@6913c1fb, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@66d18979, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@bccb269, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@609cd4d8, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@17f7cd29]
-2019-01-16 17:12:21,429 [INFO] [main] o.s.boot.test.context.SpringBootTestContextBootstrapper [AbstractTestContextBootstrapper.java : 308] Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.zwk.weibo.demo.FactTest], using SpringBootContextLoader
-2019-01-16 17:12:21,479 [INFO] [main] o.springframework.test.context.support.AbstractContextLoader [AbstractContextLoader.java : 264] Could not detect default resource locations for test class [com.zwk.weibo.demo.FactTest]: no resource found for suffixes {-context.xml, Context.groovy}.
-2019-01-16 17:12:21,992 [INFO] [main] o.s.boot.test.context.SpringBootTestContextBootstrapper [AbstractTestContextBootstrapper.java : 248] Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
-2019-01-16 17:12:22,040 [INFO] [main] o.s.boot.test.context.SpringBootTestContextBootstrapper [AbstractTestContextBootstrapper.java : 177] Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@65a15628, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@2e6a5539, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@3fc9504b, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@6d025197, org.springframework.test.context.support.DirtiesContextTestExecutionListener@27d4a09, org.springframework.test.context.transaction.TransactionalTestExecutionListener@7e4204e2, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@b7c4869, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@740d2e78, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@1c481ff2, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@72437d8d, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@1b955cac, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@676cf48]
-2019-01-16 17:14:14,544 [INFO] [main] o.s.boot.test.context.SpringBootTestContextBootstrapper [AbstractTestContextBootstrapper.java : 308] Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.zwk.weibo.demo.FactTest], using SpringBootContextLoader
-2019-01-16 17:14:14,558 [INFO] [main] o.springframework.test.context.support.AbstractContextLoader [AbstractContextLoader.java : 264] Could not detect default resource locations for test class [com.zwk.weibo.demo.FactTest]: no resource found for suffixes {-context.xml, Context.groovy}.
-2019-01-16 17:14:15,619 [INFO] [main] o.s.boot.test.context.SpringBootTestContextBootstrapper [AbstractTestContextBootstrapper.java : 248] Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
-2019-01-16 17:14:15,663 [INFO] [main] o.s.boot.test.context.SpringBootTestContextBootstrapper [AbstractTestContextBootstrapper.java : 177] Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@79d8407f, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@5fbe4146, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@1e66f1f5, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@4e50c791, org.springframework.test.context.support.DirtiesContextTestExecutionListener@7530ad9c, org.springframework.test.context.transaction.TransactionalTestExecutionListener@58a9760d, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@71e9ddb4, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@394df057, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@4961f6af, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@5aebe890, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@65d09a04, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@33c911a1]
-2019-01-16 17:17:36,515 [INFO] [main] o.s.boot.test.context.SpringBootTestContextBootstrapper [AbstractTestContextBootstrapper.java : 308] Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.zwk.weibo.demo.FactTest], using SpringBootContextLoader
-2019-01-16 17:17:36,540 [INFO] [main] o.springframework.test.context.support.AbstractContextLoader [AbstractContextLoader.java : 264] Could not detect default resource locations for test class [com.zwk.weibo.demo.FactTest]: no resource found for suffixes {-context.xml, Context.groovy}.
-2019-01-16 17:17:37,069 [INFO] [main] o.s.boot.test.context.SpringBootTestContextBootstrapper [AbstractTestContextBootstrapper.java : 248] Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
-2019-01-16 17:17:37,159 [INFO] [main] o.s.boot.test.context.SpringBootTestContextBootstrapper [AbstractTestContextBootstrapper.java : 177] Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@40db2a24, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@10cf09e8, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@1921ad94, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@ee86bcb, org.springframework.test.context.support.DirtiesContextTestExecutionListener@177bea38, org.springframework.test.context.transaction.TransactionalTestExecutionListener@7f132176, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@6bca7e0d, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@2631f68c, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@6ed3f258, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@8ad6665, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@30af5b6b, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@19835e64]
+2019-01-24 10:13:36,938 [INFO] [main] us.codecraft.webmagic.model.OOSpider [Spider.java : 306] Spider github.com started!
+2019-01-24 10:13:40,111 [INFO] [pool-1-thread-1] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/code4craft
+2019-01-24 10:13:41,804 [INFO] [pool-1-thread-4] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/security
+2019-01-24 10:13:42,428 [INFO] [pool-1-thread-5] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/enterprise
+2019-01-24 10:13:42,623 [INFO] [pool-1-thread-2] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/features
+2019-01-24 10:13:42,952 [INFO] [pool-1-thread-3] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/case
+2019-01-24 10:13:43,722 [INFO] [pool-1-thread-1] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/explore
+2019-01-24 10:13:43,776 [INFO] [pool-1-thread-4] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/topics
+2019-01-24 10:13:44,071 [INFO] [pool-1-thread-5] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/collections
+2019-01-24 10:13:44,395 [INFO] [pool-1-thread-3] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/events
+2019-01-24 10:13:44,476 [INFO] [pool-1-thread-2] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/trending
+2019-01-24 10:13:45,574 [INFO] [pool-1-thread-1] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/marketplace
+2019-01-24 10:13:45,596 [INFO] [pool-1-thread-5] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/nonprofit
+2019-01-24 10:13:45,739 [INFO] [pool-1-thread-4] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/pricing
+2019-01-24 10:13:45,901 [INFO] [pool-1-thread-3] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/login
+2019-01-24 10:13:46,383 [INFO] [pool-1-thread-2] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/join
+2019-01-24 10:13:47,272 [INFO] [pool-1-thread-1] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/contact
+2019-01-24 10:13:47,280 [INFO] [pool-1-thread-5] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/webmagic
+2019-01-24 10:13:47,379 [INFO] [pool-1-thread-3] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/about
+2019-01-24 10:13:48,310 [INFO] [pool-1-thread-2] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/features/code
+2019-01-24 10:13:48,311 [INFO] [pool-1-thread-2] us.codecraft.webmagic.model.OOSpider [Spider.java : 422] page status code error, page https://github.com/features/code , code: 404
+2019-01-24 10:13:48,408 [INFO] [pool-1-thread-4] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/site
+2019-01-24 10:13:48,409 [INFO] [pool-1-thread-4] us.codecraft.webmagic.model.OOSpider [Spider.java : 422] page status code error, page https://github.com/site , code: 404
+2019-01-24 10:13:48,904 [INFO] [pool-1-thread-3] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/features/actions
+2019-01-24 10:13:49,072 [INFO] [pool-1-thread-1] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/features/integrations
+2019-01-24 10:13:49,560 [INFO] [pool-1-thread-5] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/features/project
+2019-01-24 10:13:49,561 [INFO] [pool-1-thread-5] us.codecraft.webmagic.model.OOSpider [Spider.java : 422] page status code error, page https://github.com/features/project , code: 404
+2019-01-24 10:13:50,079 [INFO] [pool-1-thread-4] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/code4craft/webmagic
+2019-01-24 10:13:50,199 [INFO] [pool-1-thread-2] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/contact/report
+2019-01-24 10:13:50,201 [INFO] [pool-1-thread-2] us.codecraft.webmagic.model.OOSpider [Spider.java : 422] page status code error, page https://github.com/contact/report , code: 404
+2019-01-24 10:13:50,850 [INFO] [pool-1-thread-3] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/code4craft/netty
+2019-01-24 10:13:50,852 [INFO] [pool-1-thread-3] us.codecraft.webmagic.model.OOSpider [Spider.java : 422] page status code error, page https://github.com/code4craft/netty , code: 404
+2019-01-24 10:13:51,091 [INFO] [pool-1-thread-1] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/code4craft/tiny
+2019-01-24 10:13:51,092 [INFO] [pool-1-thread-1] us.codecraft.webmagic.model.OOSpider [Spider.java : 422] page status code error, page https://github.com/code4craft/tiny , code: 404
+2019-01-24 10:13:51,370 [INFO] [pool-1-thread-5] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/code4craft/jsoup
+2019-01-24 10:13:51,823 [INFO] [pool-1-thread-4] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/code4craft/xsoup
+2019-01-24 10:13:52,199 [INFO] [pool-1-thread-2] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/code4craft/hello
+2019-01-24 10:13:52,201 [INFO] [pool-1-thread-2] us.codecraft.webmagic.model.OOSpider [Spider.java : 422] page status code error, page https://github.com/code4craft/hello , code: 404
+2019-01-24 10:13:53,322 [INFO] [pool-1-thread-4] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/security/trust
+2019-01-24 10:13:53,378 [INFO] [pool-1-thread-5] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/github
+2019-01-24 10:13:53,548 [INFO] [pool-1-thread-3] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/site/terms
+2019-01-24 10:13:53,692 [INFO] [pool-1-thread-2] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/security/team
+2019-01-24 10:13:53,816 [INFO] [pool-1-thread-1] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/site/privacy
+2019-01-24 10:13:54,854 [INFO] [pool-1-thread-5] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/about/careers
+2019-01-24 10:13:55,069 [INFO] [pool-1-thread-4] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/security/incident
+2019-01-24 10:13:55,070 [INFO] [pool-1-thread-4] us.codecraft.webmagic.model.OOSpider [Spider.java : 422] page status code error, page https://github.com/security/incident , code: 404
+2019-01-24 10:13:55,221 [INFO] [pool-1-thread-3] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/about/press
+2019-01-24 10:13:55,955 [INFO] [pool-1-thread-1] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/enterprise/security
+2019-01-24 10:13:56,557 [INFO] [pool-1-thread-4] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/personal
+2019-01-24 10:13:56,632 [INFO] [pool-1-thread-2] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/business
+2019-01-24 10:13:56,841 [INFO] [pool-1-thread-3] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/works
+2019-01-24 10:13:57,522 [INFO] [pool-1-thread-5] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/business/customers
+2019-01-24 10:13:57,646 [INFO] [pool-1-thread-1] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/atom
+2019-01-24 10:13:58,195 [INFO] [pool-1-thread-4] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/electron
+2019-01-24 10:13:58,333 [INFO] [pool-1-thread-2] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/git
+2019-01-24 10:13:58,476 [INFO] [pool-1-thread-3] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/open
+2019-01-24 10:13:59,175 [INFO] [pool-1-thread-5] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/atom/atom
+2019-01-24 10:13:59,814 [INFO] [pool-1-thread-1] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/electron/electron
+2019-01-24 10:13:59,956 [INFO] [pool-1-thread-2] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/domainr
+2019-01-24 10:14:00,693 [INFO] [pool-1-thread-3] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/connor
+2019-01-24 10:14:00,682 [INFO] [pool-1-thread-4] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/github/hubot
+2019-01-24 10:14:02,187 [INFO] [pool-1-thread-5] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/getpelican
+2019-01-24 10:14:02,407 [INFO] [pool-1-thread-4] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/case/itunes
+2019-01-24 10:14:02,408 [INFO] [pool-1-thread-4] us.codecraft.webmagic.model.OOSpider [Spider.java : 422] page status code error, page https://github.com/case/itunes , code: 404
+2019-01-24 10:14:02,637 [INFO] [pool-1-thread-2] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/pugjs
+2019-01-24 10:14:02,637 [INFO] [pool-1-thread-1] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/initpy
+2019-01-24 10:14:02,733 [INFO] [pool-1-thread-3] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/case/jqosk
+2019-01-24 10:14:03,966 [INFO] [pool-1-thread-5] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/connor/itunes
+2019-01-24 10:14:03,966 [INFO] [pool-1-thread-5] us.codecraft.webmagic.model.OOSpider [Spider.java : 422] page status code error, page https://github.com/connor/itunes , code: 404
+2019-01-24 10:14:04,424 [INFO] [pool-1-thread-2] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/getpelican/pelican
+2019-01-24 10:14:04,480 [INFO] [pool-1-thread-1] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/case/go
+2019-01-24 10:14:04,480 [INFO] [pool-1-thread-1] us.codecraft.webmagic.model.OOSpider [Spider.java : 422] page status code error, page https://github.com/case/go , code: 404
+2019-01-24 10:14:04,899 [INFO] [pool-1-thread-3] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/initpy/go
+2019-01-24 10:14:04,901 [INFO] [pool-1-thread-3] us.codecraft.webmagic.model.OOSpider [Spider.java : 422] page status code error, page https://github.com/initpy/go , code: 404
+2019-01-24 10:14:04,966 [INFO] [pool-1-thread-4] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/case/pelican
+2019-01-24 10:14:06,078 [INFO] [pool-1-thread-5] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/case/jade
+2019-01-24 10:14:06,192 [INFO] [pool-1-thread-1] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/domainr/domainr
+2019-01-24 10:14:06,270 [INFO] [pool-1-thread-2] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/pugjs/pug
+2019-01-24 10:14:22,885 [INFO] [main] us.codecraft.webmagic.model.OOSpider [Spider.java : 306] Spider github.com started!
+2019-01-24 10:14:25,983 [INFO] [pool-1-thread-1] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/code4craft
+2019-01-24 10:14:27,942 [INFO] [pool-1-thread-2] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/features
+2019-01-24 10:14:28,442 [INFO] [pool-1-thread-4] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/security
+2019-01-24 10:14:28,489 [INFO] [pool-1-thread-5] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/enterprise
+2019-01-24 10:14:29,039 [INFO] [pool-1-thread-3] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/case
+2019-01-24 10:14:30,491 [INFO] [pool-1-thread-4] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/collections
+2019-01-24 10:14:30,514 [INFO] [pool-1-thread-2] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/topics
+2019-01-24 10:14:31,185 [INFO] [pool-1-thread-5] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/trending
+2019-01-24 10:14:31,392 [INFO] [pool-1-thread-3] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/events
+2019-01-24 10:14:33,196 [INFO] [pool-1-thread-4] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/marketplace
+2019-01-24 10:14:33,462 [INFO] [pool-1-thread-2] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/pricing
+2019-01-24 10:14:33,580 [INFO] [pool-1-thread-3] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/login
+2019-01-24 10:14:33,596 [INFO] [pool-1-thread-5] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/nonprofit
+2019-01-24 10:14:34,152 [INFO] [pool-1-thread-1] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/explore
+2019-01-24 10:14:35,148 [INFO] [pool-1-thread-3] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/contact
+2019-01-24 10:14:35,180 [INFO] [pool-1-thread-4] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/join
+2019-01-24 10:14:35,472 [INFO] [pool-1-thread-2] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/site
+2019-01-24 10:14:35,473 [INFO] [pool-1-thread-2] us.codecraft.webmagic.model.OOSpider [Spider.java : 422] page status code error, page https://github.com/site , code: 404
+2019-01-24 10:14:35,498 [INFO] [pool-1-thread-5] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/webmagic
+2019-01-24 10:14:35,658 [INFO] [pool-1-thread-1] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/about
+2019-01-24 10:14:56,855 [INFO] [main] us.codecraft.webmagic.model.OOSpider [Spider.java : 306] Spider github.com started!
+2019-01-24 10:15:03,300 [INFO] [pool-1-thread-1] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/code4craft
+2019-01-24 10:15:05,849 [INFO] [pool-1-thread-4] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/security
+2019-01-24 10:15:05,853 [INFO] [pool-1-thread-2] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/features
+2019-01-24 10:15:07,533 [INFO] [pool-1-thread-2] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/collections
+2019-01-24 10:15:07,798 [INFO] [pool-1-thread-4] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/topics
+2019-01-24 10:15:08,391 [INFO] [pool-1-thread-1] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/explore
+2019-01-24 10:15:09,182 [INFO] [pool-1-thread-3] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/case
+2019-01-24 10:15:09,282 [INFO] [pool-1-thread-4] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/events
+2019-01-24 10:15:10,110 [INFO] [pool-1-thread-5] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/enterprise
+2019-01-24 10:15:10,169 [INFO] [pool-1-thread-2] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/trending
+2019-01-24 10:15:10,264 [INFO] [pool-1-thread-1] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/marketplace
+2019-01-24 10:15:10,804 [INFO] [pool-1-thread-4] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/nonprofit
+2019-01-24 10:15:11,013 [INFO] [pool-1-thread-3] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/pricing
+2019-01-24 10:15:11,635 [INFO] [pool-1-thread-5] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/login
+2019-01-24 10:15:11,666 [INFO] [pool-1-thread-2] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/join
+2019-01-24 10:15:12,318 [INFO] [pool-1-thread-1] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/contact
+2019-01-24 10:15:12,394 [INFO] [pool-1-thread-4] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/webmagic
+2019-01-24 10:15:12,749 [INFO] [pool-1-thread-3] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/site
+2019-01-24 10:15:12,750 [INFO] [pool-1-thread-3] us.codecraft.webmagic.model.OOSpider [Spider.java : 422] page status code error, page https://github.com/site , code: 404
+2019-01-24 10:15:13,819 [INFO] [pool-1-thread-5] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/about
+2019-01-24 10:15:14,021 [INFO] [pool-1-thread-1] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/features/project
+2019-01-24 10:15:14,022 [INFO] [pool-1-thread-1] us.codecraft.webmagic.model.OOSpider [Spider.java : 422] page status code error, page https://github.com/features/project , code: 404
+2019-01-24 10:15:14,191 [INFO] [pool-1-thread-3] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/features/actions
+2019-01-24 10:15:15,519 [INFO] [pool-1-thread-4] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/features/integrations
+2019-01-24 10:15:15,540 [INFO] [pool-1-thread-5] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/contact/report
+2019-01-24 10:15:15,540 [INFO] [pool-1-thread-5] us.codecraft.webmagic.model.OOSpider [Spider.java : 422] page status code error, page https://github.com/contact/report , code: 404
+2019-01-24 10:15:15,703 [INFO] [pool-1-thread-1] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/code4craft/webmagic
+2019-01-24 10:15:15,913 [INFO] [pool-1-thread-3] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/code4craft/netty
+2019-01-24 10:15:15,914 [INFO] [pool-1-thread-3] us.codecraft.webmagic.model.OOSpider [Spider.java : 422] page status code error, page https://github.com/code4craft/netty , code: 404
+2019-01-24 10:15:17,077 [INFO] [pool-1-thread-4] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/code4craft/jsoup
+2019-01-24 10:15:17,190 [INFO] [pool-1-thread-5] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/code4craft/tiny
+2019-01-24 10:15:17,191 [INFO] [pool-1-thread-5] us.codecraft.webmagic.model.OOSpider [Spider.java : 422] page status code error, page https://github.com/code4craft/tiny , code: 404
+2019-01-24 10:15:17,297 [INFO] [pool-1-thread-2] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/features/code
+2019-01-24 10:15:17,298 [INFO] [pool-1-thread-2] us.codecraft.webmagic.model.OOSpider [Spider.java : 422] page status code error, page https://github.com/features/code , code: 404
+2019-01-24 10:15:17,555 [INFO] [pool-1-thread-1] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/code4craft/xsoup
+2019-01-24 10:15:19,034 [INFO] [pool-1-thread-4] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/site/terms
+2019-01-24 10:15:19,217 [INFO] [pool-1-thread-5] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/site/privacy
+2019-01-24 10:15:19,226 [INFO] [pool-1-thread-2] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/github
+2019-01-24 10:15:19,263 [INFO] [pool-1-thread-1] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/personal
+2019-01-24 10:15:20,939 [INFO] [pool-1-thread-4] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/works
+2019-01-24 10:15:21,337 [INFO] [pool-1-thread-2] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/electron
+2019-01-24 10:15:21,464 [INFO] [pool-1-thread-3] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/code4craft/hello
+2019-01-24 10:15:21,465 [INFO] [pool-1-thread-3] us.codecraft.webmagic.model.OOSpider [Spider.java : 422] page status code error, page https://github.com/code4craft/hello , code: 404
+2019-01-24 10:15:21,559 [INFO] [pool-1-thread-1] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/git
+2019-01-24 10:15:21,707 [INFO] [pool-1-thread-5] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/atom
+2019-01-24 10:15:22,964 [INFO] [pool-1-thread-4] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/business
+2019-01-24 10:15:23,071 [INFO] [pool-1-thread-1] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/security/team
+2019-01-24 10:15:23,278 [INFO] [pool-1-thread-2] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/open
+2019-01-24 10:15:23,419 [INFO] [pool-1-thread-5] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/security/incident
+2019-01-24 10:15:23,420 [INFO] [pool-1-thread-5] us.codecraft.webmagic.model.OOSpider [Spider.java : 422] page status code error, page https://github.com/security/incident , code: 404
+2019-01-24 10:15:23,636 [INFO] [pool-1-thread-3] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/security/trust
+2019-01-24 10:15:24,572 [INFO] [pool-1-thread-1] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/about/press
+2019-01-24 10:34:57,609 [INFO] [main] us.codecraft.webmagic.Spider [Spider.java : 306] Spider github.com started!
+2019-01-24 10:34:59,625 [INFO] [pool-1-thread-1] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/code4craft
+2019-01-24 10:35:01,822 [INFO] [pool-1-thread-3] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/features/project
+2019-01-24 10:35:01,823 [INFO] [pool-1-thread-3] us.codecraft.webmagic.Spider [Spider.java : 422] page status code error, page https://github.com/features/project , code: 404
+2019-01-24 10:35:02,138 [INFO] [pool-1-thread-5] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/features/actions
+2019-01-24 10:35:02,597 [INFO] [pool-1-thread-1] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/contact/report
+2019-01-24 10:35:02,598 [INFO] [pool-1-thread-1] us.codecraft.webmagic.Spider [Spider.java : 422] page status code error, page https://github.com/contact/report , code: 404
+2019-01-24 10:35:02,926 [INFO] [pool-1-thread-3] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/code4craft/webmagic
+2019-01-24 10:35:03,248 [INFO] [pool-1-thread-4] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/features/integrations
+2019-01-24 10:35:03,255 [INFO] [pool-1-thread-5] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/code4craft/netty
+2019-01-24 10:35:03,256 [INFO] [pool-1-thread-5] us.codecraft.webmagic.Spider [Spider.java : 422] page status code error, page https://github.com/code4craft/netty , code: 404
+2019-01-24 10:35:03,454 [INFO] [pool-1-thread-1] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/code4craft/tiny
+2019-01-24 10:35:03,455 [INFO] [pool-1-thread-1] us.codecraft.webmagic.Spider [Spider.java : 422] page status code error, page https://github.com/code4craft/tiny , code: 404
+2019-01-24 10:35:03,736 [INFO] [pool-1-thread-3] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/code4craft/jsoup
+2019-01-24 10:35:03,791 [INFO] [pool-1-thread-2] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/features/code
+2019-01-24 10:35:03,795 [INFO] [pool-1-thread-2] us.codecraft.webmagic.Spider [Spider.java : 422] page status code error, page https://github.com/features/code , code: 404
+2019-01-24 10:35:04,003 [INFO] [pool-1-thread-5] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/code4craft/xsoup
+2019-01-24 10:35:04,358 [INFO] [pool-1-thread-4] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/code4craft/hello
+2019-01-24 10:35:04,359 [INFO] [pool-1-thread-4] us.codecraft.webmagic.Spider [Spider.java : 422] page status code error, page https://github.com/code4craft/hello , code: 404
+2019-01-24 10:35:04,535 [INFO] [pool-1-thread-3] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/about/careers
+2019-01-24 10:35:04,571 [INFO] [pool-1-thread-5] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/about/press
+2019-01-24 10:35:11,127 [INFO] [main] us.codecraft.webmagic.Spider [Spider.java : 306] Spider github.com started!
+2019-01-24 10:35:15,362 [INFO] [pool-1-thread-1] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/code4craft
+2019-01-24 10:35:25,300 [INFO] [pool-1-thread-3] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/features/project
+2019-01-24 10:35:25,302 [INFO] [pool-1-thread-3] us.codecraft.webmagic.Spider [Spider.java : 422] page status code error, page https://github.com/features/project , code: 404
+2019-01-24 10:35:25,466 [INFO] [pool-1-thread-2] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/features/code
+2019-01-24 10:35:25,467 [INFO] [pool-1-thread-2] us.codecraft.webmagic.Spider [Spider.java : 422] page status code error, page https://github.com/features/code , code: 404
+2019-01-24 10:35:25,466 [INFO] [pool-1-thread-4] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/features/integrations
+2019-01-24 10:35:26,399 [INFO] [pool-1-thread-5] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/features/actions
+2019-01-24 10:35:26,402 [INFO] [pool-1-thread-3] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/code4craft/webmagic
+2019-01-24 10:35:26,404 [INFO] [pool-1-thread-1] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/contact/report
+2019-01-24 10:35:26,405 [INFO] [pool-1-thread-1] us.codecraft.webmagic.Spider [Spider.java : 422] page status code error, page https://github.com/contact/report , code: 404
+2019-01-24 10:35:28,510 [INFO] [pool-1-thread-2] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/code4craft/netty
+2019-01-24 10:35:28,511 [INFO] [pool-1-thread-2] us.codecraft.webmagic.Spider [Spider.java : 422] page status code error, page https://github.com/code4craft/netty , code: 404
+2019-01-24 10:35:29,228 [INFO] [pool-1-thread-1] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/code4craft/tiny
+2019-01-24 10:35:29,229 [INFO] [pool-1-thread-1] us.codecraft.webmagic.Spider [Spider.java : 422] page status code error, page https://github.com/code4craft/tiny , code: 404
+2019-01-24 10:35:29,243 [INFO] [pool-1-thread-2] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/code4craft/jsoup
+2019-01-24 10:35:31,229 [INFO] [pool-1-thread-4] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/code4craft/xsoup
+2019-01-24 10:35:32,314 [INFO] [pool-1-thread-5] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/code4craft/hello
+2019-01-24 10:35:32,316 [INFO] [pool-1-thread-5] us.codecraft.webmagic.Spider [Spider.java : 422] page status code error, page https://github.com/code4craft/hello , code: 404
+2019-01-24 10:35:35,082 [INFO] [pool-1-thread-4] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/about/careers
+2019-01-24 10:35:35,091 [INFO] [pool-1-thread-5] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/marketplace/new
+2019-01-24 10:35:35,107 [INFO] [pool-1-thread-3] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/site/terms
+2019-01-24 14:15:39,973 [INFO] [main] us.codecraft.webmagic.Spider [Spider.java : 306] Spider github.com started!
+2019-01-24 14:15:42,265 [INFO] [pool-1-thread-1] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/code4craft
+2019-01-24 14:15:42,487 [ERROR] [pool-1-thread-1] us.codecraft.webmagic.Spider [Spider.java : 324] process request Request{url='https://github.com/code4craft', method='null', extras=null, priority=0, headers={}, cookies={}} error
+java.lang.NullPointerException: null
+	at com.zwk.crawler.test.TestPageProcessor.process(TestPageProcessor.java:34)
+	at us.codecraft.webmagic.Spider.onDownloadSuccess(Spider.java:414)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:406)
+	at us.codecraft.webmagic.Spider.access$000(Spider.java:61)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:320)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2019-01-24 14:15:42,488 [INFO] [main] us.codecraft.webmagic.Spider [Spider.java : 338] Spider github.com closed! 1 pages downloaded.
+2019-01-24 14:19:36,664 [INFO] [main] us.codecraft.webmagic.Spider [Spider.java : 306] Spider github.com started!
+2019-01-24 14:19:39,934 [INFO] [pool-1-thread-1] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/code4craft
+2019-01-24 14:19:40,147 [ERROR] [pool-1-thread-1] us.codecraft.webmagic.Spider [Spider.java : 324] process request Request{url='https://github.com/code4craft', method='null', extras=null, priority=0, headers={}, cookies={}} error
+java.lang.NullPointerException: null
+	at com.zwk.crawler.test.TestPageProcessor.process(TestPageProcessor.java:35)
+	at us.codecraft.webmagic.Spider.onDownloadSuccess(Spider.java:414)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:406)
+	at us.codecraft.webmagic.Spider.access$000(Spider.java:61)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:320)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2019-01-24 14:19:40,148 [INFO] [main] us.codecraft.webmagic.Spider [Spider.java : 338] Spider github.com closed! 1 pages downloaded.
+2019-01-24 14:20:17,174 [INFO] [main] us.codecraft.webmagic.Spider [Spider.java : 306] Spider github.com started!
+2019-01-24 14:20:21,139 [INFO] [pool-1-thread-1] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/code4craft
+2019-01-24 14:21:18,064 [ERROR] [pool-1-thread-1] us.codecraft.webmagic.Spider [Spider.java : 324] process request Request{url='https://github.com/code4craft', method='null', extras=null, priority=0, headers={}, cookies={}} error
+java.lang.NullPointerException: null
+	at com.zwk.crawler.test.TestPageProcessor.process(TestPageProcessor.java:35)
+	at us.codecraft.webmagic.Spider.onDownloadSuccess(Spider.java:414)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:406)
+	at us.codecraft.webmagic.Spider.access$000(Spider.java:61)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:320)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2019-01-24 14:21:18,065 [INFO] [main] us.codecraft.webmagic.Spider [Spider.java : 338] Spider github.com closed! 1 pages downloaded.
+2019-01-24 14:21:46,804 [INFO] [main] us.codecraft.webmagic.Spider [Spider.java : 306] Spider github.com started!
+2019-01-24 14:21:54,383 [INFO] [pool-1-thread-1] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/code4craft
+2019-01-24 14:22:12,982 [ERROR] [pool-1-thread-1] us.codecraft.webmagic.Spider [Spider.java : 324] process request Request{url='https://github.com/code4craft', method='null', extras=null, priority=0, headers={}, cookies={}} error
+java.lang.NullPointerException: null
+	at com.zwk.crawler.test.TestPageProcessor.process(TestPageProcessor.java:35)
+	at us.codecraft.webmagic.Spider.onDownloadSuccess(Spider.java:414)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:406)
+	at us.codecraft.webmagic.Spider.access$000(Spider.java:61)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:320)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2019-01-24 14:22:12,983 [INFO] [main] us.codecraft.webmagic.Spider [Spider.java : 338] Spider github.com closed! 1 pages downloaded.
+2019-01-24 14:23:13,628 [INFO] [main] us.codecraft.webmagic.Spider [Spider.java : 306] Spider github.com started!
+2019-01-24 14:23:16,898 [INFO] [pool-1-thread-1] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/code4craft
+2019-01-24 14:23:46,163 [ERROR] [pool-1-thread-1] us.codecraft.webmagic.Spider [Spider.java : 324] process request Request{url='https://github.com/code4craft', method='null', extras=null, priority=0, headers={}, cookies={}} error
+java.lang.NullPointerException: null
+	at com.baomidou.mybatisplus.service.impl.ServiceImpl.insert(ServiceImpl.java:98)
+	at com.zwk.weibo.service.impl.CommentServiceImpl.insertComment(CommentServiceImpl.java:25)
+	at com.zwk.crawler.test.TestPageProcessor.process(TestPageProcessor.java:36)
+	at us.codecraft.webmagic.Spider.onDownloadSuccess(Spider.java:414)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:406)
+	at us.codecraft.webmagic.Spider.access$000(Spider.java:61)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:320)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2019-01-24 14:23:48,180 [INFO] [main] us.codecraft.webmagic.Spider [Spider.java : 338] Spider github.com closed! 1 pages downloaded.
+2019-01-24 14:24:09,070 [INFO] [main] us.codecraft.webmagic.Spider [Spider.java : 306] Spider github.com started!
+2019-01-24 14:24:11,053 [INFO] [pool-1-thread-1] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/code4craft
+2019-01-24 14:24:11,244 [ERROR] [pool-1-thread-1] us.codecraft.webmagic.Spider [Spider.java : 324] process request Request{url='https://github.com/code4craft', method='null', extras=null, priority=0, headers={}, cookies={}} error
+java.lang.NullPointerException: null
+	at com.baomidou.mybatisplus.service.impl.ServiceImpl.insert(ServiceImpl.java:98)
+	at com.zwk.weibo.service.impl.CommentServiceImpl.insertComment(CommentServiceImpl.java:25)
+	at com.zwk.crawler.test.TestPageProcessor.process(TestPageProcessor.java:36)
+	at us.codecraft.webmagic.Spider.onDownloadSuccess(Spider.java:414)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:406)
+	at us.codecraft.webmagic.Spider.access$000(Spider.java:61)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:320)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2019-01-24 14:24:11,245 [INFO] [main] us.codecraft.webmagic.Spider [Spider.java : 338] Spider github.com closed! 1 pages downloaded.
+2019-01-24 14:25:05,799 [INFO] [main] us.codecraft.webmagic.Spider [Spider.java : 306] Spider github.com started!
+2019-01-24 14:25:08,258 [INFO] [pool-1-thread-1] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/code4craft
+2019-01-24 14:25:09,457 [INFO] [pool-1-thread-4] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/features/integrations
+2019-01-24 14:25:09,551 [ERROR] [pool-1-thread-4] us.codecraft.webmagic.Spider [Spider.java : 324] process request Request{url='https://github.com/features/integrations', method='null', extras=null, priority=0, headers={}, cookies={}} error
+java.lang.NullPointerException: null
+	at com.baomidou.mybatisplus.service.impl.ServiceImpl.insert(ServiceImpl.java:98)
+	at com.zwk.weibo.service.impl.CommentServiceImpl.insertComment(CommentServiceImpl.java:25)
+	at com.zwk.crawler.test.TestPageProcessor.process(TestPageProcessor.java:36)
+	at us.codecraft.webmagic.Spider.onDownloadSuccess(Spider.java:414)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:406)
+	at us.codecraft.webmagic.Spider.access$000(Spider.java:61)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:320)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2019-01-24 14:25:09,592 [INFO] [pool-1-thread-5] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/features/actions
+2019-01-24 14:25:09,600 [ERROR] [pool-1-thread-5] us.codecraft.webmagic.Spider [Spider.java : 324] process request Request{url='https://github.com/features/actions', method='null', extras=null, priority=0, headers={}, cookies={}} error
+java.lang.NullPointerException: null
+	at com.baomidou.mybatisplus.service.impl.ServiceImpl.insert(ServiceImpl.java:98)
+	at com.zwk.weibo.service.impl.CommentServiceImpl.insertComment(CommentServiceImpl.java:25)
+	at com.zwk.crawler.test.TestPageProcessor.process(TestPageProcessor.java:36)
+	at us.codecraft.webmagic.Spider.onDownloadSuccess(Spider.java:414)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:406)
+	at us.codecraft.webmagic.Spider.access$000(Spider.java:61)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:320)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2019-01-24 14:25:09,768 [INFO] [pool-1-thread-1] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/contact/report
+2019-01-24 14:25:09,769 [INFO] [pool-1-thread-1] us.codecraft.webmagic.Spider [Spider.java : 422] page status code error, page https://github.com/contact/report , code: 404
+2019-01-24 14:25:09,867 [INFO] [pool-1-thread-3] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/features/project
+2019-01-24 14:25:09,868 [INFO] [pool-1-thread-3] us.codecraft.webmagic.Spider [Spider.java : 422] page status code error, page https://github.com/features/project , code: 404
+2019-01-24 14:25:10,903 [INFO] [pool-1-thread-4] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/code4craft/webmagic
+2019-01-24 14:25:10,965 [ERROR] [pool-1-thread-4] us.codecraft.webmagic.Spider [Spider.java : 324] process request Request{url='https://github.com/code4craft/webmagic', method='null', extras=null, priority=0, headers={}, cookies={}} error
+java.lang.NullPointerException: null
+	at com.baomidou.mybatisplus.service.impl.ServiceImpl.insert(ServiceImpl.java:98)
+	at com.zwk.weibo.service.impl.CommentServiceImpl.insertComment(CommentServiceImpl.java:25)
+	at com.zwk.crawler.test.TestPageProcessor.process(TestPageProcessor.java:36)
+	at us.codecraft.webmagic.Spider.onDownloadSuccess(Spider.java:414)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:406)
+	at us.codecraft.webmagic.Spider.access$000(Spider.java:61)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:320)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2019-01-24 14:25:10,970 [INFO] [pool-1-thread-3] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/code4craft/jsoup
+2019-01-24 14:25:10,981 [ERROR] [pool-1-thread-3] us.codecraft.webmagic.Spider [Spider.java : 324] process request Request{url='https://github.com/code4craft/jsoup', method='null', extras=null, priority=0, headers={}, cookies={}} error
+java.lang.NullPointerException: null
+	at com.baomidou.mybatisplus.service.impl.ServiceImpl.insert(ServiceImpl.java:98)
+	at com.zwk.weibo.service.impl.CommentServiceImpl.insertComment(CommentServiceImpl.java:25)
+	at com.zwk.crawler.test.TestPageProcessor.process(TestPageProcessor.java:36)
+	at us.codecraft.webmagic.Spider.onDownloadSuccess(Spider.java:414)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:406)
+	at us.codecraft.webmagic.Spider.access$000(Spider.java:61)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:320)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2019-01-24 14:25:11,551 [INFO] [pool-1-thread-5] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/code4craft/netty
+2019-01-24 14:25:11,552 [INFO] [pool-1-thread-5] us.codecraft.webmagic.Spider [Spider.java : 422] page status code error, page https://github.com/code4craft/netty , code: 404
+2019-01-24 14:25:11,558 [INFO] [pool-1-thread-1] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/code4craft/tiny
+2019-01-24 14:25:11,559 [INFO] [pool-1-thread-1] us.codecraft.webmagic.Spider [Spider.java : 422] page status code error, page https://github.com/code4craft/tiny , code: 404
+2019-01-24 14:25:11,667 [INFO] [pool-1-thread-3] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/code4craft/hello
+2019-01-24 14:25:11,670 [INFO] [pool-1-thread-3] us.codecraft.webmagic.Spider [Spider.java : 422] page status code error, page https://github.com/code4craft/hello , code: 404
+2019-01-24 14:25:11,755 [INFO] [pool-1-thread-4] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/code4craft/xsoup
+2019-01-24 14:25:11,789 [ERROR] [pool-1-thread-4] us.codecraft.webmagic.Spider [Spider.java : 324] process request Request{url='https://github.com/code4craft/xsoup', method='null', extras=null, priority=0, headers={}, cookies={}} error
+java.lang.NullPointerException: null
+	at com.baomidou.mybatisplus.service.impl.ServiceImpl.insert(ServiceImpl.java:98)
+	at com.zwk.weibo.service.impl.CommentServiceImpl.insertComment(CommentServiceImpl.java:25)
+	at com.zwk.crawler.test.TestPageProcessor.process(TestPageProcessor.java:36)
+	at us.codecraft.webmagic.Spider.onDownloadSuccess(Spider.java:414)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:406)
+	at us.codecraft.webmagic.Spider.access$000(Spider.java:61)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:320)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2019-01-24 14:25:13,281 [INFO] [pool-1-thread-2] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/features/code
+2019-01-24 14:25:13,283 [INFO] [pool-1-thread-2] us.codecraft.webmagic.Spider [Spider.java : 422] page status code error, page https://github.com/features/code , code: 404
+2019-01-24 14:25:13,752 [INFO] [pool-1-thread-5] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/site/terms
+2019-01-24 14:25:13,786 [ERROR] [pool-1-thread-5] us.codecraft.webmagic.Spider [Spider.java : 324] process request Request{url='https://github.com/site/terms', method='null', extras=null, priority=0, headers={}, cookies={}} error
+java.lang.NullPointerException: null
+	at com.baomidou.mybatisplus.service.impl.ServiceImpl.insert(ServiceImpl.java:98)
+	at com.zwk.weibo.service.impl.CommentServiceImpl.insertComment(CommentServiceImpl.java:25)
+	at com.zwk.crawler.test.TestPageProcessor.process(TestPageProcessor.java:36)
+	at us.codecraft.webmagic.Spider.onDownloadSuccess(Spider.java:414)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:406)
+	at us.codecraft.webmagic.Spider.access$000(Spider.java:61)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:320)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2019-01-24 14:25:16,353 [INFO] [pool-1-thread-1] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/site/privacy
+2019-01-24 14:25:16,400 [ERROR] [pool-1-thread-1] us.codecraft.webmagic.Spider [Spider.java : 324] process request Request{url='https://github.com/site/privacy', method='null', extras=null, priority=0, headers={}, cookies={}} error
+java.lang.NullPointerException: null
+	at com.baomidou.mybatisplus.service.impl.ServiceImpl.insert(ServiceImpl.java:98)
+	at com.zwk.weibo.service.impl.CommentServiceImpl.insertComment(CommentServiceImpl.java:25)
+	at com.zwk.crawler.test.TestPageProcessor.process(TestPageProcessor.java:36)
+	at us.codecraft.webmagic.Spider.onDownloadSuccess(Spider.java:414)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:406)
+	at us.codecraft.webmagic.Spider.access$000(Spider.java:61)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:320)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2019-01-24 14:25:16,405 [INFO] [main] us.codecraft.webmagic.Spider [Spider.java : 338] Spider github.com closed! 14 pages downloaded.
+2019-01-24 14:27:18,285 [INFO] [main] us.codecraft.webmagic.Spider [Spider.java : 306] Spider github.com started!
+2019-01-24 14:27:23,552 [INFO] [pool-1-thread-1] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/code4craft
+2019-01-24 14:27:58,364 [INFO] [pool-1-thread-5] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/features/actions
+2019-01-24 14:28:14,178 [INFO] [pool-1-thread-3] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/features/project
+2019-01-24 14:28:14,179 [INFO] [pool-1-thread-3] us.codecraft.webmagic.Spider [Spider.java : 422] page status code error, page https://github.com/features/project , code: 404
+2019-01-24 14:28:14,187 [INFO] [pool-1-thread-2] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/features/code
+2019-01-24 14:28:14,187 [INFO] [pool-1-thread-2] us.codecraft.webmagic.Spider [Spider.java : 422] page status code error, page https://github.com/features/code , code: 404
+2019-01-24 14:28:14,195 [INFO] [pool-1-thread-1] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/contact/report
+2019-01-24 14:28:14,196 [INFO] [pool-1-thread-1] us.codecraft.webmagic.Spider [Spider.java : 422] page status code error, page https://github.com/contact/report , code: 404
+2019-01-24 14:28:14,196 [INFO] [pool-1-thread-4] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/features/integrations
+2019-01-24 14:28:19,667 [INFO] [pool-1-thread-3] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/code4craft/webmagic
+2019-01-24 14:28:19,715 [INFO] [pool-1-thread-1] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/code4craft/jsoup
+2019-01-24 14:28:21,528 [INFO] [pool-1-thread-5] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/code4craft/netty
+2019-01-24 14:28:21,531 [INFO] [pool-1-thread-4] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/code4craft/xsoup
+2019-01-24 14:28:21,535 [INFO] [pool-1-thread-5] us.codecraft.webmagic.Spider [Spider.java : 422] page status code error, page https://github.com/code4craft/netty , code: 404
+2019-01-24 14:28:21,540 [INFO] [pool-1-thread-2] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/code4craft/tiny
+2019-01-24 14:28:21,541 [INFO] [pool-1-thread-2] us.codecraft.webmagic.Spider [Spider.java : 422] page status code error, page https://github.com/code4craft/tiny , code: 404
+2019-01-24 14:28:24,650 [INFO] [pool-1-thread-5] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/about/careers
+2019-01-24 14:28:26,339 [INFO] [pool-1-thread-3] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/about/press
+2019-01-24 14:28:26,347 [INFO] [pool-1-thread-4] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/code4craft/hello
+2019-01-24 14:28:26,348 [INFO] [pool-1-thread-4] us.codecraft.webmagic.Spider [Spider.java : 422] page status code error, page https://github.com/code4craft/hello , code: 404
+2019-01-24 14:28:29,389 [INFO] [pool-1-thread-4] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/marketplace/new
+2019-01-24 14:28:31,053 [INFO] [pool-1-thread-5] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/jhy/jsoup
+2019-01-24 14:28:31,056 [INFO] [pool-1-thread-3] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/topics/crawler
+2019-01-24 14:28:31,065 [INFO] [pool-1-thread-1] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/site/privacy
+2019-01-24 14:28:34,881 [INFO] [pool-1-thread-2] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/site/terms
+2019-01-24 14:28:47,843 [INFO] [pool-1-thread-4] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/topics/java
+2019-01-24 14:28:47,848 [INFO] [pool-1-thread-1] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/gsh199449/spider
+2019-01-24 14:28:47,844 [INFO] [pool-1-thread-5] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/topics/scraping
+2019-01-24 14:28:47,851 [INFO] [pool-1-thread-3] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/topics/framework
+2019-01-24 14:30:58,228 [INFO] [main] us.codecraft.webmagic.Spider [Spider.java : 306] Spider github.com started!
+2019-01-24 14:31:00,839 [INFO] [pool-1-thread-1] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/code4craft
+2019-01-24 14:31:02,098 [INFO] [pool-1-thread-1] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/contact/report
+2019-01-24 14:31:02,098 [INFO] [pool-1-thread-1] us.codecraft.webmagic.Spider [Spider.java : 422] page status code error, page https://github.com/contact/report , code: 404
+2019-01-24 14:31:02,382 [INFO] [pool-1-thread-5] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/features/actions
+2019-01-24 14:31:02,510 [ERROR] [pool-1-thread-5] us.codecraft.webmagic.Spider [Spider.java : 324] process request Request{url='https://github.com/features/actions', method='null', extras=null, priority=0, headers={}, cookies={}} error
+java.lang.NullPointerException: null
+	at com.zwk.weibo.service.impl.CommentServiceImpl.insertComment(CommentServiceImpl.java:25)
+	at com.zwk.crawler.test.TestPageProcessor.process(TestPageProcessor.java:38)
+	at us.codecraft.webmagic.Spider.onDownloadSuccess(Spider.java:414)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:406)
+	at us.codecraft.webmagic.Spider.access$000(Spider.java:61)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:320)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2019-01-24 14:31:02,655 [INFO] [pool-1-thread-2] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/features/code
+2019-01-24 14:31:02,657 [INFO] [pool-1-thread-2] us.codecraft.webmagic.Spider [Spider.java : 422] page status code error, page https://github.com/features/code , code: 404
+2019-01-24 14:31:02,658 [INFO] [pool-1-thread-3] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/features/project
+2019-01-24 14:31:02,659 [INFO] [pool-1-thread-3] us.codecraft.webmagic.Spider [Spider.java : 422] page status code error, page https://github.com/features/project , code: 404
+2019-01-24 14:31:02,842 [INFO] [pool-1-thread-4] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/features/integrations
+2019-01-24 14:31:02,855 [INFO] [pool-1-thread-1] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/code4craft/webmagic
+2019-01-24 14:31:03,231 [ERROR] [pool-1-thread-1] us.codecraft.webmagic.Spider [Spider.java : 324] process request Request{url='https://github.com/code4craft/webmagic', method='null', extras=null, priority=0, headers={}, cookies={}} error
+java.lang.NullPointerException: null
+	at com.zwk.weibo.service.impl.CommentServiceImpl.insertComment(CommentServiceImpl.java:25)
+	at com.zwk.crawler.test.TestPageProcessor.process(TestPageProcessor.java:38)
+	at us.codecraft.webmagic.Spider.onDownloadSuccess(Spider.java:414)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:406)
+	at us.codecraft.webmagic.Spider.access$000(Spider.java:61)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:320)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2019-01-24 14:31:03,210 [ERROR] [pool-1-thread-4] us.codecraft.webmagic.Spider [Spider.java : 324] process request Request{url='https://github.com/features/integrations', method='null', extras=null, priority=0, headers={}, cookies={}} error
+java.lang.NullPointerException: null
+	at com.zwk.weibo.service.impl.CommentServiceImpl.insertComment(CommentServiceImpl.java:25)
+	at com.zwk.crawler.test.TestPageProcessor.process(TestPageProcessor.java:38)
+	at us.codecraft.webmagic.Spider.onDownloadSuccess(Spider.java:414)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:406)
+	at us.codecraft.webmagic.Spider.access$000(Spider.java:61)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:320)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2019-01-24 14:31:03,547 [INFO] [pool-1-thread-3] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/code4craft/jsoup
+2019-01-24 14:31:03,556 [ERROR] [pool-1-thread-3] us.codecraft.webmagic.Spider [Spider.java : 324] process request Request{url='https://github.com/code4craft/jsoup', method='null', extras=null, priority=0, headers={}, cookies={}} error
+java.lang.NullPointerException: null
+	at com.zwk.weibo.service.impl.CommentServiceImpl.insertComment(CommentServiceImpl.java:25)
+	at com.zwk.crawler.test.TestPageProcessor.process(TestPageProcessor.java:38)
+	at us.codecraft.webmagic.Spider.onDownloadSuccess(Spider.java:414)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:406)
+	at us.codecraft.webmagic.Spider.access$000(Spider.java:61)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:320)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2019-01-24 14:31:03,780 [INFO] [pool-1-thread-5] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/code4craft/netty
+2019-01-24 14:31:03,782 [INFO] [pool-1-thread-5] us.codecraft.webmagic.Spider [Spider.java : 422] page status code error, page https://github.com/code4craft/netty , code: 404
+2019-01-24 14:31:03,837 [INFO] [pool-1-thread-1] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/code4craft/xsoup
+2019-01-24 14:31:03,861 [ERROR] [pool-1-thread-1] us.codecraft.webmagic.Spider [Spider.java : 324] process request Request{url='https://github.com/code4craft/xsoup', method='null', extras=null, priority=0, headers={}, cookies={}} error
+java.lang.NullPointerException: null
+	at com.zwk.weibo.service.impl.CommentServiceImpl.insertComment(CommentServiceImpl.java:25)
+	at com.zwk.crawler.test.TestPageProcessor.process(TestPageProcessor.java:38)
+	at us.codecraft.webmagic.Spider.onDownloadSuccess(Spider.java:414)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:406)
+	at us.codecraft.webmagic.Spider.access$000(Spider.java:61)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:320)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2019-01-24 14:31:03,907 [INFO] [pool-1-thread-2] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/code4craft/tiny
+2019-01-24 14:31:03,907 [INFO] [pool-1-thread-2] us.codecraft.webmagic.Spider [Spider.java : 422] page status code error, page https://github.com/code4craft/tiny , code: 404
+2019-01-24 14:31:04,175 [INFO] [pool-1-thread-4] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/code4craft/hello
+2019-01-24 14:31:04,175 [INFO] [pool-1-thread-4] us.codecraft.webmagic.Spider [Spider.java : 422] page status code error, page https://github.com/code4craft/hello , code: 404
+2019-01-24 14:31:04,723 [INFO] [pool-1-thread-1] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/site/privacy
+2019-01-24 14:31:04,741 [ERROR] [pool-1-thread-1] us.codecraft.webmagic.Spider [Spider.java : 324] process request Request{url='https://github.com/site/privacy', method='null', extras=null, priority=0, headers={}, cookies={}} error
+java.lang.NullPointerException: null
+	at com.zwk.weibo.service.impl.CommentServiceImpl.insertComment(CommentServiceImpl.java:25)
+	at com.zwk.crawler.test.TestPageProcessor.process(TestPageProcessor.java:38)
+	at us.codecraft.webmagic.Spider.onDownloadSuccess(Spider.java:414)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:406)
+	at us.codecraft.webmagic.Spider.access$000(Spider.java:61)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:320)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2019-01-24 14:31:06,091 [INFO] [pool-1-thread-3] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/site/terms
+2019-01-24 14:31:06,117 [ERROR] [pool-1-thread-3] us.codecraft.webmagic.Spider [Spider.java : 324] process request Request{url='https://github.com/site/terms', method='null', extras=null, priority=0, headers={}, cookies={}} error
+java.lang.NullPointerException: null
+	at com.zwk.weibo.service.impl.CommentServiceImpl.insertComment(CommentServiceImpl.java:25)
+	at com.zwk.crawler.test.TestPageProcessor.process(TestPageProcessor.java:38)
+	at us.codecraft.webmagic.Spider.onDownloadSuccess(Spider.java:414)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:406)
+	at us.codecraft.webmagic.Spider.access$000(Spider.java:61)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:320)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2019-01-24 14:31:06,119 [INFO] [main] us.codecraft.webmagic.Spider [Spider.java : 338] Spider github.com closed! 14 pages downloaded.
+2019-01-24 14:33:32,796 [INFO] [main] us.codecraft.webmagic.Spider [Spider.java : 306] Spider github.com started!
+2019-01-24 14:33:36,447 [INFO] [pool-1-thread-1] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/code4craft
+2019-01-24 14:33:38,015 [INFO] [pool-1-thread-2] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/features/code
+2019-01-24 14:33:38,016 [INFO] [pool-1-thread-2] us.codecraft.webmagic.Spider [Spider.java : 422] page status code error, page https://github.com/features/code , code: 404
+2019-01-24 14:33:38,035 [INFO] [pool-1-thread-1] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/contact/report
+2019-01-24 14:33:38,036 [INFO] [pool-1-thread-1] us.codecraft.webmagic.Spider [Spider.java : 422] page status code error, page https://github.com/contact/report , code: 404
+2019-01-24 14:33:38,475 [INFO] [pool-1-thread-4] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/features/integrations
+2019-01-24 14:33:51,900 [INFO] [pool-1-thread-5] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/features/actions
+2019-01-24 14:33:51,922 [INFO] [pool-1-thread-3] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/features/project
+2019-01-24 14:33:51,928 [INFO] [pool-1-thread-3] us.codecraft.webmagic.Spider [Spider.java : 422] page status code error, page https://github.com/features/project , code: 404
+2019-01-24 14:33:51,928 [INFO] [pool-1-thread-2] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/code4craft/webmagic
+2019-01-24 14:33:52,036 [INFO] [pool-1-thread-1] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/code4craft/netty
+2019-01-24 14:33:52,045 [INFO] [pool-1-thread-1] us.codecraft.webmagic.Spider [Spider.java : 422] page status code error, page https://github.com/code4craft/netty , code: 404
+2019-01-24 14:33:52,099 [ERROR] [pool-1-thread-5] us.codecraft.webmagic.Spider [Spider.java : 324] process request Request{url='https://github.com/features/actions', method='null', extras=null, priority=0, headers={}, cookies={}} error
+java.lang.NullPointerException: null
+	at com.zwk.weibo.service.impl.CommentServiceImpl.insertComment(CommentServiceImpl.java:25)
+	at com.zwk.crawler.test.TestPageProcessor.process(TestPageProcessor.java:38)
+	at us.codecraft.webmagic.Spider.onDownloadSuccess(Spider.java:414)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:406)
+	at us.codecraft.webmagic.Spider.access$000(Spider.java:61)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:320)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2019-01-24 14:33:52,287 [ERROR] [pool-1-thread-2] us.codecraft.webmagic.Spider [Spider.java : 324] process request Request{url='https://github.com/code4craft/webmagic', method='null', extras=null, priority=0, headers={}, cookies={}} error
+java.lang.NullPointerException: null
+	at com.zwk.weibo.service.impl.CommentServiceImpl.insertComment(CommentServiceImpl.java:25)
+	at com.zwk.crawler.test.TestPageProcessor.process(TestPageProcessor.java:38)
+	at us.codecraft.webmagic.Spider.onDownloadSuccess(Spider.java:414)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:406)
+	at us.codecraft.webmagic.Spider.access$000(Spider.java:61)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:320)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2019-01-24 14:33:59,451 [ERROR] [pool-1-thread-4] us.codecraft.webmagic.Spider [Spider.java : 324] process request Request{url='https://github.com/features/integrations', method='null', extras=null, priority=0, headers={}, cookies={}} error
+java.lang.NullPointerException: null
+	at com.zwk.weibo.service.impl.CommentServiceImpl.insertComment(CommentServiceImpl.java:25)
+	at com.zwk.crawler.test.TestPageProcessor.process(TestPageProcessor.java:38)
+	at us.codecraft.webmagic.Spider.onDownloadSuccess(Spider.java:414)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:406)
+	at us.codecraft.webmagic.Spider.access$000(Spider.java:61)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:320)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2019-01-24 14:33:59,458 [INFO] [pool-1-thread-5] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/code4craft/jsoup
+2019-01-24 14:33:59,461 [INFO] [pool-1-thread-3] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/code4craft/tiny
+2019-01-24 14:33:59,462 [INFO] [pool-1-thread-3] us.codecraft.webmagic.Spider [Spider.java : 422] page status code error, page https://github.com/code4craft/tiny , code: 404
+2019-01-24 14:34:07,423 [ERROR] [pool-1-thread-5] us.codecraft.webmagic.Spider [Spider.java : 324] process request Request{url='https://github.com/code4craft/jsoup', method='null', extras=null, priority=0, headers={}, cookies={}} error
+java.lang.NullPointerException: null
+	at com.zwk.weibo.service.impl.CommentServiceImpl.insertComment(CommentServiceImpl.java:25)
+	at com.zwk.crawler.test.TestPageProcessor.process(TestPageProcessor.java:38)
+	at us.codecraft.webmagic.Spider.onDownloadSuccess(Spider.java:414)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:406)
+	at us.codecraft.webmagic.Spider.access$000(Spider.java:61)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:320)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2019-01-24 14:34:07,434 [INFO] [pool-1-thread-4] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/code4craft/xsoup
+2019-01-24 14:34:07,438 [INFO] [pool-1-thread-2] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/code4craft/hello
+2019-01-24 14:34:07,439 [INFO] [pool-1-thread-2] us.codecraft.webmagic.Spider [Spider.java : 422] page status code error, page https://github.com/code4craft/hello , code: 404
+2019-01-24 14:34:09,310 [ERROR] [pool-1-thread-4] us.codecraft.webmagic.Spider [Spider.java : 324] process request Request{url='https://github.com/code4craft/xsoup', method='null', extras=null, priority=0, headers={}, cookies={}} error
+java.lang.NullPointerException: null
+	at com.zwk.weibo.service.impl.CommentServiceImpl.insertComment(CommentServiceImpl.java:25)
+	at com.zwk.crawler.test.TestPageProcessor.process(TestPageProcessor.java:38)
+	at us.codecraft.webmagic.Spider.onDownloadSuccess(Spider.java:414)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:406)
+	at us.codecraft.webmagic.Spider.access$000(Spider.java:61)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:320)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2019-01-24 14:34:10,091 [INFO] [pool-1-thread-1] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/site/terms
+2019-01-24 14:34:10,091 [INFO] [pool-1-thread-5] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/site/privacy
+2019-01-24 14:34:34,721 [ERROR] [pool-1-thread-1] us.codecraft.webmagic.Spider [Spider.java : 324] process request Request{url='https://github.com/site/terms', method='null', extras=null, priority=0, headers={}, cookies={}} error
+java.lang.NullPointerException: null
+	at com.zwk.weibo.service.impl.CommentServiceImpl.insertComment(CommentServiceImpl.java:25)
+	at com.zwk.crawler.test.TestPageProcessor.process(TestPageProcessor.java:38)
+	at us.codecraft.webmagic.Spider.onDownloadSuccess(Spider.java:414)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:406)
+	at us.codecraft.webmagic.Spider.access$000(Spider.java:61)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:320)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2019-01-24 14:34:34,731 [ERROR] [pool-1-thread-5] us.codecraft.webmagic.Spider [Spider.java : 324] process request Request{url='https://github.com/site/privacy', method='null', extras=null, priority=0, headers={}, cookies={}} error
+java.lang.NullPointerException: null
+	at com.zwk.weibo.service.impl.CommentServiceImpl.insertComment(CommentServiceImpl.java:25)
+	at com.zwk.crawler.test.TestPageProcessor.process(TestPageProcessor.java:38)
+	at us.codecraft.webmagic.Spider.onDownloadSuccess(Spider.java:414)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:406)
+	at us.codecraft.webmagic.Spider.access$000(Spider.java:61)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:320)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2019-01-24 14:34:34,732 [INFO] [main] us.codecraft.webmagic.Spider [Spider.java : 338] Spider github.com closed! 14 pages downloaded.
+2019-01-24 14:34:43,357 [INFO] [main] us.codecraft.webmagic.Spider [Spider.java : 306] Spider github.com started!
+2019-01-24 14:34:46,901 [INFO] [pool-1-thread-1] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/code4craft
+2019-01-24 14:34:48,980 [INFO] [pool-1-thread-2] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/features/code
+2019-01-24 14:34:48,981 [INFO] [pool-1-thread-2] us.codecraft.webmagic.Spider [Spider.java : 422] page status code error, page https://github.com/features/code , code: 404
+2019-01-24 14:34:48,995 [INFO] [pool-1-thread-5] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/features/actions
+2019-01-24 14:36:31,942 [INFO] [pool-1-thread-1] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/contact/report
+2019-01-24 14:36:31,942 [INFO] [pool-1-thread-1] us.codecraft.webmagic.Spider [Spider.java : 422] page status code error, page https://github.com/contact/report , code: 404
+2019-01-24 14:36:31,944 [INFO] [pool-1-thread-4] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/features/integrations
+2019-01-24 14:36:31,946 [ERROR] [pool-1-thread-5] us.codecraft.webmagic.Spider [Spider.java : 324] process request Request{url='https://github.com/features/actions', method='null', extras=null, priority=0, headers={}, cookies={}} error
+java.lang.NullPointerException: null
+	at com.zwk.weibo.service.impl.CommentServiceImpl.insertComment(CommentServiceImpl.java:25)
+	at com.zwk.crawler.test.TestPageProcessor.process(TestPageProcessor.java:38)
+	at us.codecraft.webmagic.Spider.onDownloadSuccess(Spider.java:414)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:406)
+	at us.codecraft.webmagic.Spider.access$000(Spider.java:61)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:320)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2019-01-24 14:36:31,966 [INFO] [pool-1-thread-3] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/features/project
+2019-01-24 14:36:31,967 [INFO] [pool-1-thread-3] us.codecraft.webmagic.Spider [Spider.java : 422] page status code error, page https://github.com/features/project , code: 404
+2019-01-24 14:36:31,973 [ERROR] [pool-1-thread-4] us.codecraft.webmagic.Spider [Spider.java : 324] process request Request{url='https://github.com/features/integrations', method='null', extras=null, priority=0, headers={}, cookies={}} error
+java.lang.NullPointerException: null
+	at com.zwk.weibo.service.impl.CommentServiceImpl.insertComment(CommentServiceImpl.java:25)
+	at com.zwk.crawler.test.TestPageProcessor.process(TestPageProcessor.java:38)
+	at us.codecraft.webmagic.Spider.onDownloadSuccess(Spider.java:414)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:406)
+	at us.codecraft.webmagic.Spider.access$000(Spider.java:61)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:320)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2019-01-24 14:36:31,978 [INFO] [pool-1-thread-5] org.apache.http.impl.execchain.RetryExec [RetryExec.java : 97] I/O exception (org.apache.http.NoHttpResponseException) caught when processing request to {s}->https://github.com:443: The target server failed to respond
+2019-01-24 14:36:31,981 [INFO] [pool-1-thread-4] org.apache.http.impl.execchain.RetryExec [RetryExec.java : 97] I/O exception (org.apache.http.NoHttpResponseException) caught when processing request to {s}->https://github.com:443: The target server failed to respond
+2019-01-24 14:36:31,982 [INFO] [pool-1-thread-5] org.apache.http.impl.execchain.RetryExec [RetryExec.java : 113] Retrying request to {s}->https://github.com:443
+2019-01-24 14:36:31,984 [INFO] [pool-1-thread-4] org.apache.http.impl.execchain.RetryExec [RetryExec.java : 113] Retrying request to {s}->https://github.com:443
+2019-01-24 14:36:31,985 [INFO] [pool-1-thread-5] org.apache.http.impl.execchain.RetryExec [RetryExec.java : 97] I/O exception (org.apache.http.NoHttpResponseException) caught when processing request to {s}->https://github.com:443: The target server failed to respond
+2019-01-24 14:36:31,986 [INFO] [pool-1-thread-5] org.apache.http.impl.execchain.RetryExec [RetryExec.java : 113] Retrying request to {s}->https://github.com:443
+2019-01-24 14:38:46,670 [INFO] [main] us.codecraft.webmagic.Spider [Spider.java : 306] Spider github.com started!
+2019-01-24 14:38:49,675 [INFO] [pool-1-thread-1] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/code4craft
+2019-01-24 14:38:51,092 [INFO] [pool-1-thread-5] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/features/actions
+2019-01-24 14:38:51,157 [ERROR] [pool-1-thread-5] us.codecraft.webmagic.Spider [Spider.java : 324] process request Request{url='https://github.com/features/actions', method='null', extras=null, priority=0, headers={}, cookies={}} error
+java.lang.NullPointerException: null
+	at com.zwk.weibo.service.impl.CommentServiceImpl.insertComment(CommentServiceImpl.java:25)
+	at com.zwk.crawler.test.TestPageProcessor.process(TestPageProcessor.java:40)
+	at us.codecraft.webmagic.Spider.onDownloadSuccess(Spider.java:414)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:406)
+	at us.codecraft.webmagic.Spider.access$000(Spider.java:61)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:320)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2019-01-24 14:38:52,164 [INFO] [pool-1-thread-4] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/features/integrations
+2019-01-24 14:38:52,183 [INFO] [pool-1-thread-5] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/code4craft/webmagic
+2019-01-24 14:38:52,301 [ERROR] [pool-1-thread-5] us.codecraft.webmagic.Spider [Spider.java : 324] process request Request{url='https://github.com/code4craft/webmagic', method='null', extras=null, priority=0, headers={}, cookies={}} error
+java.lang.NullPointerException: null
+	at com.zwk.weibo.service.impl.CommentServiceImpl.insertComment(CommentServiceImpl.java:25)
+	at com.zwk.crawler.test.TestPageProcessor.process(TestPageProcessor.java:40)
+	at us.codecraft.webmagic.Spider.onDownloadSuccess(Spider.java:414)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:406)
+	at us.codecraft.webmagic.Spider.access$000(Spider.java:61)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:320)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2019-01-24 14:38:52,305 [ERROR] [pool-1-thread-4] us.codecraft.webmagic.Spider [Spider.java : 324] process request Request{url='https://github.com/features/integrations', method='null', extras=null, priority=0, headers={}, cookies={}} error
+java.lang.NullPointerException: null
+	at com.zwk.weibo.service.impl.CommentServiceImpl.insertComment(CommentServiceImpl.java:25)
+	at com.zwk.crawler.test.TestPageProcessor.process(TestPageProcessor.java:40)
+	at us.codecraft.webmagic.Spider.onDownloadSuccess(Spider.java:414)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:406)
+	at us.codecraft.webmagic.Spider.access$000(Spider.java:61)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:320)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2019-01-24 14:38:52,749 [INFO] [pool-1-thread-2] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/features/code
+2019-01-24 14:38:52,749 [INFO] [pool-1-thread-1] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/contact/report
+2019-01-24 14:38:52,750 [INFO] [pool-1-thread-2] us.codecraft.webmagic.Spider [Spider.java : 422] page status code error, page https://github.com/features/code , code: 404
+2019-01-24 14:38:52,750 [INFO] [pool-1-thread-1] us.codecraft.webmagic.Spider [Spider.java : 422] page status code error, page https://github.com/contact/report , code: 404
+2019-01-24 14:38:53,458 [INFO] [pool-1-thread-3] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/features/project
+2019-01-24 14:38:53,459 [INFO] [pool-1-thread-3] us.codecraft.webmagic.Spider [Spider.java : 422] page status code error, page https://github.com/features/project , code: 404
+2019-01-24 14:38:53,671 [INFO] [pool-1-thread-2] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/code4craft/xsoup
+2019-01-24 14:38:53,688 [INFO] [pool-1-thread-1] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/code4craft/jsoup
+2019-01-24 14:38:53,690 [INFO] [pool-1-thread-4] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/code4craft/tiny
+2019-01-24 14:38:53,691 [INFO] [pool-1-thread-4] us.codecraft.webmagic.Spider [Spider.java : 422] page status code error, page https://github.com/code4craft/tiny , code: 404
+2019-01-24 14:38:53,712 [ERROR] [pool-1-thread-2] us.codecraft.webmagic.Spider [Spider.java : 324] process request Request{url='https://github.com/code4craft/xsoup', method='null', extras=null, priority=0, headers={}, cookies={}} error
+java.lang.NullPointerException: null
+	at com.zwk.weibo.service.impl.CommentServiceImpl.insertComment(CommentServiceImpl.java:25)
+	at com.zwk.crawler.test.TestPageProcessor.process(TestPageProcessor.java:40)
+	at us.codecraft.webmagic.Spider.onDownloadSuccess(Spider.java:414)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:406)
+	at us.codecraft.webmagic.Spider.access$000(Spider.java:61)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:320)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2019-01-24 14:38:53,726 [ERROR] [pool-1-thread-1] us.codecraft.webmagic.Spider [Spider.java : 324] process request Request{url='https://github.com/code4craft/jsoup', method='null', extras=null, priority=0, headers={}, cookies={}} error
+java.lang.NullPointerException: null
+	at com.zwk.weibo.service.impl.CommentServiceImpl.insertComment(CommentServiceImpl.java:25)
+	at com.zwk.crawler.test.TestPageProcessor.process(TestPageProcessor.java:40)
+	at us.codecraft.webmagic.Spider.onDownloadSuccess(Spider.java:414)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:406)
+	at us.codecraft.webmagic.Spider.access$000(Spider.java:61)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:320)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2019-01-24 14:38:53,975 [INFO] [pool-1-thread-5] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/code4craft/netty
+2019-01-24 14:38:53,977 [INFO] [pool-1-thread-5] us.codecraft.webmagic.Spider [Spider.java : 422] page status code error, page https://github.com/code4craft/netty , code: 404
+2019-01-24 14:38:55,007 [INFO] [pool-1-thread-1] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/site/privacy
+2019-01-24 14:38:55,043 [ERROR] [pool-1-thread-1] us.codecraft.webmagic.Spider [Spider.java : 324] process request Request{url='https://github.com/site/privacy', method='null', extras=null, priority=0, headers={}, cookies={}} error
+java.lang.NullPointerException: null
+	at com.zwk.weibo.service.impl.CommentServiceImpl.insertComment(CommentServiceImpl.java:25)
+	at com.zwk.crawler.test.TestPageProcessor.process(TestPageProcessor.java:40)
+	at us.codecraft.webmagic.Spider.onDownloadSuccess(Spider.java:414)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:406)
+	at us.codecraft.webmagic.Spider.access$000(Spider.java:61)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:320)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2019-01-24 14:38:55,932 [INFO] [pool-1-thread-3] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/code4craft/hello
+2019-01-24 14:38:55,933 [INFO] [pool-1-thread-3] us.codecraft.webmagic.Spider [Spider.java : 422] page status code error, page https://github.com/code4craft/hello , code: 404
+2019-01-24 14:38:55,946 [INFO] [pool-1-thread-2] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/site/terms
+2019-01-24 14:38:55,969 [ERROR] [pool-1-thread-2] us.codecraft.webmagic.Spider [Spider.java : 324] process request Request{url='https://github.com/site/terms', method='null', extras=null, priority=0, headers={}, cookies={}} error
+java.lang.NullPointerException: null
+	at com.zwk.weibo.service.impl.CommentServiceImpl.insertComment(CommentServiceImpl.java:25)
+	at com.zwk.crawler.test.TestPageProcessor.process(TestPageProcessor.java:40)
+	at us.codecraft.webmagic.Spider.onDownloadSuccess(Spider.java:414)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:406)
+	at us.codecraft.webmagic.Spider.access$000(Spider.java:61)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:320)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2019-01-24 14:38:56,035 [INFO] [main] us.codecraft.webmagic.Spider [Spider.java : 338] Spider github.com closed! 14 pages downloaded.
+2019-01-24 14:41:54,392 [INFO] [main] us.codecraft.webmagic.Spider [Spider.java : 306] Spider github.com started!
+2019-01-24 14:41:56,811 [INFO] [pool-1-thread-1] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/code4craft
+2019-01-24 14:41:57,599 [INFO] [pool-1-thread-5] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/features/actions
+2019-01-24 14:41:57,655 [ERROR] [pool-1-thread-5] us.codecraft.webmagic.Spider [Spider.java : 324] process request Request{url='https://github.com/features/actions', method='null', extras=null, priority=0, headers={}, cookies={}} error
+java.lang.NullPointerException: null
+	at com.baomidou.mybatisplus.service.impl.ServiceImpl.insert(ServiceImpl.java:98)
+	at com.zwk.weibo.service.impl.CommentServiceImpl.insertComment(CommentServiceImpl.java:33)
+	at com.zwk.crawler.test.TestPageProcessor.process(TestPageProcessor.java:40)
+	at us.codecraft.webmagic.Spider.onDownloadSuccess(Spider.java:414)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:406)
+	at us.codecraft.webmagic.Spider.access$000(Spider.java:61)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:320)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2019-01-24 14:41:58,477 [INFO] [pool-1-thread-2] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/features/code
+2019-01-24 14:41:58,480 [INFO] [pool-1-thread-2] us.codecraft.webmagic.Spider [Spider.java : 422] page status code error, page https://github.com/features/code , code: 404
+2019-01-24 14:41:59,202 [INFO] [pool-1-thread-5] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/code4craft/webmagic
+2019-01-24 14:41:59,274 [ERROR] [pool-1-thread-5] us.codecraft.webmagic.Spider [Spider.java : 324] process request Request{url='https://github.com/code4craft/webmagic', method='null', extras=null, priority=0, headers={}, cookies={}} error
+java.lang.NullPointerException: null
+	at com.baomidou.mybatisplus.service.impl.ServiceImpl.insert(ServiceImpl.java:98)
+	at com.zwk.weibo.service.impl.CommentServiceImpl.insertComment(CommentServiceImpl.java:33)
+	at com.zwk.crawler.test.TestPageProcessor.process(TestPageProcessor.java:40)
+	at us.codecraft.webmagic.Spider.onDownloadSuccess(Spider.java:414)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:406)
+	at us.codecraft.webmagic.Spider.access$000(Spider.java:61)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:320)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2019-01-24 14:41:59,475 [INFO] [pool-1-thread-2] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/code4craft/netty
+2019-01-24 14:41:59,476 [INFO] [pool-1-thread-2] us.codecraft.webmagic.Spider [Spider.java : 422] page status code error, page https://github.com/code4craft/netty , code: 404
+2019-01-24 14:41:59,476 [INFO] [pool-1-thread-4] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/features/integrations
+2019-01-24 14:41:59,505 [ERROR] [pool-1-thread-4] us.codecraft.webmagic.Spider [Spider.java : 324] process request Request{url='https://github.com/features/integrations', method='null', extras=null, priority=0, headers={}, cookies={}} error
+java.lang.NullPointerException: null
+	at com.baomidou.mybatisplus.service.impl.ServiceImpl.insert(ServiceImpl.java:98)
+	at com.zwk.weibo.service.impl.CommentServiceImpl.insertComment(CommentServiceImpl.java:33)
+	at com.zwk.crawler.test.TestPageProcessor.process(TestPageProcessor.java:40)
+	at us.codecraft.webmagic.Spider.onDownloadSuccess(Spider.java:414)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:406)
+	at us.codecraft.webmagic.Spider.access$000(Spider.java:61)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:320)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2019-01-24 14:42:01,235 [INFO] [pool-1-thread-2] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/code4craft/xsoup
+2019-01-24 14:42:01,235 [INFO] [pool-1-thread-4] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/code4craft/jsoup
+2019-01-24 14:42:01,263 [ERROR] [pool-1-thread-4] us.codecraft.webmagic.Spider [Spider.java : 324] process request Request{url='https://github.com/code4craft/jsoup', method='null', extras=null, priority=0, headers={}, cookies={}} error
+java.lang.NullPointerException: null
+	at com.baomidou.mybatisplus.service.impl.ServiceImpl.insert(ServiceImpl.java:98)
+	at com.zwk.weibo.service.impl.CommentServiceImpl.insertComment(CommentServiceImpl.java:33)
+	at com.zwk.crawler.test.TestPageProcessor.process(TestPageProcessor.java:40)
+	at us.codecraft.webmagic.Spider.onDownloadSuccess(Spider.java:414)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:406)
+	at us.codecraft.webmagic.Spider.access$000(Spider.java:61)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:320)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2019-01-24 14:42:01,271 [ERROR] [pool-1-thread-2] us.codecraft.webmagic.Spider [Spider.java : 324] process request Request{url='https://github.com/code4craft/xsoup', method='null', extras=null, priority=0, headers={}, cookies={}} error
+java.lang.NullPointerException: null
+	at com.baomidou.mybatisplus.service.impl.ServiceImpl.insert(ServiceImpl.java:98)
+	at com.zwk.weibo.service.impl.CommentServiceImpl.insertComment(CommentServiceImpl.java:33)
+	at com.zwk.crawler.test.TestPageProcessor.process(TestPageProcessor.java:40)
+	at us.codecraft.webmagic.Spider.onDownloadSuccess(Spider.java:414)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:406)
+	at us.codecraft.webmagic.Spider.access$000(Spider.java:61)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:320)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2019-01-24 14:42:01,572 [INFO] [pool-1-thread-5] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/code4craft/tiny
+2019-01-24 14:42:01,572 [INFO] [pool-1-thread-5] us.codecraft.webmagic.Spider [Spider.java : 422] page status code error, page https://github.com/code4craft/tiny , code: 404
+2019-01-24 14:42:02,640 [INFO] [pool-1-thread-2] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/site/terms
+2019-01-24 14:42:02,663 [ERROR] [pool-1-thread-2] us.codecraft.webmagic.Spider [Spider.java : 324] process request Request{url='https://github.com/site/terms', method='null', extras=null, priority=0, headers={}, cookies={}} error
+java.lang.NullPointerException: null
+	at com.baomidou.mybatisplus.service.impl.ServiceImpl.insert(ServiceImpl.java:98)
+	at com.zwk.weibo.service.impl.CommentServiceImpl.insertComment(CommentServiceImpl.java:33)
+	at com.zwk.crawler.test.TestPageProcessor.process(TestPageProcessor.java:40)
+	at us.codecraft.webmagic.Spider.onDownloadSuccess(Spider.java:414)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:406)
+	at us.codecraft.webmagic.Spider.access$000(Spider.java:61)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:320)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2019-01-24 14:42:02,730 [INFO] [pool-1-thread-4] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/code4craft/hello
+2019-01-24 14:42:02,732 [INFO] [pool-1-thread-4] us.codecraft.webmagic.Spider [Spider.java : 422] page status code error, page https://github.com/code4craft/hello , code: 404
+2019-01-24 14:42:04,270 [INFO] [pool-1-thread-5] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/site/privacy
+2019-01-24 14:42:04,308 [ERROR] [pool-1-thread-5] us.codecraft.webmagic.Spider [Spider.java : 324] process request Request{url='https://github.com/site/privacy', method='null', extras=null, priority=0, headers={}, cookies={}} error
+java.lang.NullPointerException: null
+	at com.baomidou.mybatisplus.service.impl.ServiceImpl.insert(ServiceImpl.java:98)
+	at com.zwk.weibo.service.impl.CommentServiceImpl.insertComment(CommentServiceImpl.java:33)
+	at com.zwk.crawler.test.TestPageProcessor.process(TestPageProcessor.java:40)
+	at us.codecraft.webmagic.Spider.onDownloadSuccess(Spider.java:414)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:406)
+	at us.codecraft.webmagic.Spider.access$000(Spider.java:61)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:320)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2019-01-24 14:42:21,085 [INFO] [pool-1-thread-1] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/contact/report
+2019-01-24 14:42:21,087 [INFO] [pool-1-thread-1] us.codecraft.webmagic.Spider [Spider.java : 422] page status code error, page https://github.com/contact/report , code: 404
+2019-01-24 14:42:26,782 [INFO] [pool-1-thread-3] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/features/project
+2019-01-24 14:42:26,783 [INFO] [pool-1-thread-3] us.codecraft.webmagic.Spider [Spider.java : 422] page status code error, page https://github.com/features/project , code: 404
+2019-01-24 14:42:26,885 [INFO] [main] us.codecraft.webmagic.Spider [Spider.java : 338] Spider github.com closed! 14 pages downloaded.
+2019-01-24 14:43:12,467 [INFO] [main] us.codecraft.webmagic.Spider [Spider.java : 306] Spider github.com started!
+2019-01-24 14:43:14,532 [INFO] [pool-1-thread-1] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/code4craft
+2019-01-24 14:43:15,623 [INFO] [pool-1-thread-3] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/features/project
+2019-01-24 14:43:15,624 [INFO] [pool-1-thread-3] us.codecraft.webmagic.Spider [Spider.java : 422] page status code error, page https://github.com/features/project , code: 404
+2019-01-24 14:43:15,810 [INFO] [pool-1-thread-5] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/features/actions
+2019-01-24 14:43:15,898 [ERROR] [pool-1-thread-5] us.codecraft.webmagic.Spider [Spider.java : 324] process request Request{url='https://github.com/features/actions', method='null', extras=null, priority=0, headers={}, cookies={}} error
+java.lang.NullPointerException: null
+	at com.zwk.weibo.service.impl.CommentServiceImpl.insertComment(CommentServiceImpl.java:33)
+	at com.zwk.crawler.test.TestPageProcessor.process(TestPageProcessor.java:40)
+	at us.codecraft.webmagic.Spider.onDownloadSuccess(Spider.java:414)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:406)
+	at us.codecraft.webmagic.Spider.access$000(Spider.java:61)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:320)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2019-01-24 14:43:16,122 [INFO] [pool-1-thread-2] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/features/code
+2019-01-24 14:43:16,125 [INFO] [pool-1-thread-2] us.codecraft.webmagic.Spider [Spider.java : 422] page status code error, page https://github.com/features/code , code: 404
+2019-01-24 14:43:16,222 [INFO] [pool-1-thread-4] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/features/integrations
+2019-01-24 14:43:16,241 [ERROR] [pool-1-thread-4] us.codecraft.webmagic.Spider [Spider.java : 324] process request Request{url='https://github.com/features/integrations', method='null', extras=null, priority=0, headers={}, cookies={}} error
+java.lang.NullPointerException: null
+	at com.zwk.weibo.service.impl.CommentServiceImpl.insertComment(CommentServiceImpl.java:33)
+	at com.zwk.crawler.test.TestPageProcessor.process(TestPageProcessor.java:40)
+	at us.codecraft.webmagic.Spider.onDownloadSuccess(Spider.java:414)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:406)
+	at us.codecraft.webmagic.Spider.access$000(Spider.java:61)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:320)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2019-01-24 14:43:16,342 [INFO] [pool-1-thread-1] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/contact/report
+2019-01-24 14:43:16,342 [INFO] [pool-1-thread-1] us.codecraft.webmagic.Spider [Spider.java : 422] page status code error, page https://github.com/contact/report , code: 404
+2019-01-24 14:43:16,549 [INFO] [pool-1-thread-3] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/code4craft/webmagic
+2019-01-24 14:43:16,566 [ERROR] [pool-1-thread-3] us.codecraft.webmagic.Spider [Spider.java : 324] process request Request{url='https://github.com/code4craft/webmagic', method='null', extras=null, priority=0, headers={}, cookies={}} error
+java.lang.NullPointerException: null
+	at com.zwk.weibo.service.impl.CommentServiceImpl.insertComment(CommentServiceImpl.java:33)
+	at com.zwk.crawler.test.TestPageProcessor.process(TestPageProcessor.java:40)
+	at us.codecraft.webmagic.Spider.onDownloadSuccess(Spider.java:414)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:406)
+	at us.codecraft.webmagic.Spider.access$000(Spider.java:61)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:320)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2019-01-24 14:43:16,580 [INFO] [pool-1-thread-5] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/code4craft/netty
+2019-01-24 14:43:16,580 [INFO] [pool-1-thread-5] us.codecraft.webmagic.Spider [Spider.java : 422] page status code error, page https://github.com/code4craft/netty , code: 404
+2019-01-24 14:43:16,939 [INFO] [pool-1-thread-4] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/code4craft/jsoup
+2019-01-24 14:43:16,994 [ERROR] [pool-1-thread-4] us.codecraft.webmagic.Spider [Spider.java : 324] process request Request{url='https://github.com/code4craft/jsoup', method='null', extras=null, priority=0, headers={}, cookies={}} error
+java.lang.NullPointerException: null
+	at com.zwk.weibo.service.impl.CommentServiceImpl.insertComment(CommentServiceImpl.java:33)
+	at com.zwk.crawler.test.TestPageProcessor.process(TestPageProcessor.java:40)
+	at us.codecraft.webmagic.Spider.onDownloadSuccess(Spider.java:414)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:406)
+	at us.codecraft.webmagic.Spider.access$000(Spider.java:61)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:320)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2019-01-24 14:43:17,123 [INFO] [pool-1-thread-3] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/code4craft/hello
+2019-01-24 14:43:17,125 [INFO] [pool-1-thread-3] us.codecraft.webmagic.Spider [Spider.java : 422] page status code error, page https://github.com/code4craft/hello , code: 404
+2019-01-24 14:43:17,362 [INFO] [pool-1-thread-1] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/code4craft/xsoup
+2019-01-24 14:43:17,379 [ERROR] [pool-1-thread-1] us.codecraft.webmagic.Spider [Spider.java : 324] process request Request{url='https://github.com/code4craft/xsoup', method='null', extras=null, priority=0, headers={}, cookies={}} error
+java.lang.NullPointerException: null
+	at com.zwk.weibo.service.impl.CommentServiceImpl.insertComment(CommentServiceImpl.java:33)
+	at com.zwk.crawler.test.TestPageProcessor.process(TestPageProcessor.java:40)
+	at us.codecraft.webmagic.Spider.onDownloadSuccess(Spider.java:414)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:406)
+	at us.codecraft.webmagic.Spider.access$000(Spider.java:61)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:320)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2019-01-24 14:43:17,645 [INFO] [pool-1-thread-5] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/site/terms
+2019-01-24 14:43:17,673 [ERROR] [pool-1-thread-5] us.codecraft.webmagic.Spider [Spider.java : 324] process request Request{url='https://github.com/site/terms', method='null', extras=null, priority=0, headers={}, cookies={}} error
+java.lang.NullPointerException: null
+	at com.zwk.weibo.service.impl.CommentServiceImpl.insertComment(CommentServiceImpl.java:33)
+	at com.zwk.crawler.test.TestPageProcessor.process(TestPageProcessor.java:40)
+	at us.codecraft.webmagic.Spider.onDownloadSuccess(Spider.java:414)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:406)
+	at us.codecraft.webmagic.Spider.access$000(Spider.java:61)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:320)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2019-01-24 14:43:17,736 [INFO] [pool-1-thread-2] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/code4craft/tiny
+2019-01-24 14:43:17,737 [INFO] [pool-1-thread-2] us.codecraft.webmagic.Spider [Spider.java : 422] page status code error, page https://github.com/code4craft/tiny , code: 404
+2019-01-24 14:43:17,757 [INFO] [pool-1-thread-4] com.zwk.crawler.config.HttpClientDownloader [HttpClientDownloader.java : 89] downloading page success https://github.com/site/privacy
+2019-01-24 14:43:17,762 [ERROR] [pool-1-thread-4] us.codecraft.webmagic.Spider [Spider.java : 324] process request Request{url='https://github.com/site/privacy', method='null', extras=null, priority=0, headers={}, cookies={}} error
+java.lang.NullPointerException: null
+	at com.zwk.weibo.service.impl.CommentServiceImpl.insertComment(CommentServiceImpl.java:33)
+	at com.zwk.crawler.test.TestPageProcessor.process(TestPageProcessor.java:40)
+	at us.codecraft.webmagic.Spider.onDownloadSuccess(Spider.java:414)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:406)
+	at us.codecraft.webmagic.Spider.access$000(Spider.java:61)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:320)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2019-01-24 14:43:17,838 [INFO] [main] us.codecraft.webmagic.Spider [Spider.java : 338] Spider github.com closed! 14 pages downloaded.
